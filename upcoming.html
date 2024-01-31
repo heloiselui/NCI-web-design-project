@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SIP Mix and Lounge is a vibrant venue in Dublin where expertly 
+        crafted cocktails harmonize with high-end live music performances, creating a rhythm that delivers outstanding,
+         enjoyable, and comfortable experiences. Discover something different for your night out.">
+  <meta name="keywords" content="SIP Mix and Lounge, Dublin cocktails, live music venue, sophisticated ambiance, crafted cocktails, 
+        live music performances, nightlife Dublin, entertainment, relaxed atmosphere">
+
+  <!--------------------- STYLESHEET LINK--------------------->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!--------------------- BOOTSTRAP LINK--------------------->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <title>Document</title>
+</head>
+
+<body>
+  <!--------------------- HEADER --------------------->
+  <header class="header" id="upcoming-header">
+    <div id="upcoming-bg-image" class="upcoming-bg-image">
+      <div class="overlay"></div>
+    </div>
+
+    <div class="rectangle" id="rectangle"></div>
+    <nav class="navbar navbar-expand-lg">
+      <a id="logo" class="navbar-brand" href="index.html" aria-label="Link to homepage">
+      </a>
+      <button class="navbar-toggler navbar-dark ms-auto" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="#navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span id="burger" class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav ms-auto">
+          <li class="nav-item">
+            <a id="nav-home-link" class="nav-link" href="index.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a id="nav-inside-link" class="nav-link" href="inside.html">INSIDE</a>
+          </li>
+          <li class="nav-item">
+            <a id="nav-signature-link" class="nav-link" href="signature.html">SIGNATURE</a>
+          </li>
+          <li class="nav-item ">
+            <a id="nav-upcoming-link" class="nav-link" href="upcoming.html">UPCOMING</a>
+          </li>
+          <li class="nav-item">
+            <a id="nav-about-link" class="nav-link" href="about.html">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a id="nav-reservations-link" class="nav-link" href="reservations.html">RESERVATIONS</a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!---------------------- MAIN ---------------------->
+  <main>
+    <section class="upcoming-events">
+      <h1 class="mt-5 mb-5">Upcoming</h1>
+      <!-------------- EVENT - IMGs -------------->
+      <div class="events">
+        <div class="row w-100 d-flex flex-row">
+          <div class="col-sm-12 col-lg-4">
+            <div class="event">
+              <img src="./assets/images/sipem-live-music.png" alt="Blues & Jazz Club" onclick="openLightbox(this);">
+              <h2 class="mt-5">Blues & Jazz Club</h2>
+              <p>Experience the magic of music at SIPEM. A unique evening where rhythm and harmony meet in an enchanting
+                atmosphere. Come and feel the essence of blues and jazz on an unforgettable night.</p>
+              <p class="event-time">Fri, Dec 8 • 8 PM</p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-4">
+            <div class="event">
+              <img src="./assets/images/sipem-dj.png" alt="Live Music" onclick="openLightbox(this);">
+              <h2 class="mt-5">Live Music</h2>
+              <p>Immerse yourself in a night filled with captivating melodies and soul-stirring performances at our live
+                music
+                event. A perfect blend of rhythm, energy, and musical genius awaits you.</p>
+              <p class="event-time">Sat, Dec 9 • 8 PM</p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-4">
+            <div class="event">
+              <img src="./assets/images/sipem-live-bands.png" alt="Live Bands" onclick="openLightbox(this);">
+              <h2 class="mt-5">Live Bands</h2>
+              <p>Join us for an electrifying night featuring some of the best live bands in town. Get ready for an
+                evening of
+                dynamic performances, where each chord tells a story and every beat is a pulse of energy.</p>
+              <p class="event-time">Sun, Dec 10 • 9 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      </div>
+    </section>
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="lightbox">
+      <span class="close" onclick="closeLightbox()">&times;</span>
+      <img class="lightbox-content" id="lightboxImage">
+    </div>
+    <!-------------- NEWSLETTER -------------->
+    <section class="newsletter">
+      <h2>Events Letters</h2>
+      <p>Subscribe to our Events Letters and get the latest updates,exclusive offers, and insider info straight to your
+        inbox. <br /> Be the first to know about our upcoming music nights,special events, and much more.</p>
+      <form>
+        <input type="email" placeholder="Email" id="subscription-email" required>
+        <div class="inputBaseLine" style="visibility: hidden;"></div>
+
+        <button type="submit">SUBMIT</button>
+      </form>
+    </section>
+  </main>
+  <!-------------------- Footer section  ------------------------->
+  <section id="footer">
+    <div class="footer-wraper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-3 order-1 order-md-1 order-lg-1">
+            <!------ Footer Logo ------>
+            <div class="footer-item-wraper">
+              <a class="navItem" href="index.html" aria-label="Sipem logo">
+                <div class="div" id="logo-footer"></div>
+              </a>
+            </div>
+          </div>
+          <!------ Address ------>
+          <div class="col-sm-12  col-md-6 col-lg-3 order-3 order-md-4 order-lg-3">
+            <div class="address-wraper">
+              <p>
+                +353 (08) 0000000
+              </p>
+              <p>
+                Nowhere Rd 123,
+              </p>
+              <p>
+                Dublin
+              </p>
+            </div>
+
+          </div>
+          <div class="col-sm-12  col-md-6 col-lg-3 order-2 order-md-2 order-g-2">
+            <!------ Footer links ------>
+            <div class="availability-wraper">
+              <p> OPEN HOURS</p>
+              <p>WED - THU: 17:00 PM - 1:00 AM</p>
+              <p>
+                FRI - SUN: 17:00 PM - 2:00 AM
+              </p>
+
+            </div>
+          </div>
+          <div class="col-sm-12  col-md-6 col-lg-3 order-4 order-md-3 order-lg-4">
+            <!------ Social links ------>
+            <div class="social-wraper">
+              <a href="https://www.facebook.com/" target="_blank">
+                <img id="footer-facebook-icon" width="24" height="24"
+                  src="https://img.icons8.com/fluency-systems-filled/48/FFFFFF/facebook-f.png" alt="facebook-f" />
+              </a>
+              <a href="https://www.instagram.com/" target="_blank">
+                <img id="footer-insta-icon" width="50" height="50"
+                  src="https://img.icons8.com/sf-regular/68/FFFFFF/instagram-new.png" alt="instagram-new" /></a>
+              <a href="https://twitter.com/" target="_blank">
+                <img id="footer-x-icon" width="26" height="26"
+                  src="https://img.icons8.com/ios-glyphs/30/FFFFFF/twitterx--v2.png" alt="twitterx--v2" /> </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <p>Copy Right <span id="copyRight">©</span> <span id="current-year"></span></p>
+        </div>
+      </div>
+      <div class="authors-wraper">
+        <div class="authors-container text-center">
+          <p>Designed and developed by; </p>
+          <div class="names-wraper d-flex justify-content-evenly sm-flex-column lg-flex-row">
+            <p> Heloise Lui</p>
+            <p> Bence Pillips</p>
+            <p> Javier Bastande</p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!------------------------ MODAL BURGER MENU ----------->
+  <div class="modalt closeMenu" id="navbar-modal">
+    <div class="modal-wraper">
+      <div class=" modal-container">
+        <div class="row text-end mt-3 me-4">
+          <div class="close-wraper ">
+            <div id="close-icon">
+              <img width="64" height="64" src="https://img.icons8.com/laces/64/ffffff/arrow.png" alt="arrow" />
+            </div>
+
+          </div>
+        </div>
+        <div class="row modal-menu-holder">
+          <ul class="nav navbar-nav modal-menu">
+            <li class="nav-item">
+              <a id="modal-home-link" class="nav-link" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a id="modal-inside-link" class="nav-link" href="inside.html">INSIDE</a>
+            </li>
+            <li class="nav-item">
+              <a id="modal-signature-link" class="nav-link" href="signature.html">SIGNATURE</a>
+            </li>
+            <li class="nav-item ">
+              <a id="modal-upcoming-link" class="nav-link" href="upcoming.html">UPCOMING</a>
+            </li>
+            <li class="nav-item">
+              <a id="modal-about-link" class="nav-link" href="about.html">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a id="modal-reservations-link" class="nav-link" href="reservations.html">RESERVATIONS</a>
+            </li>
+            <li class="nav-item">
+              <div class="modal-social-wraper">
+                <a href="https://www.facebook.com/" target="_blank">
+                  <img id="modal-facebook-icon" width="24" height="24"
+                    src="https://img.icons8.com/fluency-systems-filled/48/FFFFFF/facebook-f.png" alt="facebook-logo" />
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                  <img id="modal-insta-icon" width="50" height="50"
+                    src="https://img.icons8.com/sf-regular/68/FFFFFF/instagram-new.png" alt="instagram-logo" /></a>
+                <a href="https://twitter.com/" target="_blank">
+                  <img id="modal-x-icon" width="26" height="26"
+                    src="https://img.icons8.com/ios-glyphs/30/FFFFFF/twitterx--v2.png" alt="twitterx--v2" />
+                </a>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!------------ BOOSTRAP CND  ------>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"
+    defer></script>
+
+  <script>
+    const currentYear = new Date().getFullYear();
+    console.log(currentYear);
+    document.getElementById("current-year").textContent = currentYear;
+  </script>
+
+  <!----- SCRIPTS-->
+  <script type="text/javascript" src="assets/js/burgerMenu.js" defer></script>
+  <script type="text/javascript" src="assets/js/upcoming.js" defer></script>
+
+</body>
+
+</html>

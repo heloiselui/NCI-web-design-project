@@ -1,0 +1,4248 @@
+/* Root Variables for Color Scheme and Fonts */
+:root {
+    /* Color Palette */
+    --beaver: #9E7F66;
+    --cod-grey: #111111;
+    --mirage: #17192B;
+    --elbony-clay: #242B37;
+    --shuttle-gray: #5C6779;
+    --white: #ffffff;
+    --black: #000000;
+
+    /* Font Families */
+    --font-league-spartan: 'League Spartan', sans-serif;
+    --font-sanchez: 'Sanchez', serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Lora:wght@500;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&family=Sanchez:ital@0;1&display=swap');
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "League Spartan";
+}
+
+#CocktailBackground p,
+p a {
+    font-family: "League Spartan";
+
+}
+
+
+/****
+* Navbar, Footer & Modal menu stylings and animations
+* @author Javier Bastande 
+**/
+
+/*************** CLASSLIST ANIMATIONS*/
+.showMenu {
+    display: block;
+    animation-name: showMenu;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes showMenu {
+    from {
+        right: -600px;
+        display: none;
+        border-left: solid 1px black;
+    }
+
+    to {
+        right: 0;
+        display: block;
+        border-left: solid 1px white;
+
+    }
+}
+
+.closeMenu {
+    display: none;
+    animation-name: closeMenu;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes closeMenu {
+    from {
+        right: 0;
+        display: block;
+    }
+
+    to {
+        right: -600px;
+
+        display: none;
+    }
+}
+
+.popInRectangle {
+    animation-name: rectangleIn;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    transition: ease-in-out;
+}
+
+
+@keyframes rectangleIn {
+    from {
+        position: fixed;
+        height: inherit;
+        z-index: 0;
+    }
+
+    to {
+        position: fixed;
+        top: 0;
+        height: 100vh;
+        z-index: 2;
+    }
+}
+
+.popOutRectangle {
+    min-height: 100vh;
+    position: relative;
+    z-index: 0;
+}
+
+.contentFadeOut {
+    animation-name: fadeOut;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.contentFadeIn {
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#logo {
+    position: relative;
+    z-index: 5;
+}
+
+.fixedLogo {
+    animation-name: fixedLogo;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    transition: ease-in-out;
+}
+
+@keyframes fixedLogo {
+    from {
+        position: initial;
+    }
+
+    to {
+        position: fixed;
+        top: 0;
+    }
+}
+
+
+/*********************  SHARED HEADER PROPERTIES*/
+header {
+    height: 800px;
+}
+
+header .navbar {
+    max-width: 1300px;
+    padding: 0px;
+    background-color: transparent;
+    margin: 0 auto;
+}
+
+#logo {
+    position: relative;
+    z-index: 4;
+}
+
+
+header nav .navbar-brand,
+#logo-footer {
+    background-image: url("../images/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header nav a:hover,
+#close-icon,
+#burger,
+#navbar-modal a {
+    cursor: url("../images/pointer.png"), auto;
+}
+
+header nav .nav-link,
+header nav .nav-link:hover {
+    color: #ffffff;
+}
+
+
+header nav .nav-link::after {
+    content: '';
+    margin: auto;
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: transparent;
+    transition: all 0.5s ease;
+}
+
+header nav .nav-link:hover::after {
+    height: 2px;
+    width: 100%;
+    background-color: #9E7F66;
+}
+
+header nav .navbar-toggler,
+header nav .navbar-toggler:focus,
+header nav .navbar-toggler:active,
+header nav .navbar-toggler-icon:active {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+header nav .navbar-toggler-icon {
+    color: inherit;
+}
+
+/* header backgorund images */
+#upcoming-header #upcoming-bg-image {
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    max-height: 950px;
+    background-image: url("../images/scenario.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header #reservations-bg-image,
+header #about-bg-img,
+header #home-bg-img {
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    max-height: 950px;
+    background-image: url("../images/tables.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#signature-header .signature-bg-image {
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    background-image: url("../images/bar.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1.5;
+}
+
+#inside-header {
+    background-color: #111111;
+}
+
+#signature-header .overlay,
+#upcoming-header .overlay {
+    width: inherit;
+    height: inherit;
+    background-color: #111111;
+    opacity: 0.5;
+}
+
+
+
+header .rectangle {
+    background-color: #111111;
+    position: absolute;
+    height: inherit;
+}
+
+/************** SHARED FOOTER PROPERTIES*/
+.footer-wraper {
+    min-height: 460px;
+    width: 100%;
+    background-color: #111111;
+}
+
+.footer-wraper .row {
+
+    margin: 0 auto;
+}
+
+.container-fluid,
+.names-wraper>p {
+    color: #ffffff;
+}
+
+.footer-wraper a {
+    text-decoration: none;
+}
+
+.footer-copyright {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.footer-copyright p {
+    text-align: center;
+    margin-bottom: 0;
+    margin: 0;
+    font-size: 0.7rem;
+}
+
+.authors-wraper {
+    width: 100%;
+}
+
+.authors-container {
+    background-color: #9E7F66;
+    padding: 10px 0;
+}
+
+.names-wraper {
+    margin: 0 auto;
+}
+
+.authors-container>p,
+.names-wraper>p {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+/****
+* About page stylings shared accross screen sizes
+* @author Javier Bastande 
+**/
+#about-header {
+    height: 200px;
+}
+
+section {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "League Spartan", sans-serif;
+}
+
+
+/********** story section**/
+#story-decorator .decorator,
+#alex-decorator .decorator {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+}
+
+#story .decorator img:last-child {
+    position: relative;
+    z-index: 1;
+}
+
+#story .story-wraper,
+#john .john-wraper,
+#alex .alex-desc-wraper,
+.call-action-heading {
+    font-family: "League Spartan";
+    font-size: 1rem;
+    line-height: 30px;
+}
+
+#story .story-wraper,
+#john .john-wraper,
+#alex .alex-wraper {
+    min-height: 600px;
+    width: 100%;
+}
+
+#story #story-img-wraper {
+    width: 100%;
+    min-height: 600px;
+    background-image: url("../images/about-simpem-img.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#story .about-desc-wraper p {
+    margin-top: 30px;
+}
+
+#story .about-desc-wraper,
+#john .john-desc-wraper {
+    padding: 70px;
+    font-size: 1.2rem;
+}
+
+#john #about-heading {
+    text-align: center;
+    font-size: 3rem;
+}
+
+/********* john section**/
+#john .pin-holder {
+    background-image: url("../images/pin.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 10%;
+    height: 30px;
+}
+
+.pin-separator {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.pin-separator .gold-circle {
+    width: 5px;
+    height: 5px;
+    border: solid 2px #9E7F66;
+    border-radius: 50px;
+}
+
+.pin-separator .gold-line {
+    width: 60px;
+    height: 1px;
+    background-color: #9E7F66;
+    border-radius: 5px;
+    margin-left: 7px;
+}
+
+#john .john-wraper {
+    background-color: #111111;
+    color: #ffffff;
+    padding-bottom: 60px;
+}
+
+#john .john-wraper #john-img-wraper {
+    width: 100%;
+    min-height: 520px;
+    background-image: url("../images/john.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/********* alex section**/
+#alex #alex-decorator {
+    position: absolute;
+    right: 0;
+}
+
+#alex .alex-wraper {
+    color: #111111;
+    padding-bottom: 60px;
+}
+
+#alex .alex-wraper #alex-img-wraper {
+    width: 100%;
+    min-height: 520px;
+    background-image: url("../images/alex.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/****** call to action **/
+
+.call-action-wraper .call-action-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.call-action-wraper .call-action-container .row {
+    align-items: center;
+    text-align: center;
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    z-index: 1;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#call-action h4 {
+    font-size: 2.5rem;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}
+
+.call-action-wraper .call-action-img-holder {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-image: url("../images/call-action-img.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.call-action-wraper a {
+    height: 75px;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+    border: solid 1px #ffffff;
+    border-radius: 0;
+    width: 50%;
+    background-color: transparent;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.call-action-wraper a:hover {
+    border: solid 1px #111111;
+    transition: 0.5s;
+    background-color: #ffffff;
+    color: #111111;
+    cursor: url("../images/pointer.png"), auto;
+}
+
+
+/****
+* Reservation page stylings for desktop
+* @author Javier Bastande 
+**/
+/********* CLASSS LIST*/
+.inputError {
+    width: 100%;
+    height: 2px;
+    background-color: #b40505;
+}
+
+.redText {
+    color: #b40505;
+    opacity: 0.6;
+}
+
+.redPlaceholder::-webkit-input-placeholder {
+    color: #b40505;
+    opacity: 0.6;
+    font-size: 1.125rem;
+}
+
+.wrongEmail::-webkit-input-placeholder {
+    color: #b40505;
+    opacity: 0.6;
+    font-size: 1.063rem;
+}
+
+.success {
+    width: 100%;
+    height: 2px;
+    background-color: #9E7F66;
+}
+
+/**** double quotes */
+#reservations-review .left-quote-wraper {
+    text-align: start;
+}
+
+#reservations-review .right-quote-wraper {
+    text-align: right;
+}
+
+#left-quote,
+#right-quote {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+#right-quote {
+    transform: rotate(180deg);
+}
+
+
+/*********** RESERVATIONS PAGE SHARED PROPERTIES*/
+#reservations-main-wraper h4 {
+    font-size: 4rem;
+}
+
+/** font family*/
+#reservations-main-wraper input,
+#reservations input[type="date"],
+#reservations form .form-input-wraper p,
+#reservations-main-wraper p,
+#reservations-review p #reservations-main-wraper input:active,
+#reservations-main-wraper #contact input:active,
+#reservations-main-wraper input:focus,
+#contact .contact-form-wraper textarea::placeholder,
+#contact .contact-form-wraper textarea::placeholder,
+#reservations form .form-input-wraper p,
+#reservations-main-wraper input,
+#reservations input[type="date"],
+#contact .contact-form-wraper textarea::placeholder,
+#about-main-wraper {
+    font-family: "League Spartan";
+    letter-spacing: 0.5px;
+}
+
+#reservations-main-wraper p,
+#reservations-review p,
+#about-main-wraper p {
+    font-size: 1.25rem;
+    line-height: 30px;
+}
+
+#reservations-review p {
+    font-family: 'Sanchez', sans-serif;
+}
+
+/**** colors ***/
+.reservations-wraper .reservation-text-wraper,
+#reservations-main-wraper button[type="submit"],
+.contact-wraper .contact-text-wraper,
+.contact-wraper .office-hours-wraper,
+header .navbar,
+header nav .nav-link,
+.footer-wraper p,
+.footer-wraper a,
+.footer-copyright p,
+.footer-wraper .names-wraper p,
+#about-main-wraper {
+    color: #ffffff;
+}
+
+
+.authors-container>p,
+.names-wraper>p,
+.reservations-wraper .reservation-form-wraper,
+#reservations-main-wraper .form-input-wraper,
+#reservations form .form-check,
+#reservations form .form-input-wraper .dropdown a,
+.contact-wraper .contact-form-wraper,
+#contact .contact-form-wraper textarea,
+#contact .contact-form-wraper textarea::placeholder,
+#about-main-wraper {
+    color: #111111;
+}
+
+.reservations-wraper .reservation-form-wraper,
+.contact-wraper .contact-form-wraper,
+#reservations-main-wraper button[type="submit"]:hover,
+#reservations form .form-input-wraper .dropdown a {
+    background-color: #ffffff;
+}
+
+#contact .contact-wraper,
+.footer-wraper {
+    background-color: #111111;
+}
+
+/*** buttons and links */
+#reservations-main-wraper button[type="submit"] {
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    background-color: #111111;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+#reservations-main-wraper button[type="submit"]:hover {
+    border: solid 1px #111111;
+    transition: 0.5s;
+    color: #111111;
+    cursor: url("../images/pointer.png"), auto;
+}
+
+#reservations-main-wraper button[type="submit"]:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/*** containers shadow*/
+/* https://cssgenerator.org/box-shadow-css-generator.html */
+.reservations-wraper .reservation-form-wraper {
+    box-shadow: 16px 18px 46px -13px rgba(0, 0, 0, 0.21);
+    -webkit-box-shadow: 16px 18px 46px -13px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 16px 18px 46px -13px rgba(0, 0, 0, 0.21);
+}
+
+#reservations input[type="date"]::-webkit-calendar-picker-indicator:hover,
+#timePicker:hover,
+input[type="checkbox"]:hover,
+#reservations form .form-input-wraper .time-slot-wraper p:hover,
+#footer #footer-facebook-icon:hover,
+#footer #footer-insta-icon:hover,
+#footer #footer-x-icon:hover,
+#footer #modal-facebook-icon:hover,
+#footer #modal-insta-icon:hover,
+#footer #modal-x-icon:hover,
+#logo-footer:hover,
+header nav .navbar-brand:hover {
+    cursor: url("../images/pointer.png"), auto;
+}
+
+/******* shared form inputs ***/
+input[type="checkbox"]:focus,
+select,
+input[type="date"]:focus,
+#reservations-main-wraper .form-input-wraper>input:focus,
+#contact-number-wraper input:focus,
+input[type="checkbox"],
+input[type="checkbox"]:checked {
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: #111111;
+    opacity: 0.8;
+    background-color: #ffffff;
+}
+
+#reservations-main-wraper .form-input-wraper {
+    margin: 20px auto;
+    padding-right: 0;
+}
+
+#reservations-main-wraper form .form-input-wraper .col {
+    padding-left: 0;
+}
+
+#contact .form-input-wraper {
+    margin: 23px auto;
+}
+
+#reservations-review .double-gold-line-holder {
+    width: 100%;
+    height: 2px;
+    background-image: url("../images/double-gold-line.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#reservations-review .rh-decorator-holder {
+    width: 50%;
+    height: 50px;
+    background-image: url("../images/rh.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/****
+* Home page stylings
+*
+* @author Heloise Lui 
+**/
+
+/************** MAIN **************/
+.homepage-heading {
+    width: 100%;
+    position: absolute;
+    top: 180px;
+    background-color: transparent;
+    word-break: break-all;
+}
+
+.homepage-heading .heading-container {
+    margin: 50px auto;
+    text-align: center;
+    max-width: 1300px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+.homepage-heading .heading-container .header-content {
+    /* margin: 0 auto; */
+    color: #ffffff;
+    width: 720px;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 400;
+    text-align: left;
+}
+
+section .container .service {
+    margin: 0 auto;
+}
+
+.section5 {
+    height: 1200px;
+}
+
+.section2,
+.section3 {
+    background-color: #ffffff;
+    font-family: 'League Spartan', sans-serif;
+    padding: 40px;
+    min-height: fit-content;
+    height: 1200px;
+}
+
+.section2 img,
+.section3 img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 10px 8px #0000001a;
+}
+
+section .container .service {
+    margin: 0 auto;
+    height: 500px;
+}
+
+
+/* .section5 img {
+    width: 100%;
+} */
+
+
+/* Estilizando o h3 */
+.section2 h3,
+.section3 h3 {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+/* Estilizando o p */
+.section2 p,
+.section3 p {
+    font-size: 1.25rem;
+}
+
+.section5 p {
+    font-family: 'League Spartan';
+    font-size: 1.3rem;
+    margin: 170px 10px;
+}
+
+.header-content h1 {
+    font-size: 4rem;
+    font-weight: 400;
+    font-family: 'League Spartan';
+    letter-spacing: -1px;
+}
+
+.header-content p {
+    font-size: 1.3rem;
+    font-family: 'League Spartan';
+    word-break: keep-all;
+    width: 500px;
+}
+
+.container-image {
+    text-align: center;
+    background-color: #111111;
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-family: 'Sanchez', serif;
+    font-weight: 400;
+    padding: 230px;
+
+}
+
+.text-signature {
+    font-size: 1.4rem;
+    text-align: right;
+    margin-right: 35px;
+}
+
+.section4 p {
+    width: 700px;
+    margin: 0 auto;
+    font-size: 1.6rem;
+}
+
+.container-image .quotation-marks-left,
+.quotation-marks-right {
+    margin-right: 10px;
+}
+
+.section5 {
+    padding: 80px;
+}
+
+.buttons button {
+    background-color: transparent;
+    color: #333;
+    font-size: 1.125rem;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 245px;
+    height: 64px;
+}
+
+.row h3 {
+    text-align: center;
+    color: #242B37;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 5rem;
+    font-weight: 400;
+    letter-spacing: -1px;
+    margin-bottom: 40px;
+}
+
+.reservation-footer {
+    background-image: url('./assets/images/sipem-space.png');
+    background-size: cover;
+    background-position: center;
+    padding: 70px 80px;
+    position: relative;
+    color: #fff;
+}
+
+.reservation-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.reservation-footer .container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 50px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.reservation-footer .container .row .col {
+    margin: 0 auto;
+}
+
+.reservation-heading {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.btn-homepage {
+    font-family: 'League Spartan', sans-serif;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 15px 70px;
+    font-size: 1rem;
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+    letter-spacing: 2.5px;
+}
+
+.reservation-footer button {
+    width: 320px;
+    margin: 0 auto;
+}
+
+.btn-homepage:hover {
+    background-color: #ffffff;
+    color: #333;
+    text-decoration: none;
+}
+
+/* #sipemCarousel button {
+    background-color: #9E7F66;
+} */
+
+#sipemCarousel img {
+    background-color: #ffffff;
+}
+
+/****
+* Upcoming page stylings
+*
+* @author Heloise Lui 
+**/
+.upcoming-events {
+    background-color: #ffffff;
+    font-family: 'League Spartan', sans-serif;
+    text-align: center;
+}
+
+.upcoming-events h1 {
+    font-size: 4rem;
+    color: #242B37;
+    margin: 70px 0;
+}
+
+.events {
+    margin: 0 auto;
+
+}
+
+.event {
+    padding: 20px;
+}
+
+
+section .container .service .col {
+    margin: 0 auto;
+}
+
+.upcoming-events .event {
+    margin-bottom: 40px;
+}
+
+.event img {
+    width: 350px;
+    height: 300px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 50px -12px #333;
+}
+
+.upcoming-events .event h2 {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #242B37;
+}
+
+.upcoming-events .event p {
+    font-size: 1.3rem;
+    color: #242B37;
+    margin-bottom: 40px;
+
+}
+
+.upcoming-events .event .event-time {
+    color: #111111;
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+.upcoming-events img:hover,
+.newsletter button[type="submit"]:hover {
+    cursor: url("../images/pointer.png"), auto;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 50px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Newsletter Section */
+.newsletter {
+    color: #242B37;
+    padding: 60px 0;
+    font-family: 'League Spartan', sans-serif;
+    text-align: center;
+}
+
+.newsletter h2 {
+    font-size: 2.5rem;
+    font-family: 'League Spartan';
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.newsletter p {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+}
+
+.newsletter input[type="email"] {
+    padding: 12px;
+    margin-right: 3px;
+    border: none;
+    border-radius: 0;
+    background-color: rgba(217, 217, 217, 0.36);
+    width: 344px;
+    height: 40px;
+}
+
+.newsletter button {
+    background-color: #111111;
+    font-size: 1rem;
+    color: #FFFFFF;
+    text-align: center;
+    width: 108px;
+    height: 40px;
+    border: none;
+    letter-spacing: 2.5px;
+}
+
+.newsletter button:hover {
+    background-color: #FFFFFF;
+    border: 1px solid #111111;
+    color: #111111;
+}
+
+.reservation-footer {
+    background-image: url("../images/call-action-img.webp");
+    background-size: cover;
+    background-position: center;
+    padding: 70px 80px;
+    position: relative;
+    color: #fff;
+}
+
+.reservation-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.reservation-footer .container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+}
+
+.reservation-heading {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.btn-footer {
+    font-family: 'League Spartan', sans-serif;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 15px 35px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-footer:hover {
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+}
+
+
+
+
+
+/* Signature page stylings Sections 
+**
+**@author Bence Pillips*/
+
+
+/* Style for Cocktail Overview */
+.cocktail-overview {
+    padding-top: 50px;
+}
+
+.cocktail-overview h1,
+.cocktail-section h1 {
+    font-family: 'Spartan League', sans-serif;
+}
+
+/* Style for cocktail section */
+.cocktail-section {
+    padding: 50px 0;
+}
+
+.cocktail-overview p,
+.cocktail-section P {
+    font-family: 'Sanchez', serif;
+}
+
+/* Style for cocktail image*/
+.cocktail-section img {
+    max-width: 100%;
+    max-height: 750px;
+    width: auto;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Style for cocktail images when clicked */
+.clickedCocktail {
+    transition: transform 0.2s ease-in-out;
+}
+
+.transformed-size {
+    transform: scale(1.05);
+}
+
+/* Style for cocktail info */
+.cocktail-info {
+    padding: 20px;
+}
+
+.cocktail-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.cocktail-info p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* CSS for Minigame */
+#minigame-section {
+    padding: 50px;
+}
+
+#minigame {
+    background-size: cover;
+    text-align: center;
+}
+
+#board {
+    max-width: 45%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(112, 47, 47);
+    border: 10px solid rgb(163, 161, 161);
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.card {
+    margin: 5px;
+    border: none;
+}
+
+#board .card {
+    margin: 5px;
+    border: none;
+    background-color: #111111;
+    zoom: 1.1;
+
+}
+
+.card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+
+/* Inside page stylings 
+**
+**@author Bence Pillips*/
+
+.gallery-page .container {
+    width: calc(100% - 40px);
+    columns: 3;
+}
+
+.gallery-page {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.2s linear;
+}
+
+.gallery-page .container {
+    padding: 2rem 5%;
+    gap: 1.4rem;
+}
+
+.container .gallery {
+    columns: 15rem 3;
+}
+
+.container .gallery img {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 0.7rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container .gallery img:hover {
+    transform: scale(1.02);
+}
+
+
+/*************************** Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    /****
+* Navbar, Footer & Modal menu stylings for desktop
+* @author Javier Bastande 
+**/
+    header .navbar {
+        max-width: 1300px;
+    }
+
+    header nav .navbar-brand {
+        min-height: 175px;
+        max-height: 180px;
+        min-width: 150px;
+        max-width: 150px;
+    }
+
+    nav .nav-item {
+        padding: 0 10px;
+    }
+
+    nav .nav-link {
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+
+    header nav .show ul:last-child {
+        padding-bottom: 20px;
+    }
+
+    header .rectangle {
+        min-width: 37%;
+    }
+
+    #about-header,
+    #signature-header,
+    #upcoming-header,
+    #inside-header {
+        height: 200px;
+        position: relative;
+    }
+
+    /**************** FOOTER SECTION ****/
+    .footer-wraper {
+        min-height: 260px;
+        min-width: 100%;
+        background-color: #111111;
+
+    }
+
+    .footer-wraper .container-fluid {
+        max-width: 1350px;
+        padding: 40px 0px;
+        justify-content: space-evenly;
+        text-align: start;
+    }
+
+    #logo-footer {
+        min-height: 175px;
+        max-height: 180px;
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .footer-wraper .address-wraper,
+    .footer-wraper .availability-wraper {
+        margin-top: 50px;
+    }
+
+    .footer-wraper .social-wraper {
+        text-align: left;
+        margin-top: 80px;
+        padding-right: 100px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #footer #footer-facebook-icon {
+        height: 30px;
+        width: 30px;
+    }
+
+    #footer #footer-x-icon {
+        height: 32px;
+        width: 32px;
+    }
+
+    .footer-wraper #footer-insta-icon {
+        height: 39px;
+        width: 39px;
+        position: relative;
+        bottom: 2px;
+    }
+
+    .footer-wraper p {
+        margin: 10px 6px;
+        font-size: 0.9rem;
+    }
+
+    .footer-copyright {
+        text-align: center;
+        padding-top: 40px;
+        font-size: 0.6rem;
+    }
+
+    .footer-copyright p {
+        font-size: 0.6rem;
+    }
+
+    .authors-container .names-wraper {
+        max-width: 1300px;
+
+    }
+
+    /****
+* About page stylings for Desktop
+* @author Javier Bastande 
+**/
+
+    #about-main-wraper {
+        position: relative;
+    }
+
+    /********* story section**/
+    #story #story-decorator {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #story-decorator .decorator,
+    #alex-decorator .decorator {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #story .decorator img:first-child {
+        height: 240px;
+        width: 47%;
+        z-index: -1;
+    }
+
+    #story .decorator img:last-child {
+        max-height: 80px;
+        width: 400px;
+        max-width: 250px;
+        position: relative;
+        z-index: 1;
+        top: 180px;
+        right: 300px;
+        height: 110px;
+    }
+
+    .story-wraper h1 {
+        font-size: 3rem;
+        margin-bottom: 0;
+    }
+
+    small {
+        margin-bottom: 20px;
+    }
+
+    #story .story-wraper,
+    #john .john-wraper,
+    #alex .alex-wraper {
+        min-height: 600px;
+        width: 100%;
+    }
+
+    #story .story-wraper .story-container,
+    #john .john-wraper .john-container,
+    #alex .alex-wraper .alex-container {
+        margin: 0 auto;
+        width: 1300px;
+        max-width: 100%;
+        padding: 200px 60px 100px;
+    }
+
+    #story #story-img-wraper {
+        min-height: 600px;
+    }
+
+    #story .about-desc-wraper p {
+        margin-top: 30px;
+    }
+
+    #story .about-desc-wraper,
+    #john .john-desc-wraper,
+    #alex .alex-desc-wraper {
+        padding: 70px;
+        font-size: 1.1rem;
+    }
+
+    #john #about-heading {
+        text-align: center;
+        font-size: 3.2rem;
+    }
+
+    /********* john section**/
+    #john .pin-holder {
+        background-image: url("../images/pin.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 10%;
+        height: 30px;
+    }
+
+    .pin-separator {
+        display: flex;
+        flex-direction: row;
+        width: 400px;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .pin-separator .gold-circle {
+        width: 5px;
+        height: 5px;
+        border: solid 2px #9E7F66;
+        border-radius: 50px;
+    }
+
+    .pin-separator .gold-line {
+        width: 60px;
+        height: 1px;
+        background-color: #9E7F66;
+        border-radius: 5px;
+        margin-left: 7px;
+    }
+
+    #john .john-wraper {
+        background-color: #111111;
+        color: #ffffff;
+        padding-bottom: 60px;
+    }
+
+    #john .john-wraper #john-img-wraper {
+        min-height: 520px;
+    }
+
+    /********* alex section**/
+    #alex #alex-decorator {
+        position: absolute;
+        right: 0;
+        padding-top: 200px;
+    }
+
+    #alex #alex-decorator .decorator {
+        margin: 0 auto;
+    }
+
+    #alex-decorator .decorator img:last-child {
+        height: 440px;
+        z-index: -2;
+        padding-top: 100px;
+        position: absolute;
+        right: 0;
+    }
+
+    #alex-decorator .decorator img:first-child {
+        max-height: 80px;
+        width: 200px;
+        max-width: 250px;
+        position: relative;
+        z-index: 1;
+        top: 130px;
+        height: 110px;
+    }
+
+    #alex .alex-wraper {
+        color: #111111;
+        padding-bottom: 60px;
+    }
+
+    #alex .alex-desc-wraper {
+        padding-top: 30px;
+        padding-right: 70px;
+    }
+
+    #alex .alex-wraper #alex-img-wraper {
+        min-height: 520px;
+    }
+
+    .call-action-wraper .call-action-container {
+        height: inherit;
+    }
+
+
+    /******call to action ****/
+    .call-action-wraper {
+        height: 200px;
+    }
+
+    .call-action-wraper a {
+        padding-top: 20px;
+
+    }
+
+    /****
+* Reservations page stylings for desktop
+* @author Javier Bastande 
+**/
+
+    /*********** RESERVATIONS SECTION */
+    .reservations-wraper {
+        width: 100%;
+        position: absolute;
+        top: 300px;
+        z-index: 1;
+    }
+
+    .reservations-wraper .reservations-container {
+        width: 1300px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .reservations-wraper .reservation-text-wraper {
+        min-height: 400px;
+        max-width: none;
+        padding: 40px 50px;
+        background-color: transparent;
+    }
+
+    .reservations-wraper .reservation-form-wraper,
+    .contact-wraper .contact-form-wraper {
+        padding: 50px 50px;
+    }
+
+
+    #reservations-main-wraper .reservation-form-wraper .reservation-form-container>#reservation-form .row {
+        margin: 0 auto;
+    }
+
+    #reservations-main-wraper .reservation-form-wraper .reservation-form-container>#reservation-form .row .form-input-wraper .row {
+        width: 100%;
+    }
+
+    /*** BOOKING FORM*/
+    #reservations form .form-input-wraper p {
+        font-size: 1.25rem;
+        padding-top: 10px;
+    }
+
+    #reservations-main-wraper input,
+    #reservations input[type="date"] {
+        background-color: inherit;
+        width: 100%;
+        font-size: 1.25rem;
+        letter-spacing: 1.5px;
+        padding-left: 10px;
+        border: none;
+        text-align: start;
+    }
+
+    #reservations input[type="date"] {
+        text-align: center;
+        margin-left: 15px;
+    }
+
+    #datePicker-input {
+        padding-right: 0;
+    }
+
+    #reservations-main-wraper input:focus {
+        font-size: 1.25rem;
+        letter-spacing: 0.5px;
+        opacity: 0.7;
+        border: none;
+    }
+
+    #reservations-main-wraper input:active,
+    #reservations-main-wraper #contact input:active {
+        letter-spacing: 0.5px;
+        font-size: 1.25rem;
+        border: none;
+        box-shadow: none;
+    }
+
+    #reservations-main-wraper .inputBaseLine {
+        width: 100%;
+        min-height: 2px;
+        background-color: #9E7F66;
+    }
+
+    #contact-number-wraper {
+        padding: 0;
+    }
+
+    #reservations .booking-form-wraper .contact-number-wraper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #reservations form .form-check-wraper {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #reservations form .form-check {
+        margin-top: 30px;
+        font-size: 16px;
+        opacity: 0.9;
+    }
+
+    #reservations input[type="checkbox"] {
+        height: 20px;
+        width: 20px;
+        margin: 0 10px 0 10px;
+        border: solid 1px #9E7F66;
+    }
+
+    #reservations input[type="checkbox"]:checked {
+        background-color: #9E7F66;
+    }
+
+    #reservations-main-wraper button[type="submit"] {
+        margin: 30px auto;
+        height: 65px;
+        font-size: 1.25rem;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        width: 93%;
+        background-color: #111111;
+        text-transform: uppercase;
+        transition: 0.5s;
+    }
+
+
+
+    /*  Remove default arrows on input type=number */
+    /*  Code taken from next link */
+    /* https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+        -moz-appearance: textfield;
+    }
+
+
+    /**** DAY PICKER */
+
+    /* Took this code "::-webkit-datetime-edit" from the below link to override default date input placeholder color */
+    /* https://stackoverflow.com/questions/31706433/how-can-i-change-the-text-color-of-chromes-input-date-placeholder */
+    #reservations input[type="date"]::-webkit-datetime-edit {
+        color: #111111;
+        opacity: 0.7;
+        font-size: 1.063rem;
+        ;
+        cursor: url("../images/pointer.png"), auto;
+    }
+
+
+
+    /* Took this code "::-webkit-calendar-picker-indicator {filter: invert(0.5);}"
+ from the below link to override default date indicator color */
+    /* https://stackoverflow.com/questions/31706433/how-can-i-change-the-text-color-of-chromes-input-date-placeholder */
+    #reservations input[type="date"]::-webkit-calendar-picker-indicator {
+        filter: invert(0.5);
+        font-size: 1.125rem;
+    }
+
+
+    /**** TIME PICKER */
+
+    #reservations form .form-input-wraper .dropdown {
+        text-align: center;
+        margin-left: 11px;
+    }
+
+    #reservations form .form-input-wraper .dropdown a {
+        font-size: 1.125rem;
+        opacity: 0.7;
+        border: none;
+        padding: 0;
+    }
+
+    #reservations form .form-input-wraper .time-slot-wraper {
+        display: flex;
+        flex-direction: row;
+        margin-right: 35px;
+        padding: 10px 0;
+    }
+
+    #reservations form .form-input-wraper .time-slot-wraper p {
+        margin: 0;
+        padding: 5px;
+        font-size: 1.25rem;
+    }
+
+    #reservations form .form-input-wraper .time-slot-wraper p:hover {
+        background-color: rgb(244, 230, 203);
+        border-radius: 5px;
+    }
+
+    #reservations .form .form-input-wraper .dropdown-menu {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #reservations .form .form-input-wraper .dropdown-menu>.row {
+        margin: 0 auto;
+        padding: 10px 0;
+
+    }
+
+    #reservations #contact-number-wraper .form-input-wraper {
+        margin: 5px auto;
+    }
+
+    #reservations #contact-number-wraper select {
+        max-width: 120%;
+        border: none;
+        font-size: 1.125rem;
+        margin: 4px auto;
+    }
+
+    #reservations #contact-number-wraper #prefix-wraper {
+        text-align: center;
+
+    }
+
+    /***** remove arrow on dropdown element ****/
+    /**
+* Took the code lines from the below link
+/* https://stackoverflow.com/questions/16603979/how-to-remove-the-default-arrow-icon-from-a-dropdown-list-select-element 
+*/
+    form .form-input-wraper select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+
+
+    /***** Override autofill default style behavoir ****/
+    /**
+* Took the code lines from the below link
+/* https://stackoverflow.com/questions/2338102/override-browser-form-filling-and-input-highlighting-with-html-css 
+*/
+    input:-webkit-autofill,
+    #contact input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 50px #333333 inset;
+        /* Change the color to your own background color */
+        -webkit-text-fill-color: #FFFFF0;
+        -webkit-text-fill-backgorund-color: #FFFFF0;
+        -webkit-text-fill-font-size: 0.813rem;
+    }
+
+    #reservations input:-webkit-autofill:focus,
+    #contact input:-webkit-autofill:focus {
+        -webkit-box-shadow: 0 0 0 50px #ffffff inset;
+        /*your box-shadow*/
+        -webkit-text-fill-backgorund-color: #FFFFF0;
+        -webkit-text-fill-color: #111111;
+        -webkit-text-fill-font-size: 1.125rem;
+    }
+
+    /******* RESERVATION SECTIONS SEPARATOR  */
+    #reservations-section-separator {
+        width: 100%;
+        padding-bottom: 150px;
+    }
+
+    #reservations-section-separator .separator-container {
+        height: 400px;
+        min-width: 70%;
+        max-width: 900px;
+        display: flex;
+    }
+
+    #reservations-section-separator .separator-container img:first-child {
+        width: 100%;
+    }
+
+    #reservations-section-separator .separator-container img:last-child {
+        padding-bottom: 280px;
+        height: auto;
+        width: 8000px;
+        width: 100%;
+        position: relative;
+        top: 340px;
+        right: 480px;
+    }
+
+    /******* CONTACT SECTION*/
+    .contact-wraper {
+        position: relative;
+        min-height: fit-content;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .contact-wraper .contact-container {
+        min-height: fit-content;
+        max-height: 100%;
+        width: 1300px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 7% 5%;
+    }
+
+    .contact-wraper .contact-container p {
+        margin: 3px auto;
+    }
+
+    .contact-wraper .contact-text-wraper {
+        min-height: 400px;
+        max-height: 400px;
+        max-width: none;
+        padding: 100px 0px 0px 30px;
+        background-color: transparent;
+    }
+
+    .contact-wraper .contact-form-wraper {
+        padding: 40px 50px;
+        box-shadow: 16px 18px 46px -13px rgba(0, 0, 0, 0.21);
+        -webkit-box-shadow: 16px 18px 46px -13px rgba(0, 0, 0, 0.21);
+        -moz-box-shadow: 16px 18px 46px -13px rgba(0, 0, 0, 0.21);
+
+    }
+
+    .contact-wraper .office-hours-wraper {
+        margin-top: 25px;
+    }
+
+    #contact .contact-wraper .office-hours-wraper p {
+        font-size: 1rem;
+    }
+
+    /************** CONTACT FORM */
+    #contact .contact-form-wraper textarea {
+        margin: 50px 5px 0 5px;
+        font-size: 1.25rem;
+        text-align: left;
+        padding: 15px;
+        width: 99%;
+    }
+
+    #contact .contact-form-wraper textarea::placeholder {
+        font-size: 1.125rem;
+        text-align: left;
+    }
+
+    #contact .contact-form-wraper textarea:active {
+        text-align: left;
+    }
+
+    /************* REVIEW SECTION**/
+    #reservations-review {
+        width: 100%;
+        min-height: 450px;
+        background-color: #ffffff;
+    }
+
+    #reservations-review #review-wraper {
+        width: 100%;
+    }
+
+    #reservations-review .review-container {
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+
+    #reservations-review .double-line-decorator-wraper {
+        margin: 250px auto 0px;
+        width: 80%;
+        max-width: 620px;
+    }
+
+    #reservations-review .rh-decorator-wraper {
+        margin: 0 auto 250px;
+        width: 80%;
+        max-width: 420px;
+    }
+
+    #reservations-review .rh-decorator-holder {
+        width: 100%;
+        height: 40px;
+    }
+
+    #reservations-review .review-container .text-wraper {
+        margin: 150px auto;
+        padding: 30px;
+        width: 950px;
+    }
+
+    #reservations-review p {
+        font-size: 1.575rem;
+        letter-spacing: 0.5px;
+        line-height: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-bottom: 0;
+    }
+
+
+    /****
+* Upcoming page stylings for desktop screens
+*
+* @author Heloise Lui 
+**/
+
+    .upcoming-events {
+        background-color: #ffffff;
+        font-family: 'League Spartan', sans-serif;
+        text-align: center;
+    }
+
+    .upcoming-events h1 {
+        font-size: 4rem;
+        color: #242B37;
+        margin: 70px 0;
+
+    }
+
+    .events {
+        display: flex;
+
+    }
+
+    .event {
+        padding: 20px;
+    }
+
+    .upcoming-events .event {
+        margin-bottom: 40px;
+    }
+
+    .event img {
+        width: 350px;
+        height: 300px;
+        margin-bottom: 40px;
+        box-shadow: 0 10px 50px -12px #333;
+    }
+
+    .upcoming-events .event h2 {
+        font-weight: bold;
+        font-size: 2rem;
+        color: #242B37;
+    }
+
+    .upcoming-events .event p {
+        font-size: 1.3rem;
+        color: #242B37;
+        margin-bottom: 40px;
+
+    }
+
+    .upcoming-events .event .event-time {
+        color: #111111;
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+
+
+
+    /* Newsletter Section */
+    .newsletter {
+        color: #242B37;
+        padding: 60px 0;
+        font-family: 'League Spartan', sans-serif;
+        text-align: center;
+    }
+
+    .newsletter h2 {
+        font-size: 2.5rem;
+        font-family: 'League Spartan';
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .newsletter p {
+        font-size: 1.25rem;
+        margin-bottom: 40px;
+    }
+
+    .newsletter input[type="email"] {
+        padding: 12px;
+        margin-right: 3px;
+        border: none;
+        border-radius: 0;
+        background-color: rgba(217, 217, 217, 0.36);
+        width: 344px;
+        height: 40px;
+    }
+
+    .newsletter button {
+        background-color: #111111;
+        font-size: 1rem;
+        color: #FFFFFF;
+        text-align: center;
+        width: 108px;
+        height: 40px;
+        border: none;
+        letter-spacing: 2.5px;
+    }
+
+    .newsletter button:hover {
+        background-color: #FFFFFF;
+        border: 1px solid #111111;
+        color: #111111;
+    }
+
+
+    .reservation-footer {
+        background-image: url('../images/call-action-img.webp');
+        background-size: cover;
+        background-position: center;
+        padding: 70px 80px;
+        position: relative;
+        color: #fff;
+        text-align: center;
+    }
+
+    .reservation-footer::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+
+    .reservation-footer .container {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .reservation-heading {
+        font-family: 'League Spartan', sans-serif;
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: left;
+        align-items: center;
+    }
+
+    .btn-footer {
+        font-family: 'League Spartan', sans-serif;
+        background-color: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        padding: 15px 35px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        transition: all 0.3s ease-in-out;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .btn-footer:hover {
+        background-color: #fff;
+        color: #333;
+        text-decoration: none;
+    }
+
+
+}
+
+
+/********************************************* TABLET SCREEN SIZE *****/
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 990px) and (min-width:590px) {
+
+    /****
+* Navbar, Footer & Modal menu stylings for Tablet screen
+* @author Javier Bastande 
+**/
+    /************** NAVBAR */
+    header .navbar {
+        background-color: transparent;
+        margin: 0 auto;
+        z-index: 2;
+        padding: 0 20px;
+    }
+
+    header nav .navbar-brand {
+        height: 125px;
+        max-height: 125px;
+        width: 170px;
+        max-width: 170px;
+    }
+
+    header .rectangle {
+        min-width: 30%;
+    }
+
+    header nav .show {
+        width: 20px;
+    }
+
+    header nav #navbarSupportedContent {
+        background-color: #111111;
+    }
+
+    nav .nav-link {
+        font-size: 0.9rem;
+        text-align: center;
+        position: relative;
+    }
+
+    header nav .show ul:last-child {
+        padding-bottom: 18px;
+    }
+
+    #about-header,
+    #signature-header,
+    #upcoming-header,
+    #inside-header {
+        height: 150px;
+        position: relative;
+    }
+
+    /********** MODAL MENU */
+    #navbar-modal {
+        position: fixed;
+        top: 0;
+        min-height: 100vh;
+        width: 71%;
+        background-color: #111111;
+        color: #ffffff;
+        z-index: 3;
+        margin: 0 auto;
+    }
+
+    #navbar-modal .modal-container {
+        justify-content: space-around;
+        height: 100vh;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    #navbar-modal .modal-container .modal-menu-holder {
+        height: 80%;
+    }
+
+    #navbar-modal .modal-container ul {
+        height: 100%;
+        justify-content: space-evenly;
+    }
+
+    #navbar-modal .modal-container ul li {
+        margin: 0 auto;
+    }
+
+    #navbar-modal .modal-container .nav-link {
+        font-size: 1.2rem;
+    }
+
+    #navbar-modal .modal-social-wraper a {
+        margin: auto 7px;
+        text-decoration: none;
+    }
+
+    #close-icon {
+        margin-top: 15px;
+        margin-right: 5px;
+        font-size: 1.7rem;
+    }
+
+    #navbar-modal .modal-social-wraper #modal-facebook-icon {
+        height: 27px;
+        width: 27px;
+    }
+
+    #navbar-modal .modal-social-wraper #modal-insta-icon {
+        height: 36px;
+        width: 36px;
+    }
+
+    #navbar-modal .modal-social-wraper #modal-x-icon {
+        height: 27px;
+        width: 27px;
+    }
+
+
+    /************** FOOTER SECTION ***********/
+    .footer-wraper {
+        min-height: 460px;
+        padding: 60px 0px 0px;
+    }
+
+    .footer-wraper .container-fluid {
+        text-align: center;
+    }
+
+    #footer .container-fluid .col {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+
+    }
+
+    #footer .container-fluid .row {
+        height: 200px;
+        max-height: 250px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #footer .container-fluid p {
+        margin: 5px;
+    }
+
+    #footer #logo-footer {
+        height: 150px;
+        max-width: 80%;
+        margin-left: 50px;
+    }
+
+    .footer-wraper .availability-wraper,
+    .footer-wraper .address-wraper,
+    .footer-wraper .social-wraper {
+        margin-top: 35px;
+    }
+
+    .footer-wraper .availability-wraper,
+    .footer-wraper .address-wraper {
+        text-align: left;
+        width: fit-content;
+        padding-left: 25%;
+    }
+
+    .footer-wraper .social-wraper {
+        margin-top: 50px;
+    }
+
+    #footer #footer-facebook-icon,
+    #footer #footer-insta-icon,
+    #footer #footer-x-icon {
+        margin-left: 8px;
+    }
+
+    #footer #footer-facebook-icon {
+        height: 30px;
+        width: 30px;
+    }
+
+    #footer #footer-insta-icon {
+        height: 39px;
+        width: 39px;
+    }
+
+    #footer #footer-x-icon {
+        height: 28px;
+        width: 28px;
+    }
+
+    .footer-wraper p {
+        margin: 6px;
+        font-size: 0.9rem;
+    }
+
+    #footer .footer-copyright {
+        padding: 100px 0 60px;
+    }
+
+    /****
+* About page stylings for tablet screen
+* @author Javier Bastande 
+**/
+
+    #john .name-heading,
+    #alex .name-heading {
+        font-size: 2.3rem;
+    }
+
+    /********* story section**/
+    #story-decorator .decorator,
+    #alex-decorator .decorator {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #story .decorator img:first-child {
+        height: 200px;
+        width: 40%;
+        z-index: -1;
+    }
+
+    #story .decorator img:last-child {
+        max-height: 80px;
+        width: 200px;
+        max-width: 250px;
+        position: relative;
+        z-index: 1;
+        top: 150px;
+        right: 150px;
+        height: 110px;
+    }
+
+    .story-wraper {
+        margin: 0 auto;
+    }
+
+    .story-wraper h1 {
+        font-size: 55px;
+        margin-bottom: 0;
+    }
+
+    small {
+        margin-bottom: 20px;
+    }
+
+    #story .story-wraper .story-container {
+        width: 80%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    #story #story-img-wraper {
+        width: 90%;
+        background-image: url("../images/about-simpem-img.webp");
+        margin: 0 auto;
+    }
+
+    #story .about-desc-wraper {
+        margin: 30px auto 5px;
+        padding-right: 90px;
+        max-width: 700px;
+        line-height: 35px;
+        letter-spacing: 0.5px;
+    }
+
+
+    /**** john*/
+    #john #about-heading {
+        text-align: center;
+        font-size: 3.2rem;
+    }
+
+    #john .pin-holder {
+        background-image: url("../images/pin.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 10%;
+        height: 30px;
+    }
+
+    .pin-separator {
+        display: flex;
+        flex-direction: row;
+        width: 400px;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .pin-separator .gold-circle {
+        width: 5px;
+        height: 5px;
+        border: solid 2px #9E7F66;
+        border-radius: 50px;
+    }
+
+    .pin-separator .gold-line {
+        width: 60px;
+        height: 1px;
+        background-color: #9E7F66;
+        border-radius: 5px;
+        margin-left: 7px;
+    }
+
+    #john .john-wraper {
+        background-color: #111111;
+        color: #ffffff;
+        padding-bottom: 60px;
+        width: 100%;
+
+    }
+
+    #john .john-wraper .john-container {
+        padding: 100px 20px;
+        max-width: 600px;
+        margin: 0 auto;
+
+    }
+
+    #john .john-desc-wraper {
+        padding-right: 90px;
+        max-width: 700px;
+        line-height: 35px;
+        letter-spacing: 0.5px;
+
+    }
+
+    #john .john-wraper #john-img-wraper {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    /********* alex section**/
+    #alex #alex-decorator {
+        position: absolute;
+        width: 100%;
+        margin: 0 auto;
+
+    }
+
+    #alex #alex-decorator .decorator {
+        margin: 0 auto;
+        width: 100%;
+
+    }
+
+    #alex-decorator .decorator img:last-child {
+        height: 340px;
+        width: 100%;
+        z-index: -2;
+        padding-top: 100px;
+        position: absolute;
+        right: 0;
+        top: 650px;
+        width: 70%;
+
+    }
+
+    #alex-decorator .decorator img:first-child {
+        max-height: 80px;
+        width: 200px;
+        max-width: 250px;
+        position: absolute;
+        z-index: 1;
+        top: 750px;
+        right: 0;
+        height: 110px;
+    }
+
+    #alex .alex-wraper {
+        width: 100%;
+    }
+
+    #alex .alex-wraper .alex-container {
+        width: 100%;
+        width: 600px;
+        margin: 0 auto;
+        color: #111111;
+        padding-top: 50px;
+        padding-bottom: 200px;
+    }
+
+    #alex .alex-desc-wraper {
+        max-width: 700px;
+        padding: 100px 70px;
+        margin: 0 auto;
+        letter-spacing: 0.5px;
+        line-height: 35px;
+    }
+
+    #alex .alex-wraper #alex-img-wraper {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    /******call to action ****/
+    .call-action-wraper {
+        height: 170px;
+    }
+
+
+    #call-action h4 {
+        font-size: 2rem;
+        letter-spacing: 0.5px;
+    }
+
+    .call-action-wraper .call-action-container .row {
+        margin-top: 40px;
+        max-width: 700px;
+    }
+
+    .call-action-wraper .call-action-img-holder {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        min-height: 202px;
+        max-height: 270px;
+    }
+
+    .call-action-wraper a {
+        height: 2.5rem;
+        font-size: 20px;
+        font-weight: 500;
+        margin-top: 20px;
+        padding-top: 8px;
+        letter-spacing: 1.5px;
+        color: #ffffff;
+        border: solid 1px #ffffff;
+        border-radius: 0;
+        width: 40%;
+        background-color: transparent;
+        text-transform: uppercase;
+        transition: 0.5s;
+    }
+
+    /****
+* Reservations page stylings for tablet screen
+* @author Javier Bastande 
+**/
+
+
+    /******** RESERVATION SECTION */
+    .reservations-wraper {
+        width: 100%;
+        position: absolute;
+        top: 200px;
+        left: 0;
+        z-index: 1;
+    }
+
+    #reservations-main-wraper h4 {
+        font-size: 2.188rem;
+    }
+
+    .reservations-wraper .reservations-container {
+        width: 80%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .reservations-wraper .reservation-text-wraper {
+        height: 300px;
+        padding: 20px 30px;
+        background-color: transparent;
+    }
+
+    .reservations-wraper .reservation-form-wraper {
+        margin: 0 auto;
+        min-height: fit-content;
+        padding: 40px 50px;
+        box-shadow: 16px 18px 46px -13px rgba(0, 0, 0, 0.21);
+        -webkit-box-shadow: 16px 18px 46px -13px rgba(0, 0, 0, 0.21);
+        -moz-box-shadow: 16px 18px 46px -13px rgba(0, 0, 0, 0.21);
+    }
+
+    /******* BOOKING FORM*/
+    #reservations form .form-input-wraper p {
+        font-size: 1.1rem;
+        padding-top: 10px;
+    }
+
+    #reservations-main-wraper input,
+    #reservations input[type="date"] {
+        background-color: inherit;
+        width: 100%;
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+        padding-left: 10px;
+        border: none;
+        text-align: start;
+    }
+
+    #reservations input[type="date"] {
+        text-align: center;
+        margin-left: 10px;
+        padding-right: 0;
+    }
+
+    #datePicker-input,
+    #timePicker-input {
+        padding-right: 0;
+    }
+
+    #reservations-main-wraper .inputBaseLine {
+        width: 100%;
+        min-height: 2px;
+        background-color: #9E7F66;
+    }
+
+    #reservations-main-wraper input::placeholder {
+        font-size: 1.1rem;
+    }
+
+    #reservations .booking-form-wraper .contact-number-wraper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #reservations form .form-check-wraper {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #reservations form .form-check {
+        margin-top: 30px;
+        font-size: 1rem;
+        opacity: 0.9;
+        padding-left: 0;
+    }
+
+    #reservations input[type="checkbox"] {
+        height: 20px;
+        width: 20px;
+        margin: 0 10px 0 10px;
+        border: solid 1px #9E7F66;
+    }
+
+    #reservations input[type="checkbox"]:checked {
+        background-color: #9E7F66;
+    }
+
+    #reservations-main-wraper button[type="submit"] {
+        margin: 30px auto;
+        height: 65px;
+        font-size: 1.25rem;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        width: 93%;
+        background-color: #111111;
+        text-transform: uppercase;
+        transition: 0.5s;
+    }
+
+    /*  Remove default arrows on input type=number */
+    /*  Code taken from next link */
+    /* https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+
+    /**** DAY PICKER */
+
+    /* Took this code "::-webkit-datetime-edit" from the below link to override default date input placeholder color */
+    /* https://stackoverflow.com/questions/31706433/how-can-i-change-the-text-color-of-chromes-input-date-placeholder */
+    #reservations input[type="date"]::-webkit-datetime-edit {
+        color: #111111;
+        opacity: 0.7;
+        font-size: 1.063rem;
+        ;
+    }
+
+    /* Took this code "::-webkit-calendar-picker-indicator {filter: invert(0.5);}"
+ from the below link to override default date indicator color */
+    /* https://stackoverflow.com/questions/31706433/how-can-i-change-the-text-color-of-chromes-input-date-placeholder */
+    #reservations input[type="date"]::-webkit-calendar-picker-indicator {
+        filter: invert(0.5);
+        font-size: 1.25rem;
+        ;
+    }
+
+    /**** TIME PICKER */
+
+    #reservations #reservation-form .form-input-wraper .dropdown {
+        text-align: center;
+        margin-left: 11px;
+    }
+
+    #reservations #reservation-form .form-input-wraper .dropdown a {
+        font-size: 1.125rem;
+        opacity: 0.7;
+        border: none;
+        padding: 0;
+    }
+
+    #reservations #reservation-form .form-input-wraper .time-slot-wraper {
+        display: flex;
+        flex-direction: row;
+        padding: 0 25px;
+        margin-right: 35px;
+    }
+
+    #reservations #reservation-form .form-input-wraper .time-slot-wraper p {
+        margin: 0;
+        padding: 5px;
+        font-size: 1.25rem;
+        ;
+    }
+
+    #reservations #reservation-form .form-input-wraper .time-slot-wraper p:hover {
+        background-color: rgb(244, 230, 203);
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    #reservations #reservation-form .form-input-wraper .dropdown-menu {
+        min-width: 140px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #reservations #reservation-form .form-input-wraper .dropdown-menu>.row {
+        margin: 0 auto;
+    }
+
+    #reservations #reservation-form #prefix-wraper {
+        text-align: center;
+    }
+
+    #reservations #contact-number-wraper select {
+        max-width: 100%;
+        border: none;
+        font-size: 1.080rem;
+        ;
+        margin: 4px auto 0;
+    }
+
+    /***** remove arrow on dropdown element ****/
+    /**
+* Took the code lines from the below link
+/* https://stackoverflow.com/questions/16603979/how-to-remove-the-default-arrow-icon-from-a-dropdown-list-select-element 
+*/
+    form .form-input-wraper select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+
+
+    /***** Override autofill default style behavoir ****/
+    /**
+* Took the code lines from the below link
+/* https://stackoverflow.com/questions/2338102/override-browser-form-filling-and-input-highlighting-with-html-css 
+*/
+    #reservations input:-webkit-autofill,
+    #contact input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 50px #333333 inset;
+        /* Change the color to your own background color */
+        -webkit-text-fill-background-color: #ffffff;
+        -webkit-text-fill-color: #FFFFF0;
+        -webkit-text-fill-font-size: 0.813rem;
+    }
+
+    #reservations input:-webkit-autofill:focus,
+    #contact input:-webkit-autofill:focus {
+        -webkit-box-shadow: 0 0 0 50px #ffffff inset;
+        /*your box-shadow*/
+        -webkit-text-fill-color: #111111;
+        -webkit-text-fill-font-size: 1.125rem;
+    }
+
+
+    /******* RESERVATION SECTIONS SEPARATOR  */
+    #reservations-section-separator {
+        width: 100%;
+        padding-bottom: 200px;
+    }
+
+    #reservations-section-separator .separator-container {
+        width: 100%;
+        display: flex;
+    }
+
+    #reservations-section-separator .separator-container {
+        height: 540px;
+    }
+
+    #reservations-section-separator .separator-container img:first-child {
+        width: 90%;
+    }
+
+    #reservations-section-separator .separator-container img:last-child {
+        width: 100%;
+        position: relative;
+        top: 480px;
+        right: 700px;
+        padding-bottom: 400px;
+    }
+
+    /******* CONTACT SECTION*/
+    .contact-wraper {
+        min-height: fit-content;
+        width: 100%;
+    }
+
+    .contact-wraper .contact-container {
+        margin: 0 auto;
+        width: 80%;
+        max-width: 600px;
+        padding: 30px 0 50px;
+    }
+
+    .contact-wraper .contact-text-wraper {
+        height: 480px;
+        padding: 90px 30px;
+        background-color: transparent;
+    }
+
+
+    .contact-wraper .contact-form-wraper {
+        margin: 50px auto;
+        padding: 40px 50px;
+    }
+
+    .contact-wraper .office-hours-wraper {
+        margin-top: 25px;
+    }
+
+    /* CONTACT FORM */
+    #contact .contact-form-wraper textarea {
+        margin: 50px 5px 0 5px;
+        width: inherit;
+        font-size: 1.25rem;
+        text-align: left;
+        padding: 15px;
+    }
+
+    #contact .contact-form-wraper textarea::placeholder {
+        font-size: 1.125rem;
+        text-align: left;
+    }
+
+
+    #contact .contact-form-wraper textarea:active {
+        text-align: left;
+    }
+
+    /************* REVIEW SECTION**/
+    #reservations-review {
+        min-height: 400px;
+    }
+
+    #reservations-review .review-wraper {
+        min-width: 100%;
+    }
+
+    #reservations-review .review-container {
+        width: 90%;
+        margin: 120px auto;
+        max-width: 650px;
+        padding: 40px;
+    }
+
+    #reservations-review .double-line-decorator-wraper {
+        margin: 50px auto 180px;
+        width: 80%;
+        max-width: 480px;
+    }
+
+    #reservations-review .rh-decorator-wraper {
+        margin: 200px auto 50px;
+        width: 80%;
+        max-width: 520px;
+    }
+
+    #reservations-review .rh-decorator-holder {
+        width: 100%;
+        height: 30px;
+    }
+
+    #reservations-review p {
+        padding: 30px 50px;
+        font-size: 1.25rem;
+        letter-spacing: 0.5px;
+        line-height: 40px;
+    }
+
+    /****
+* Home page stylings for tablet screen
+*
+* @author Heloise Lui 
+**/
+    .homepage-heading .heading-container .header-content {
+        margin: 0 auto;
+        color: #ffffff;
+        width: 600px;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .homepage-heading h1 {
+        font-size: 3.3rem;
+    }
+
+    .header-content p {
+        font-size: 1.1rem;
+        width: 80%;
+        max-width: 400px;
+        text-align: left;
+        word-break: keep-all;
+    }
+
+    .row h3 {
+        font-size: 3rem;
+        font-weight: 400;
+    }
+
+    .section5 {
+        height: 1200px;
+    }
+
+    .section2 {
+        height: 1500px;
+
+    }
+
+    .section3 {
+        height: 1600px;
+    }
+
+    .section4 .container-image {
+        height: 700px;
+        margin: 0 auto;
+        padding: 200px 0;
+    }
+
+    .section4 p {
+        width: 500px;
+        margin: 0 auto;
+        font-size: 1.4rem;
+    }
+
+    .section5 p {
+        width: 85%;
+        margin: 0 auto;
+        font-size: 1.4rem;
+        font-family: 'League Spartan';
+        font-size: 1.3rem;
+        margin: 50px auto;
+    }
+
+    .btn-homepage {
+        width: 70%;
+        margin: 15px auto 0;
+    }
+
+    .gallery-page .container {
+        columns: 2;
+    }
+
+    /* * Upcoming page stylings for tablet screen
+*
+* @author Heloise Lui 
+**/
+    .upcoming-events h1,
+    .newsletter h2,
+    .reservation-footer h2 {
+        font-size: 2rem;
+    }
+
+
+    .event h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .event p,
+    .event .event-time {
+        font-size: 1rem;
+    }
+
+    .events .row {
+        margin: 0 auto;
+    }
+
+    .event {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .reservation-footer,
+    .newsletter {
+        padding: 40px 20px;
+        text-align: center;
+
+    }
+
+
+
+    .btn-footer {
+        width: auto;
+        padding: 10px 20px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 575px) and (min-width:330px) {
+
+    /****
+* Navbar, Footer & Modal menu stylings for mobile screen
+* @author Javier Bastande 
+**/
+    /************** NAVBAR */
+
+    header .navbar {
+        padding-right: 10px;
+    }
+
+    header nav .navbar-brand {
+        height: 110px;
+        min-width: 145px;
+        max-width: 145px;
+    }
+
+    header nav #navbarSupportedContent {
+        background-color: #111111;
+    }
+
+    header #logo {
+        position: relative;
+        z-index: 4;
+    }
+
+    nav .nav-link {
+        font-size: 0.9rem;
+        text-align: center;
+        position: relative;
+    }
+
+    header nav .show ul:last-child {
+        padding-bottom: 20px;
+    }
+
+    header nav .navbar-toggler-icon {
+        color: inherit;
+    }
+
+    header .rectangle {
+        min-width: 33%;
+    }
+
+    #about-header,
+    #signature-header,
+    #upcoming-header,
+    #inside-header {
+        height: 150px;
+        position: relative;
+    }
+
+    #homepage-header {
+        height: 660px;
+
+    }
+
+    /***** modal menu */
+    #navbar-modal {
+        position: fixed;
+        top: 0;
+        right: 300px;
+        height: 100vh;
+        width: 67%;
+        background-color: #111111;
+        color: #FFFFF0;
+        z-index: 3;
+        margin: 0 auto;
+    }
+
+    #navbar-modal .modal-container {
+        text-align: center;
+        margin: 0 auto;
+        height: 100vh;
+    }
+
+    #navbar-modal .modal-container .modal-menu-holder {
+        height: 80%;
+    }
+
+    #navbar-modal .modal-container .nav-link {
+        font-size: 1.050rem;
+    }
+
+    #navbar-modal .modal-container ul {
+        height: 100%;
+        height: 100%;
+        justify-content: space-evenly;
+    }
+
+    #navbar-modal .modal-container ul li {
+        margin: 0 auto;
+    }
+
+    #navbar-modal .modal-social-wraper a {
+        margin: auto 7px;
+        text-decoration: none;
+    }
+
+    #close-icon {
+        margin-top: 5px;
+        margin-right: -10px;
+        font-size: 1.6rem;
+    }
+
+    #navbar-modal .modal-social-wraper #modal-facebook-icon {
+        height: 24px;
+        width: 24px;
+    }
+
+    #navbar-modal .modal-social-wraper #modal-insta-icon {
+        height: 33px;
+        width: 33px;
+    }
+
+    #navbar-modal .modal-social-wraper #modal-x-icon {
+        height: 26px;
+        width: 26px;
+    }
+
+    /************** FOOTER SECTION ***********/
+    .footer-wraper {
+        min-height: 460px;
+        width: 100%;
+    }
+
+    .footer-wraper .container-fluid {
+        padding: 40px 0px 0px;
+        text-align: center;
+    }
+
+    #footer .container-fluid .row {
+        margin: 0;
+        padding: 0;
+    }
+
+    #footer .container-fluid .row div {
+        margin-top: 10px;
+    }
+
+    .footer-wraper .availability-wraper,
+    .footer-wraper .address-wraper {
+        text-align: left;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .footer-wraper .address-wraper {
+        position: relative;
+        right: 20px;
+    }
+
+    .footer-wraper .availability-wraper {
+        position: relative;
+        left: 20px;
+    }
+
+    #footer .footer-logo-wraper {
+        padding-left: 20px;
+    }
+
+    #footer #logo-footer {
+        margin: 0 auto;
+        height: 150px;
+        width: 80%;
+        max-width: 400px;
+    }
+
+    .footer-wraper .social-wraper {
+        margin-top: 30px;
+    }
+
+    .footer-wraper #footer-facebook-icon {
+        height: 24px;
+        width: 24px;
+        margin-left: 8px;
+    }
+
+    .footer-wraper #footer-x-icon {
+        height: 26px;
+        width: 26px;
+        margin-left: 8px;
+    }
+
+    .footer-wraper #footer-insta-icon {
+        height: 35px;
+        width: 35px;
+        margin-left: 8px;
+    }
+
+    .footer-wraper .container-fluid .col {
+        text-align: center;
+    }
+
+    .footer-wraper a {
+        text-decoration: none;
+    }
+
+    #footer .footer-wraper .row p,
+    #footer .footer-wraper .address-wraper p {
+        margin: 6px;
+        font-size: 0.9rem;
+    }
+
+    #footer .footer-copyright {
+        width: 100%;
+        background-color: #111111;
+        text-align: center;
+        padding: 40px 0;
+        margin: 0;
+    }
+
+    .footer-copyright p {
+        text-align: center;
+        margin: 0;
+        font-size: 0.6rem;
+        padding: 0;
+    }
+
+
+    .authors-wraper {
+        width: 100%;
+        background-color: #9E7F66;
+    }
+
+    .authors-container {
+        max-width: 1300px;
+        background-color: #9E7F66;
+        margin: 0 auto;
+        padding: 10px 0
+    }
+
+    .authors-container>p,
+    .names-wraper>p {
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+
+    /****
+* About page stylings for tablet screen
+* @author Javier Bastande 
+**/
+    #about-header {
+        height: 120px;
+    }
+
+    #john .name-heading,
+    #alex .name-heading {
+        font-size: 1.9rem;
+    }
+
+    /********* story section**/
+    #story-decorator .decorator {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #story .decorator img:first-child {
+        height: 100px;
+        width: 50%;
+        z-index: -1;
+    }
+
+    #story .decorator img:last-child {
+        max-height: 60px;
+        width: 150px;
+        position: relative;
+        z-index: 1;
+        top: 90px;
+        right: 100px;
+        height: 110px;
+    }
+
+    .story-wraper {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .story-wraper h1 {
+        font-size: 2rem;
+        margin-bottom: 0;
+    }
+
+
+    #story .story-wraper .story-container {
+        padding: 0;
+        width: 95%;
+    }
+
+    #story #story-img-wraper {
+        width: 95%;
+        min-height: 600px;
+        background-image: url("../images/about-simpem-img.webp");
+        margin: 0 auto;
+    }
+
+    #story .about-desc-wraper {
+        margin-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+
+    }
+
+    #story .about-desc-wraper p {
+        margin-top: 50px;
+
+    }
+
+
+    /********* john section**/
+    #john .john-wraper {
+        width: 100%;
+    }
+
+    #john #about-heading {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+
+    #john .pin-holder {
+        background-image: url("../images/pin.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 10%;
+        height: 30px;
+    }
+
+    .pin-separator {
+        display: flex;
+        flex-direction: row;
+        width: 400px;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .pin-separator .gold-circle {
+        width: 5px;
+        height: 5px;
+        border: solid 2px #9E7F66;
+        border-radius: 50px;
+    }
+
+    .pin-separator .gold-line {
+        width: 60px;
+        height: 1px;
+        background-color: #9E7F66;
+        border-radius: 5px;
+        margin-left: 7px;
+    }
+
+    #john .john-wraper .john-container {
+        width: 95%;
+        padding: 100px 0;
+        margin: 0 auto;
+
+    }
+
+    #john .john-wraper {
+        background-color: #111111;
+        color: #ffffff;
+        padding-bottom: 60px;
+    }
+
+    #john .john-desc-wraper {
+        padding-right: 30px;
+        padding-left: 30px;
+        letter-spacing: 0.5px;
+        line-height: 32px;
+    }
+
+
+    #john .john-wraper #john-img-wraper {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    /********* alex section**/
+    #alex #alex-decorator {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #alex #alex-decorator .decorator {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    #alex-decorator .decorator img:last-child {
+        height: 240px;
+        width: 100%;
+        z-index: -2;
+        padding-top: 100px;
+        position: absolute;
+        right: 0;
+        top: 950px;
+        width: 80%;
+    }
+
+
+    #alex-decorator .decorator img:first-child {
+        max-height: 60px;
+        width: 150px;
+        position: absolute;
+        z-index: 1;
+        top: 1100px;
+        right: 0;
+        height: 110px;
+    }
+
+    #alex .alex-wraper {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #alex .alex-wraper .alex-container {
+        margin: 0 auto;
+        color: #111111;
+        padding-bottom: 150px;
+    }
+
+    #alex .alex-desc-wraper {
+        padding: 70px 30px;
+        margin: 0 auto;
+        letter-spacing: 0.5px;
+        line-height: 32px;
+        font-size: 1.2rem;
+    }
+
+    #alex .alex-wraper #alex-img-wraper {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    /******call to action ****/
+    .call-action-wraper {
+        width: 100%;
+    }
+
+    #call-action h4 {
+        font-size: 1.5rem;
+        letter-spacing: 0.5px;
+    }
+
+    .call-action-wraper .call-action-container {
+        height: inherit;
+    }
+
+    .call-action-wraper .call-action-container .row {
+        margin-top: 30px;
+        max-width: 700px;
+    }
+
+    .call-action-wraper .call-action-img-holder {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 160px;
+        background-image: url("../images/call-action-img.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .call-action-wraper a {
+        height: 45px;
+        font-size: 1rem;
+        font-weight: 500;
+        margin-top: 20px;
+        letter-spacing: 1.5px;
+        color: #ffffff;
+        border: solid 1px #ffffff;
+        border-radius: 0;
+        width: 60%;
+        background-color: transparent;
+        text-transform: uppercase;
+        transition: 0.5s;
+    }
+
+
+    /****
+* Reservations page stylings for mobile screen
+* @author Javier Bastande 
+**/
+    #reservations-main-wraper h4 {
+        min-width: fit-content;
+        font-size: 2.1rem;
+        margin-bottom: 20px;
+    }
+
+    /***************** RESERVATIONS SECTION */
+
+    .reservations-wraper {
+        width: 100%;
+        position: absolute;
+        top: 200px;
+        left: 0;
+        z-index: 1;
+    }
+
+    .reservations-wraper .reservations-container {
+        width: 90%;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .reservations-wraper .reservation-text-wraper {
+        margin: 0 auto;
+        height: 300px;
+        padding: 10px 20px;
+    }
+
+    .reservations-wraper .reservation-form-wraper {
+        min-height: fit-content;
+        padding: 40px 20px;
+    }
+
+    /*** BOOKING FORM*/
+    #reservations-main-wraper #reservation-form {
+        padding-right: 0;
+        margin-left: 8px;
+    }
+
+
+    #reservations-main-wraper #reservation-form #datePicker-input,
+    #reservations-main-wraper #reservation-form #timePicker-input {
+        padding-right: 6px;
+        padding-left: 6px;
+    }
+
+    #reservations #reservation-form .form-input-wraper #prefix-wraper,
+    #reservations #reservation-form .dropdown,
+    #reservations #reservation-form #startDate {
+        text-align: center;
+    }
+
+
+    #reservations #reservation-form #party-size-wraper,
+    #reservations #reservation-form #fullName-wraper,
+    #reservations #reservation-form #reservation-email-wraper,
+    #reservations #reservation-form #phone-wraper {
+        padding-right: 6px;
+    }
+
+    #partySize,
+    #fullName,
+    #email {
+        padding-right: 15px;
+    }
+
+    #reservations form #contact-number-wraper {
+        padding-right: 0px;
+        margin-right: 0px;
+    }
+
+    #reservations #reservation-form #contact-number-wraper div:last-child {
+        padding-right: 0px;
+        padding-left: 0px;
+        text-align: center;
+    }
+
+    #reservations #reservation-form #contact-number-wraper .inputBaseLine:first-child {
+        width: 140%;
+    }
+
+    #reservations #reservation-form #contact-number-wraper .prefix-select-wraper {
+        left: 0;
+        font-size: 1rem;
+        padding-top: 3px;
+        margin: 0 auto 6px;
+    }
+
+
+    #reservations form #contact-number-wraper .prefix-select-wraper .inputBaseLine {
+        margin-top: 10px;
+    }
+
+    #reservations #reservation-form .form-input-wraper p {
+        font-size: 1.1rem;
+        padding-top: 10px;
+    }
+
+    #reservations-main-wraper input,
+    #reservations input[type="date"] {
+        margin: 0 auto;
+        background-color: inherit;
+        width: inherit;
+        font-size: 1.225rem;
+        letter-spacing: 0.5px;
+        padding-left: 10px;
+        border: none;
+        text-align: start;
+    }
+
+    #reservations-main-wraper #reservation-form input[type="date"] {
+        margin-right: 0;
+        padding-right: 0;
+        padding-left: 0;
+        min-height: 15px;
+        max-height: 45px;
+        width: 100%;
+        font-size: 1rem;
+
+    }
+
+    #reservations-main-wraper .inputBaseLine {
+        width: 100%;
+        min-height: 2px;
+        background-color: #9E7F66;
+    }
+
+    #reservations-main-wraper input::placeholder {
+        font-size: 1rem;
+    }
+
+    #reservations .booking-form-wraper .contact-number-wraper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #reservations #contact-number-wraper select {
+        max-width: 100%;
+        border: none;
+        font-size: 1.25rem;
+        margin: 15px auto 0;
+        position: relative;
+        left: 1.125rem;
+        padding-top: 7px;
+    }
+
+    #reservations form .form-check-wraper {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #reservations form .form-check {
+        margin-top: 30px;
+        margin-left: 5px;
+        padding-left: 0;
+        font-size: 0.875rem;
+        opacity: 0.9;
+    }
+
+    #reservations form .form-check.row .col {
+        padding-right: 0px;
+    }
+
+    #reservations input[type="checkbox"] {
+        height: 1.125rem;
+        width: 1.125rem;
+        margin: 0 10px 0 10px;
+        border: solid 1px #9E7F66;
+        position: relative;
+        top: 3px;
+    }
+
+    #reservations input[type="checkbox"]:checked {
+        background-color: #9E7F66;
+    }
+
+    #reservations-main-wraper button[type="submit"] {
+        margin: 30px auto;
+        height: 65px;
+        font-size: 1.25rem;
+        width: 93%;
+    }
+
+    /*  Remove default arrows on input type=number */
+    /*  Code taken from next link */
+    /* https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+
+
+    /**** DAY PICKER */
+
+    /* Took this code "::-webkit-datetime-edit" from the below link to override default date input placeholder color */
+    /* https://stackoverflow.com/questions/31706433/how-can-i-change-the-text-color-of-chromes-input-date-placeholder */
+    #reservations input[type="date"]::-webkit-datetime-edit {
+        color: #111111;
+        opacity: 0.7;
+        font-size: 1.063rem;
+        ;
+    }
+
+    /* Took this code "::-webkit-calendar-picker-indicator {filter: invert(0.5);}"
+ from the below link to override default date indicator color */
+    /* https://stackoverflow.com/questions/31706433/how-can-i-change-the-text-color-of-chromes-input-date-placeholder */
+    #reservations input[type="date"]::-webkit-calendar-picker-indicator {
+        filter: invert(0.5);
+        font-size: 1.25rem;
+        ;
+
+    }
+
+    /**** TIME PICKER */
+
+    #reservations form .form-input-wraper .dropdown {
+        text-align: start;
+        margin-left: 11px;
+    }
+
+    #reservations form .form-input-wraper .dropdown a {
+        font-size: 1.125rem;
+        opacity: 0.7;
+        border: none;
+        padding: 0;
+    }
+
+    #reservations form .form-input-wraper .time-slot-wraper {
+        display: flex;
+        flex-direction: row;
+        margin-right: 35px;
+    }
+
+    #reservations form .form-input-wraper .time-slot-wraper p {
+        margin: 0;
+        padding: 5px;
+        font-size: 1.25rem;
+    }
+
+    #reservations form .form-input-wraper .time-slot-wraper p:hover {
+        background-color: rgb(244, 230, 203);
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    #reservations .form .form-input-wraper .dropdown-menu {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #reservations .form .form-input-wraper .dropdown-menu>.row {
+        margin: 0 auto;
+        padding: 10px 0;
+
+    }
+
+    #reservations #contact-number-wraper .form-input-wraper {
+        margin: 5px auto;
+    }
+
+    #reservations #contact-number-wraper select {
+        max-width: 120%;
+        border: none;
+        font-size: 1.25rem;
+        margin: 0 auto;
+        position: relative;
+        left: 17px;
+    }
+
+    #reservations-main-wraper button[type="submit"] {
+        margin: 30px auto 30px;
+        height: 45px;
+        font-size: 1.125rem;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        width: 93%;
+        background-color: #111111;
+        text-transform: uppercase;
+        transition: 0.5s;
+    }
+
+    /***** remove arrow on dropdown element ****/
+    /**
+* Took the code lines from the below link
+/* https://stackoverflow.com/questions/16603979/how-to-remove-the-default-arrow-icon-from-a-dropdown-list-select-element 
+*/
+    form .form-input-wraper select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+
+
+    /***** Override autofill default style behavoir ****/
+    /**
+* Took the code lines from the below link
+/* https://stackoverflow.com/questions/2338102/override-browser-form-filling-and-input-highlighting-with-html-css 
+*/
+    #reservations input:-webkit-autofill,
+    #contact input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 50px #333333 inset;
+        /* Change the color to your own background color */
+        background-color: #ffffff;
+        -webkit-text-fill-color: #FFFFF0;
+        -webkit-text-fill-font-size: 0.813rem;
+    }
+
+    #reservations input:-webkit-autofill:focus,
+    #contact input:-webkit-autofill:focus {
+        -webkit-box-shadow: 0 0 0 50px #ffffff inset;
+        /*your box-shadow*/
+        -webkit-text-fill-color: #111111;
+        background-color: #ffffff;
+        -webkit-text-fill-font-size: 1.125rem;
+    }
+
+
+    /******* RESERVATION SECTIONS SEPARATOR  */
+    #reservations-section-separator {
+        width: 100%;
+        padding-bottom: 150px;
+    }
+
+    #reservations-section-separator .separator-container {
+        width: 100%;
+        display: flex;
+    }
+
+    #reservations-section-separator .separator-container {
+        height: 540px;
+    }
+
+    #reservations-section-separator .separator-container img:first-child {
+        width: 90%;
+    }
+
+    #reservations-section-separator .separator-container img:last-child {
+        width: 100%;
+        position: relative;
+        top: 460px;
+        right: 100%;
+        padding-bottom: 420px;
+    }
+
+    /******* CONTACT SECTION*/
+    .contact-wraper {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .contact-wraper .contact-container {
+        margin: 0 auto;
+        width: 90%;
+        padding: 80px 0;
+    }
+
+    .contact-wraper .contact-text-wraper {
+        height: 450px;
+        padding: 20px 20px;
+    }
+
+    .contact-wraper .contact-form-wraper {
+        margin: 50px auto;
+        min-height: fit-content;
+        width: 100%;
+        padding: 40px 20px;
+    }
+
+    .contact-wraper .office-hours-wraper {
+        margin-top: 25px;
+        width: 100%;
+        padding-right: 0px;
+    }
+
+    #reservations-main-wraper .office-hours-wraper p {
+        font-size: 1.063rem;
+        padding-right: 0px;
+    }
+
+    /* CONTACT FORM */
+    #contact .contact-form-wraper .row {
+        padding: 0px;
+        margin: 0 auto;
+    }
+
+    #contact .contact-form-wraper textarea {
+        margin: 50px 5px 20px 5px;
+        font-size: 1.25rem;
+        text-align: left;
+        padding: 15px;
+        width: 97%;
+        letter-spacing: 0.5px;
+    }
+
+    #contact .contact-form-wraper textarea::placeholder {
+        font-size: 1rem;
+        text-align: left;
+        letter-spacing: 0.5px;
+
+    }
+
+    #contact .contact-form-wraper textarea:focus {
+        text-align: left;
+        letter-spacing: 0.5px;
+    }
+
+    #contact .contact-form-wraper textarea:active {
+        text-align: left;
+    }
+
+
+    /************* REVIEW SECTION**/
+    #reservations-review .review-wraper {
+        width: 100%;
+    }
+
+    #reservations-review .review-container {
+        width: 95%;
+        margin: 0 auto;
+        padding: 120px 10px;
+    }
+
+    #reservations-review .double-line-decorator-wraper {
+        margin: 40px auto 100px;
+        width: 300px;
+        max-width: 80%;
+    }
+
+    #reservations-review .rh-decorator-wraper {
+        margin: 100px auto 50px;
+        width: 420px;
+        max-width: 80%;
+
+    }
+
+    #reservations-review .rh-decorator-holder {
+        height: 30px;
+        width: 100%;
+    }
+
+    #reservations-review p {
+        margin: 5px auto;
+        font-size: 1.375rem;
+        letter-spacing: 0.5px;
+        line-height: 35px;
+        padding-left: 25px;
+        padding-right: 20px;
+    }
+
+    #left-quote,
+    #right-quote {
+        width: 40px;
+        height: 40px;
+    }
+
+    #left-quote {
+        bottom: 10px;
+    }
+
+    /****
+* Home page stylings for Mobile screen
+*
+* @author Heloise Lui 
+**/
+
+    .homepage-heading .heading-container {
+        margin: 0 auto;
+        color: #ffffff;
+        width: 95%;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .homepage-heading .heading-container .header-content {
+        min-width: 100%;
+        max-width: 350px;
+    }
+
+    .homepage-heading h1 {
+        font-size: 2.5rem;
+    }
+
+    .header-content p {
+        font-size: 1rem;
+        width: fit-content;
+        max-width: 80%;
+        text-align: left;
+        word-break: keep-all;
+    }
+
+
+    .section5 {
+        height: 900px;
+    }
+
+    .section2 {
+        height: 880px;
+    }
+
+    .section3 {
+        height: 950px;
+    }
+
+    .section4 .container-image {
+        margin: 0 auto;
+        padding: 200px 20px;
+    }
+
+    .section4 {
+        width: 100%;
+    }
+
+    .section4 p {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 1.3rem;
+    }
+
+    .section5 {
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .row h3 {
+        font-size: 2rem;
+    }
+
+
+    .section5 p {
+        width: 90%;
+        margin: 30px auto;
+        font-size: 1.2rem;
+    }
+
+    .reservation-footer .btn {
+        margin: 0 auto;
+    }
+
+    .btn-homepage {
+        width: 80%;
+        margin: 15px auto 0;
+        padding: 10px;
+        font-size: 0.950rem;
+    }
+
+
+    /****
+* Upcoming page stylings for mobile screen
+*
+* @author Heloise Lui 
+**/
+
+    .upcoming-events h1,
+    .newsletter h2,
+    .reservation-footer h2 {
+        font-size: 2.1rem;
+        margin: 0 auto;
+    }
+
+    .event h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .reservation-footer button {
+        margin-top: 30px;
+    }
+
+    .reservation-footer {
+        text-align: center;
+    }
+
+    .event p,
+    .event .event-time,
+    .btn-footer {
+        font-size: 0.9rem;
+    }
+
+    .btn-footer {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .event img {
+        margin: auto;
+        /* Center images */
+    }
+
+    .btn-footer {
+        width: 100%;
+        /* Full width button */
+    }
+
+    /* Adjust the heading sizes */
+    .section2 h3,
+    .section3 h3,
+    .reservation-heading {
+        font-size: 1.5rem;
+        /* Even smaller font size for headings */
+    }
+
+    /* Adjust the paragraph sizes */
+    .section2 p,
+    .section3 p {
+        font-size: .9rem;
+        /* Even smaller font size for paragraphs */
+    }
+
+    .reservation-footer {
+        padding: 30px 10px;
+        /* Further reduce padding */
+    }
+
+    .gallery-page .container {
+        columns: 1;
+    }
+}

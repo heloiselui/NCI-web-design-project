@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SIP Mix and Lounge is a vibrant venue in Dublin where expertly 
+        crafted cocktails harmonize with high-end live music performances, creating a rhythm that delivers outstanding,
+         enjoyable, and comfortable experiences. Discover something different for your night out.">
+    <meta name="keywords" content="SIP Mix and Lounge, Dublin cocktails, live music venue, sophisticated ambiance, crafted cocktails, 
+        live music performances, nightlife Dublin, entertainment, relaxed atmosphere">
+
+    <!--------------------- BOOTSTRAP LINK--------------------->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <!--------------------- BOOTSTRAP LINK--------------------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Cocktails</title>
+</head>
+
+<body>
+    <!--------------------- HEADER --------------------->
+    <header class="header" id="signature-header">
+        <div id="signature" class="signature-bg-image">
+            <div class="overlay"></div>
+        </div>
+        <div id="rectangle" class="rectangle"></div>
+        <nav class="navbar navbar-expand-lg">
+
+            <a id="logo" class="navbar-brand" href="index.html" aria-label="Link to homepage">
+            </a>
+            <button class="navbar-toggler navbar-dark ms-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span id="burger" class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse">
+
+                <ul class="nav navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a id="nav-home-link" class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-inside-link" class="nav-link" href="inside.html">INSIDE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-signature-link" class="nav-link" href="signature.html">SIGNATURE</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a id="nav-upcoming-link" class="nav-link" href="upcoming.html">UPCOMING</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-about-link" class="nav-link" href="about.html">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-reservations-link" class="nav-link" href="reservations.html">RESERVATIONS</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-------------------- Body page  ------------------------->
+
+    <!-- Sections with cocktails -->
+    <div id="CocktailBackground">
+        <section class="cocktail-overview">
+            <div class="container text-center">
+                <div>
+                    <h1>Our Signature Cocktails!</h1>
+                    <p>Libations of Inspiration: Explore Our Collection of Handcrafted Cocktails</p>
+                    <p>Embark on a journey through our world of libations, where each drink is a symphony of flavors
+                        meticulously crafted to captivate your senses. From timeless classics to innovative concoctions,
+                        our cocktail collection is a celebration of mixology mastery.</p>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="cocktail-section">
+            <div class="container text-center">
+                <div class="row align-items-center">
+                    <div class="col-md-6 order-1 order-lg-2">
+                        <div class="cocktail-info-wrapper">
+                            <h1>Cosmopolitan</h1>
+                            <p>Step into a world of timeless elegance with our Cosmopolitan—a dazzling blend of premium
+                                vodka, tangy cranberry, a splash of zesty orange liqueur, and a twist of freshly
+                                squeezed lime.</p>
+                            <p>This iconic pink-hued libation exudes sophistication, teasing the palate with a
+                                harmonious balance of sweet and tart flavors. Served in a chilled martini glass and
+                                garnished with a flirty citrus twist, it's a chic and vibrant sip that embodies
+                                cosmopolitan charm in every glamorous drop.</p>
+                            <h8 id="cosmopolitan-notice" class="fw-medium mb-4">Click the image to see the ingredients!
+                            </h8>
+                        </div>
+                        <div id="cosmopolitan-ingredients" style="display: none;">
+                            <h4>Ingredients</h4>
+                            <p>- 1.5 oz citrus vodka</p>
+                            <p>- 1 oz Cointreau</p>
+                            <p>- .5 oz lime juice</p>
+                            <p>- .25 oz cranberry juice</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 order-2 order-lg-1">
+                        <div class="d-flex justify-content-center">
+                            <img src="assets/images/Cosmopolitan.webp" class="rounded img-fluid" alt="Cosmopolitan"
+                                onclick="showIngredients('cosmopolitan')" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cocktail-section">
+            <div class="container text-center">
+                <div class="row align-items-center">
+                    <div class="col-md-6 order-1 order-lg-1">
+                        <div class="cocktail-info-wrapper">
+                            <h1>Espresso Martini</h1>
+                            <p>Indulge in a seductive symphony of bold espresso, premium vodka, and a touch of coffee
+                                liqueur, shaken to perfection.</p>
+                            <p>This elegant elixir balances the rich, roasted depths of freshly brewed coffee with a
+                                velvety smoothness that dances across your palate, awakening the senses with every sip.
+                                Served chilled in a martini glass, it's the sophisticated jolt you crave, a union of
+                                caffeine and cocktail craftsmanship that's simply irresistible.</p>
+                            <h8 id="EspressoMartini-notice" class="fw-medium mb-4">Click the image to see the
+                                ingredients!
+                            </h8>
+                        </div>
+                        <div id="EspressoMartini-ingredients" style="display: none;">
+                            <h4>Ingredients</h4>
+                            <p>- 2 oz vodka</p>
+                            <p>- 1.5 oz Kahlúa</p>
+                            <p>- 0.5 oz sugar syrup</p>
+                            <p>- 1 strong Espresso</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 order-2 order-lg-2">
+                        <div class="d-flex justify-content-center">
+                            <img src="assets/images/EspressoMartini.webp" class="rounded img-fluid"
+                                alt="Espresso Martini" onclick="showIngredients('EspressoMartini')" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cocktail-section">
+            <div class="container text-center">
+                <div class="row align-items-center">
+                    <div class="col-md-6 order-2 order-lg-1">
+                        <div class="d-flex justify-content-center">
+                            <img src="assets/images/Margarita.webp" class="rounded img-fluid" alt="Margarita"
+                                onclick="showIngredients('Margarita')" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="col-md-6 order-1 order-lg-2">
+                        <div class="cocktail-info-wrapper">
+                            <h1>Margarita</h1>
+                            <p>Embark on a journey to the sun-soaked shores of Mexico with our Margarita—a refreshing
+                                fusion of premium tequila, the tang of freshly squeezed lime juice, and a whisper of
+                                orange liqueur.</p>
+                            <p>This iconic cocktail is a celebration in a glass, striking the perfect harmony between
+                                citrusy brightness and the smooth, earthy essence of tequila. Served over ice in a
+                                salt-rimmed glass, each sip is a fiesta for the senses, delivering a zesty kick that
+                                transports you to a breezy, carefree paradise.</p>
+                            <h8 id="Margarita-notice" class="fw-medium mb-4">Click the image to see the ingredients!
+                            </h8>
+                        </div>
+                        <div id="Margarita-ingredients" style="display: none;">
+                            <h4>Ingredients</h4>
+                            <p>- 2 oz silver tequila</p>
+                            <p>- 1 oz Cointreau</p>
+                            <p>- 1 oz lime juice</p>
+                            <p>- Salt for the rim</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cocktail-section">
+            <div class="container text-center">
+                <div class="row align-items-center">
+                    <div class="col-md-6 order-1 order-lg-1">
+                        <div class="cocktail-info-wrapper">
+                            <h1>Whiskey Sour</h1>
+                            <p>Experience the timeless allure of a classic with our Whiskey Sour—a tantalizing blend of
+                                top-shelf bourbon, freshly squeezed lemon juice, and just a hint of sweetness.</p>
+                            <p>This iconic libation marries the rich warmth of bourbon with the crisp, tangy embrace of
+                                citrus, creating a harmonious balance that's both smooth and invigorating. Served over
+                                ice with a delicate cherry garnish, each sip unveils layers of complexity, inviting you
+                                to savor the perfect fusion of sweet, sour, and the unmistakable depth of fine whiskey.
+                            </p>
+                            <h8 id="WhiskeySour-notice" class="fw-medium mb-4">Click the image to see the ingredients!
+                            </h8>
+                        </div>
+                        <div id="WhiskeySour-ingredients" style="display: none;">
+                            <h4>Ingredients</h4>
+                            <p>- 2 oz whiskey</p>
+                            <p>- 1 oz lemon juice</p>
+                            <p>- 1 tsp sugar</p>
+                            <p>- 1 egg white</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 order-2 order-lg-2">
+                        <div class="d-flex justify-content-center">
+                            <img src="assets/images/WhiskeySour.webp" class="rounded img-fluid" alt="Whiskey Sour"
+                                onclick="showIngredients('WhiskeySour')" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cocktail-section">
+            <div class="container text-center">
+                <div class="row align-items-center">
+                    <div class="col-md-6 order-2 order-lg-1">
+                        <div class="d-flex justify-content-center">
+                            <img src="assets/images/Martini.webp" class="rounded img-fluid" alt="Martini"
+                                onclick="showIngredients('Martini')" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="col-md-6 order-1 order-lg-2">
+                        <div class="cocktail-info-wrapper">
+                            <h1>Martini</h1>
+                            <p>Embrace the epitome of sophistication with our Martini—a flawless fusion of premium gin
+                                or vodka, vermouth, and a touch of artistry.</p>
+                            <p>This iconic elixir, served in a chilled, stemmed glass, embodies refined simplicity. Each
+                                sip unveils a symphony of botanicals or the smooth embrace of vodka, perfectly
+                                complemented by the subtle dance of vermouth. With an optional twist of citrus or an
+                                elegant olive garnish, this classic cocktail is an ode to elegance, inviting you to
+                                savor the pure essence of indulgence in a glass.</p>
+                            <h8 id="Martini-notice" class="fw-medium mb-4">Click the image to see the ingredients!</h8>
+                        </div>
+                        <div id="Martini-ingredients" style="display: none;">
+                            <h4>Ingredients</h4>
+                            <p>- 3 oz gin or vodka</p>
+                            <p>- .5 oz dry vermouth</p>
+                            <p>- Lemon peel or olive</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cocktail-section">
+            <div class="container text-center">
+                <div class="row align-items-center">
+                    <div class="col-md-6 order-1 order-lg-1">
+                        <div class="cocktail-info-wrapper">
+                            <h1>Mint Julep</h1>
+                            <p>Transport yourself to the serene charm of the Southern countryside with our Mint Julep—a
+                                refreshing union of muddled fresh mint, fine bourbon, and a touch of simple syrup over
+                                crushed ice.</p>
+                            <p>This iconic cocktail is a cool, invigorating sip that balances the robust character of
+                                bourbon with the invigorating essence of mint. Served in a frosty silver cup, it's a
+                                timeless concoction that whispers of lazy afternoons and southern hospitality, offering
+                                a delightful fusion of tradition and refreshment in every sip.</p>
+                            <h8 id="MintJulep-notice" class="fw-medium mb-4">Click the image to see the ingredients!
+                            </h8>
+                        </div>
+                        <div id="MintJulep-ingredients" style="display: none;">
+                            <h4>Ingredients</h4>
+                            <p>- 2 oz bourbon/p>
+                            <p>- 8-10 mint leaves</p>
+                            <p>- .25 oz simple syrup</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 order-2 order-lg-2">
+                        <div class="d-flex justify-content-center">
+                            <img src="assets/images/MintJulep.webp" class="rounded img-fluid" alt="Mint Julep"
+                                onclick="showIngredients('MintJulep')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="minigame-section">
+            <div class="container text-center">
+                <div id="minigame">
+                    <div class="cocktail-info-wrapper">
+                        <h1>Match the Cocktails!</h1>
+                        <p>Uncover the cards to reveal the cocktails. Match identical pairs and challenge your memory!
+                        </p>
+                        <h2>Number of Errors: <span id="errors">0</span></h2>
+                    </div>
+                    <div id="board">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <!-------------------- Footer section  ------------------------->
+    <section id="footer">
+        <div class="footer-wraper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-3 order-1 order-md-1 order-lg-1">
+                        <!------ Footer Logo ------>
+                        <div class="footer-item-wraper">
+                            <a class="navItem" href="index.html" aria-label="Sipem logo">
+                                <!-- <img id="logo-footer" src="assets/images/logo.png" alt="Logo Simpen at footer page"> -->
+                                <div class="div" id="logo-footer"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <!------ Address ------>
+                    <div class="col-sm-12  col-md-6 col-lg-3 order-3 order-md-4 order-lg-3">
+                        <div class="address-wraper">
+                            <p>
+                                +353 (08) 0000000
+                            </p>
+                            <p>
+                                Nowhere Rd 123,
+                            </p>
+                            <p>
+                                Dublin
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-12  col-md-6 col-lg-3 order-2 order-md-2 order-g-2">
+                        <!------ Footer links ------>
+                        <div class="availability-wraper">
+                            <p> OPEN HOURS</p>
+                            <p>WED - THU: 17:00 PM - 1:00 AM</p>
+                            <p>
+                                FRI - SUN: 17:00 PM - 2:00 AM
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-12  col-md-6 col-lg-3 order-4 order-md-3 order-lg-4">
+                        <!------ Social links ------>
+                        <div class="social-wraper">
+                            <a href="https://www.facebook.com/" target="_blank">
+                                <img id="footer-facebook-icon" width="24" height="24"
+                                    src="https://img.icons8.com/fluency-systems-filled/48/FFFFFF/facebook-f.png"
+                                    alt="facebook-f" />
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank">
+                                <img id="footer-insta-icon" width="50" height="50"
+                                    src="https://img.icons8.com/sf-regular/68/FFFFFF/instagram-new.png"
+                                    alt="instagram-new" /></a>
+                            <a href="https://twitter.com/" target="_blank">
+                                <img id="footer-x-icon" width="26" height="26"
+                                    src="https://img.icons8.com/ios-glyphs/30/FFFFFF/twitterx--v2.png"
+                                    alt="twitterx--v2" /> </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <p>Copy Right <span id="copyRight">©</span> <span id="current-year"></span></p>
+                </div>
+            </div>
+            <div class="authors-wraper">
+                <div class="authors-container text-center">
+                    <p>Designed and developed by; </p>
+                    <div class="names-wraper d-flex justify-content-evenly sm-flex-column lg-flex-row">
+                        <p> Heloise Lui</p>
+                        <p> Bence Pillips</p>
+                        <p> Javier Bastande</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!------------------------ MODAL BURGER MENU ----------->
+    <div class="modalt closeMenu" id="navbar-modal">
+        <div class="modal-wraper">
+            <div class=" modal-container">
+                <div class="row text-end mt-3 me-4">
+                    <div class="close-wraper ">
+                        <div id="close-icon">
+                            <img width="64" height="64" src="https://img.icons8.com/laces/64/ffffff/arrow.png"
+                                alt="arrow" />
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row modal-menu-holder">
+                    <ul class="nav navbar-nav modal-menu">
+                        <li class="nav-item">
+                            <a id="modal-home-link" class="nav-link" href="index.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="modal-inside-link" class="nav-link" href="inside.html">INSIDE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="modal-signature-link" class="nav-link" href="signature.html">SIGNATURE</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a id="modal-upcoming-link" class="nav-link" href="upcoming.html">UPCOMING</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="modal-about-link" class="nav-link" href="about.html">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="modal-reservations-link" class="nav-link" href="reservations.html">RESERVATIONS</a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="modal-social-wraper">
+                                <a href="https://www.facebook.com/" target="_blank">
+                                    <img id="modal-facebook-icon" width="24" height="24"
+                                        src="https://img.icons8.com/fluency-systems-filled/48/FFFFFF/facebook-f.png"
+                                        alt="facebook-logo" />
+                                </a>
+                                <a href="https://www.instagram.com/" target="_blank">
+                                    <img id="modal-insta-icon" width="50" height="50"
+                                        src="https://img.icons8.com/sf-regular/68/FFFFFF/instagram-new.png"
+                                        alt="instagram-logo" /></a>
+                                <a href="https://twitter.com/" target="_blank">
+                                    <img id="modal-x-icon" width="26" height="26"
+                                        src="https://img.icons8.com/ios-glyphs/30/FFFFFF/twitterx--v2.png"
+                                        alt="twitterx--v2" />
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------ BOOSTRAP CND  ------>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!------------ SCRIPTS  ------>
+    <script type="text/javascript" src="assets/js/minigame.js" defer></script>
+    <script type="text/javascript" src="assets/js/features.js" defer></script>
+    <script type="text/javascript" src="assets/js/burgerMenu.js" defer></script>
+
+    <script>
+        const currentYear = new Date().getFullYear();
+        console.log(currentYear);
+        document.getElementById("current-year").textContent = currentYear;
+
+    </script>
+
+</body>
+
+</html>

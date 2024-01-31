@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SIP Mix and Lounge is a vibrant venue in Dublin where expertly 
+        crafted cocktails harmonize with high-end live music performances, creating a rhythm that delivers outstanding,
+         enjoyable, and comfortable experiences. Discover something different for your night out.">
+    <meta name="keywords" content="SIP Mix and Lounge, Dublin cocktails, live music venue, sophisticated ambiance, crafted cocktails, 
+        live music performances, nightlife Dublin, entertainment, relaxed atmosphere">
+
+    <!--------------------- STYLESHEET LINK--------------------->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--------------------- BOOTSTRAP LINK--------------------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!----- Reservations page
+----  @author Javier Bastande 
+--->
+
+    <!--------------------- HEADER --------------------->
+    <header class="header" id="reservations-header">
+        <div id="reservations-bg-image" class="reservations-bg-image"></div>
+        <div id="rectangle" class="rectangle"></div>
+        <nav class="navbar navbar-expand-lg">
+
+            <a id="logo" class="navbar-brand" href="index.html" aria-label="Link to homepage">
+            </a>
+            <button class="navbar-toggler navbar-dark ms-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span id="burger" class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse">
+
+                <ul class="nav navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a id="nav-home-link" class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-inside-link" class="nav-link" href="inside.html">INSIDE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-signature-link" class="nav-link" href="signature.html">SIGNATURE</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a id="nav-upcoming-link" class="nav-link" href="upcoming.html">UPCOMING</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-about-link" class="nav-link" href="about.html">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-reservations-link" class="nav-link" href="reservations.html">RESERVATIONS</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div id="reservations-main-wraper">
+        <!-------------------- Reservations section  ------------------------->
+        <section id="reservations">
+            <div class="reservations-wraper" id="reservation-wraper">
+                <div class="reservations-container">
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-6">
+                            <div class="reservation-text-wraper">
+                                <div id="reservations-heading">
+                                    <h4>Reservations</h4>
+                                </div>
+                                <p id="reservations-text">
+                                    We can’t wait to host you.
+                                    If you have any special requirements please feel free to call on the phone number
+                                    below.
+                                    We’ll be happy to accommodate you. </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-6">
+                            <div class="reservation-form-wraper">
+                                <div class="reservation-form-container">
+                                    <form class="form" id="reservation-form" action="#" method="GET">
+                                        <!-------- date and time ----->
+                                        <div class="form-input-wraper">
+                                            <div class="row gx-0">
+                                                <div class="col-5 col-md-6 col-lg-4 ps-sm-2 p-lg-0">
+                                                    <p>Pick a date</p>
+                                                </div>
+                                                <div class="col-7 col-md-6 col-lg-8 " id="datePicker-input">
+                                                    <input id="startDate" class="form-control" type="date" />
+                                                    <div class="inputBaseLine"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-input-wraper">
+                                            <div class="row gx-0">
+                                                <div class="col-5 col-md-6 col-lg-4 ps-sm-2 p-lg-0">
+                                                    <p>Pick a time</p>
+                                                </div>
+                                                <div class="col-7 col-md-6 col-lg-8 pe-lg-0" id="timePicker-input">
+                                                    <div id="timeDropdown" class="dropdown">
+                                                        <a id="timePicker" class="btn btn-secondary" href="#"
+                                                            role="button" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            00:00
+                                                        </a>
+                                                        <div class="dropdown-menu slot-time-dropdown-menu">
+                                                            <div class="row gutter-0 time-slot-wraper">
+                                                                <div class="col-6">
+                                                                    <p class="dropdown-item">18:00</p>
+                                                                    <p class="dropdown-item">19:00</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <p class="dropdown-item">18:30</p>
+                                                                    <p class="dropdown-item">19:30</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="inputBaseLine"></div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-------- party size ----->
+                                        <div id="party-size-wraper" class="form-input-wraper">
+                                            <input class="partySize" type="number" id="partySize" name="party-size"
+                                                placeholder="Part size">
+                                            <div class="inputBaseLine"></div>
+                                        </div>
+                                        <!-------- contact details ----->
+                                        <div class="form-input-wraper" id="fullName-wraper">
+                                            <input class="" type="text" id="fullName" name="fullName"
+                                                placeholder="Full Name">
+                                            <div class="inputBaseLine"></div>
+                                        </div>
+                                        <!-------- email ----->
+                                        <div class="form-input-wraper" id="reservation-email-wraper">
+                                            <input class="" type="text" id="email" name="email"
+                                                placeholder="name@example.com">
+                                            <div class="inputBaseLine"></div>
+                                        </div>
+                                        <!-------- contact number ----->
+                                        <div class="row" id="contact-number-wraper">
+                                            <div class="col-4 col-md-4 col-lg-3 ps-lg-0">
+                                                <div id="prefix-wraper" class="form-input-wraper p-lg-0">
+                                                    <select class="prefix-select-wraper "
+                                                        aria-label="Select phone prefix">
+                                                        <option id="prefix" selected>+353</option>
+                                                        <option value="1">+373</option>
+                                                        <option value="2">+345</option>
+                                                        <option value="3">+384</option>
+                                                    </select>
+                                                    <div class="puta inputBaseLine"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-8 col-md-8 col-lg-9 pe-lg-0">
+                                                <div id="phone-wraper" class="form-input-wraper">
+                                                    <input class="" type="text" id="phone" name="phone"
+                                                        placeholder="Contact number">
+                                                    <div class="inputBaseLine" id="phoneBaseLine"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-check">
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <input class="form-check-input" id="checkbox" type="checkbox">
+                                                </div>
+                                                <div class="col-10">
+                                                    <label id="checkbox-label" class="form-check-label" for="checkbox">
+                                                        I confirm to be over 18 at the time of this reservation.
+                                                    </label>
+                                                </div>
+                                            </div>
+
+
+                                            <div id="booking-checkBoxMessageError" class="errorMessage">
+                                                <small></small>
+                                            </div>
+                                        </div>
+                                        <div class="row g-0">
+                                            <button class="form-control" type="submit">make reservation</button>
+
+
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-------------------- SECTION SEPARATOR ------------------------->
+
+        <div id="reservations-section-separator">
+            <div class="separator-container">
+                <img src="assets/images/side-container.png" alt="Grey container background image for reservations page"
+                    loading="lazy">
+                <img src="assets/images/gold-lines.png" alt="Gold lines grid background image for reservations page"
+                    loading="lazy">
+
+            </div>
+        </div>
+
+        <!-------------------- CONTACT SECTION  ------------------------->
+        <section id="contact">
+            <div class="contact-wraper">
+                <div class="contact-container">
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-6 order-2 order-lg-2">
+                            <div class="contact-form-wraper">
+                                <div class="contact-form-container">
+                                    <div class="row ">
+                                        <form class="form" id="contact-form" onsubmit="validContact(event)" action="#"
+                                            method="GET">
+                                            <!-------- contact details ----->
+                                            <div class="form-input-wraper">
+                                                <input class="" type="text" id="contact-form-fullname"
+                                                    name="contact-form-fullname" placeholder="Full Name">
+                                                <div class="inputBaseLine"></div>
+                                                <div id="contact-nameMessageError" class="errorMessage">
+                                                    <small></small>
+                                                </div>
+                                            </div>
+                                            <!-------- email ----->
+                                            <div class="form-input-wraper">
+                                                <input class="" type="text" id="contact-form-email"
+                                                    name="contact-form-email" placeholder="name@example.com">
+                                                <div class="inputBaseLine"></div>
+                                                <div id="contact-emailMessageError" class="errorMessage">
+                                                    <small></small>
+                                                    <i></i>
+                                                </div>
+                                            </div>
+                                            <!-------- contact comment ----->
+                                            <textarea rows="7" cols="30" class="comment" id="contact-form-comment"
+                                                placeholder="How can we help you?"></textarea>
+                                            <div class="row g-0">
+                                                <button class="form-control" type="submit">SUBMIT</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-6 order-1 order-lg-2">
+                            <div class="contact-text-wraper">
+                                <div class="row">
+                                    <div id="contact-heading">
+                                        <h4>Contact us</h4>
+                                    </div>
+                                    <p id="contact-text">
+                                        We can’t wait to host you.
+                                        If you have any special requirements please feel free to call on the phone
+                                        number
+                                        below.
+                                        We’ll be happy to accommodate you. </p>
+                                </div>
+
+                                <div class="row">
+                                    <!------ Footer links ------>
+                                    <div class="office-hours-wraper">
+                                        <div class="row">
+                                            <p>WED - THU: 17:00 PM - 1:00 AM</p>
+                                        </div>
+
+                                        <div class="row">
+                                            <p>
+                                                FRI - SUN: 17:00 PM - 2:00 AM
+                                            </p>
+                                        </div>
+                                        <div class="row">
+                                            <p>+353 (08) 0000000 </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-------------------- Review section  ------------------------->
+        <section id="reservations-review">
+            <div class="review-wraper">
+                <div class="review-container">
+                    <div class="row double-line-decorator-wraper">
+                        <div class="div double-gold-line-holder"></div>
+                    </div>
+                    <div class="row">
+                        <div class="text-wraper">
+                            <div class="left-quote-wraper">
+                                <img id="left-quote"
+                                    src="https://img.icons8.com/sf-regular-filled/48/9e7f66/quote-left.png"
+                                    alt="quote-left" />
+                            </div>
+                            <p>
+                                A true gem! The ambiance is the perfect mix of sophistication and comfort.
+                                The crafted cocktails are a delight, and the live music performances add an incredible
+                                rhythm to
+                                the night. It's a must-visit spot for those looking for a cozy escape with top-notch
+                                drinks
+                                and
+                                live entertainment. Can't wait to be back!
+
+                            </p>
+                            <div class="right-quote-wraper">
+                                <img id="right-quote" width="48" height="48"
+                                    src="https://img.icons8.com/sf-regular-filled/48/9e7f66/quote-left.png"
+                                    alt="quote-right" />
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row rh-decorator-wraper">
+                        <div class="div rh-decorator-holder"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-------------------- Footer section  ------------------------->
+    <section id="footer">
+        <div class="footer-wraper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-3 order-1 order-md-1 order-lg-1">
+                        <!------ Footer Logo ------>
+                        <div class="footer-item-wraper footer-logo-wraper">
+                            <a class="navItem" href="index.html" aria-label="Sipem logo">
+                                <!-- <img id="logo-footer" src="assets/images/logo.png" alt="Logo Simpen at footer page"> -->
+                                <div class="div" id="logo-footer"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <!------ Address ------>
+                    <div class="col-sm-12  col-md-6 col-lg-3 order-3 order-md-4 order-lg-3">
+                        <div class="address-wraper">
+                            <p>
+                                +353 (08) 0000000
+                            </p>
+                            <p>
+                                Nowhere Rd 123,
+                            </p>
+                            <p>
+                                Dublin
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-12  col-md-6 col-lg-3 order-2 order-md-2 order-g-2">
+                        <!------ Footer links ------>
+                        <div class="availability-wraper">
+                            <p> OPEN HOURS</p>
+                            <p>WED - THU: 17:00 PM - 1:00 AM</p>
+                            <p>
+                                FRI - SUN: 17:00 PM - 2:00 AM
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-12  col-md-6 col-lg-3 order-4 order-md-3 order-lg-4">
+                        <!------ Social links ------>
+                        <div class="social-wraper">
+                            <a href="https://www.facebook.com/" target="_blank">
+                                <img id="footer-facebook-icon" width="24" height="24"
+                                    src="https://img.icons8.com/fluency-systems-filled/48/FFFFFF/facebook-f.png"
+                                    alt="facebook-f" />
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank">
+                                <img id="footer-insta-icon" width="50" height="50"
+                                    src="https://img.icons8.com/sf-regular/68/FFFFFF/instagram-new.png"
+                                    alt="instagram-new" /></a>
+                            <a href="https://twitter.com/" target="_blank">
+                                <img id="footer-x-icon" width="26" height="26"
+                                    src="https://img.icons8.com/ios-glyphs/30/FFFFFF/twitterx--v2.png"
+                                    alt="twitterx--v2" /> </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <p>Copy Right <span id="copyRight">©</span> <span id="current-year"></span></p>
+                </div>
+            </div>
+            <div class="authors-wraper">
+                <div class="authors-container text-center">
+                    <p>Designed and developed by; </p>
+                    <div class="names-wraper d-flex justify-content-evenly sm-flex-column lg-flex-row">
+                        <p> Heloise Lui</p>
+                        <p> Bence Pillips</p>
+                        <p> Javier Bastande</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!------------------------ MODAL BURGER MENU ----------->
+    <div class="modalt closeMenu" id="navbar-modal">
+        <div class="modal-wraper">
+            <div class=" modal-container">
+                <div class="row text-end mt-3 me-4">
+                    <div class="close-wraper ">
+                        <div id="close-icon">
+                            <img width="64" height="64" src="https://img.icons8.com/laces/64/ffffff/arrow.png"
+                                alt="arrow" />
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row modal-menu-holder">
+                    <ul class="nav navbar-nav modal-menu">
+                        <li class="nav-item">
+                            <a id="modal-home-link" class="nav-link" href="index.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="modal-inside-link" class="nav-link" href="inside.html">INSIDE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="modal-signature-link" class="nav-link" href="signature.html">SIGNATURE</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a id="modal-upcoming-link" class="nav-link" href="upcoming.html">UPCOMING</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="modal-about-link" class="nav-link" href="about.html">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="modal-reservations-link" class="nav-link" href="reservations.html">RESERVATIONS</a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="modal-social-wraper">
+                                <a href="https://www.facebook.com/" target="_blank">
+                                    <img id="modal-facebook-icon" width="24" height="24"
+                                        src="https://img.icons8.com/fluency-systems-filled/48/FFFFFF/facebook-f.png"
+                                        alt="facebook-logo" />
+                                </a>
+                                <a href="https://www.instagram.com/" target="_blank">
+                                    <img id="modal-insta-icon" width="50" height="50"
+                                        src="https://img.icons8.com/sf-regular/68/FFFFFF/instagram-new.png"
+                                        alt="instagram-logo" /></a>
+                                <a href="https://twitter.com/" target="_blank">
+                                    <img id="modal-x-icon" width="26" height="26"
+                                        src="https://img.icons8.com/ios-glyphs/30/FFFFFF/twitterx--v2.png"
+                                        alt="twitterx--v2" />
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------ BOOSTRAP CND  ------>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"
+        defer></script>
+
+    <script>
+        const currentYear = new Date().getFullYear();
+        console.log(currentYear);
+        document.getElementById("current-year").textContent = currentYear;
+    </script>
+
+    <!----- SCRIPTS-->
+    <script type="text/javascript" src="assets/js/formValidation/reservationFormValidation.js" defer></script>
+    <script type="text/javascript" src="assets/js/formValidation/contactFormValidation.js" defer></script>
+    <script type="text/javascript" src="assets/js/timePicker.js" defer></script>
+    <script type="text/javascript" src="assets/js/burgerMenu.js" defer></script>
+
+</body>
+
+</html>
