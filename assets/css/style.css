@@ -10,8 +10,8 @@
     --black: #000000;
 
     /* Font Families */
-    --font-league-spartan: 'League Spartan', sans-serif;
-    --font-sanchez: 'Sanchez', serif;
+    --font-league-spartan: var(--font-league-spartan);
+    --font-sanchez: var(--font-sanchez);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Lora:wght@500;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&family=Sanchez:ital@0;1&display=swap');
@@ -24,12 +24,12 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "League Spartan";
+    font-family: var(--font-league-spartan);
 }
 
 #CocktailBackground p,
 p a {
-    font-family: "League Spartan";
+    font-family: var(--font-league-spartan);
 
 }
 
@@ -204,7 +204,7 @@ header nav a:hover,
 
 header nav .nav-link,
 header nav .nav-link:hover {
-    color: #ffffff;
+    color: var(--white);
 }
 
 
@@ -221,7 +221,7 @@ header nav .nav-link::after {
 header nav .nav-link:hover::after {
     height: 2px;
     width: 100%;
-    background-color: #9E7F66;
+    background-color: ;
 }
 
 header nav .navbar-toggler,
@@ -274,21 +274,21 @@ header #home-bg-img {
 }
 
 #inside-header {
-    background-color: #111111;
+    background-color: var(--cod-grey);
 }
 
 #signature-header .overlay,
 #upcoming-header .overlay {
     width: inherit;
     height: inherit;
-    background-color: #111111;
+    background-color: var(--cod-grey);
     opacity: 0.5;
 }
 
 
 
 header .rectangle {
-    background-color: #111111;
+    background-color: var(--cod-grey);
     position: absolute;
     height: inherit;
 }
@@ -297,7 +297,7 @@ header .rectangle {
 .footer-wraper {
     min-height: 460px;
     width: 100%;
-    background-color: #111111;
+    background-color: var(--cod-grey);
 }
 
 .footer-wraper .row {
@@ -307,7 +307,7 @@ header .rectangle {
 
 .container-fluid,
 .names-wraper>p {
-    color: #ffffff;
+    color: var(--white);
 }
 
 .footer-wraper a {
@@ -331,7 +331,7 @@ header .rectangle {
 }
 
 .authors-container {
-    background-color: #9E7F66;
+    background-color: var(--beaver);
     padding: 10px 0;
 }
 
@@ -365,7 +365,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "League Spartan", sans-serif;
+    font-family: var(--font-league-spartan);
 }
 
 
@@ -386,7 +386,7 @@ h6 {
 #john .john-wraper,
 #alex .alex-desc-wraper,
 .call-action-heading {
-    font-family: "League Spartan";
+    font-family: var(--font-league-spartan);
     font-size: 1rem;
     line-height: 30px;
 }
@@ -443,21 +443,21 @@ h6 {
 .pin-separator .gold-circle {
     width: 5px;
     height: 5px;
-    border: solid 2px #9E7F66;
+    border: solid 2px var(--beaver);
     border-radius: 50px;
 }
 
 .pin-separator .gold-line {
     width: 60px;
     height: 1px;
-    background-color: #9E7F66;
+    background-color: var(--beaver);
     border-radius: 5px;
     margin-left: 7px;
 }
 
 #john .john-wraper {
-    background-color: #111111;
-    color: #ffffff;
+    background-color: var(--cod-grey);
+    color: var(--white);
     padding-bottom: 60px;
 }
 
@@ -477,7 +477,7 @@ h6 {
 }
 
 #alex .alex-wraper {
-    color: #111111;
+    color: var(--cod-grey);
     padding-bottom: 60px;
 }
 
@@ -504,7 +504,7 @@ h6 {
     width: 1000px;
     margin: 0 auto;
     z-index: 1;
-    color: #ffffff;
+    color: var(--white);
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -533,8 +533,8 @@ h6 {
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 1.5px;
-    color: #ffffff;
-    border: solid 1px #ffffff;
+    color: var(--white);
+    border: solid 1px var(--white);
     border-radius: 0;
     width: 50%;
     background-color: transparent;
@@ -543,10 +543,10 @@ h6 {
 }
 
 .call-action-wraper a:hover {
-    border: solid 1px #111111;
+    border: solid 1px var(--cod-grey);
     transition: 0.5s;
-    background-color: #ffffff;
-    color: #111111;
+    background-color: var(--white);
+    color: var(--cod-grey);
     cursor: url("../images/pointer.png"), auto;
 }
 
@@ -582,7 +582,7 @@ h6 {
 .success {
     width: 100%;
     height: 2px;
-    background-color: #9E7F66;
+    background-color: var(--beaver);
 }
 
 /**** double quotes */
@@ -625,7 +625,7 @@ h6 {
 #reservations input[type="date"],
 #contact .contact-form-wraper textarea::placeholder,
 #about-main-wraper {
-    font-family: "League Spartan";
+    font-family: var(--font-league-spartan);
     letter-spacing: 0.5px;
 }
 
@@ -637,7 +637,7 @@ h6 {
 }
 
 #reservations-review p {
-    font-family: 'Sanchez', sans-serif;
+    font-family: var(--font-league-spartan);
 }
 
 /**** colors ***/
@@ -652,7 +652,7 @@ header nav .nav-link,
 .footer-copyright p,
 .footer-wraper .names-wraper p,
 #about-main-wraper {
-    color: #ffffff;
+    color: var(--white);
 }
 
 
@@ -666,19 +666,19 @@ header nav .nav-link,
 #contact .contact-form-wraper textarea,
 #contact .contact-form-wraper textarea::placeholder,
 #about-main-wraper {
-    color: #111111;
+    color: var(--cod-grey);
 }
 
 .reservations-wraper .reservation-form-wraper,
 .contact-wraper .contact-form-wraper,
 #reservations-main-wraper button[type="submit"]:hover,
 #reservations form .form-input-wraper .dropdown a {
-    background-color: #ffffff;
+    background-color: var(--white);
 }
 
 #contact .contact-wraper,
 .footer-wraper {
-    background-color: #111111;
+    background-color: var(--cod-grey);
 }
 
 /*** buttons and links */
@@ -686,15 +686,15 @@ header nav .nav-link,
     font-size: 1.25rem;
     font-weight: 500;
     letter-spacing: 1.5px;
-    background-color: #111111;
+    background-color: var(--cod-grey);
     text-transform: uppercase;
     transition: 0.5s;
 }
 
 #reservations-main-wraper button[type="submit"]:hover {
-    border: solid 1px #111111;
+    border: solid 1px var(--cod-grey);
     transition: 0.5s;
-    color: #111111;
+    color: var(--cod-grey);
     cursor: url("../images/pointer.png"), auto;
 }
 
@@ -737,9 +737,9 @@ input[type="checkbox"]:checked {
     outline: none;
     box-shadow: none;
     border: none;
-    color: #111111;
+    color: var(--cod-grey);
     opacity: 0.8;
-    background-color: #ffffff;
+    background-color: var(--white);
 }
 
 #reservations-main-wraper .form-input-wraper {
@@ -799,9 +799,9 @@ input[type="checkbox"]:checked {
 
 .homepage-heading .heading-container .header-content {
     /* margin: 0 auto; */
-    color: #ffffff;
+    color: var(--white);
     width: 720px;
-    font-family: 'League Spartan', sans-serif;
+    font-family: var(--font-league-spartan);
     font-weight: 400;
     text-align: left;
 }
@@ -816,8 +816,8 @@ section .container .service {
 
 .section2,
 .section3 {
-    background-color: #ffffff;
-    font-family: 'League Spartan', sans-serif;
+    background-color: var(--white);
+    font-family: var(--font-league-spartan);
     padding: 40px;
     min-height: fit-content;
     height: 1200px;
@@ -855,7 +855,7 @@ section .container .service {
 }
 
 .section5 p {
-    font-family: 'League Spartan';
+    font-family: var(--font-league-spartan);
     font-size: 1.3rem;
     margin: 170px 10px;
 }
@@ -863,23 +863,23 @@ section .container .service {
 .header-content h1 {
     font-size: 4rem;
     font-weight: 400;
-    font-family: 'League Spartan';
+    font-family: var(--font-league-spartan);
     letter-spacing: -1px;
 }
 
 .header-content p {
     font-size: 1.3rem;
-    font-family: 'League Spartan';
+    font-family: var(--font-league-spartan);
     word-break: keep-all;
     width: 500px;
 }
 
 .container-image {
     text-align: center;
-    background-color: #111111;
-    color: #ffffff;
+    background-color: var(--cod-grey);
+    color: var(--white);
     font-size: 2.2rem;
-    font-family: 'Sanchez', serif;
+    font-family: var(--font-sanchez);
     font-weight: 400;
     padding: 230px;
 
@@ -922,8 +922,8 @@ section .container .service {
 
 .row h3 {
     text-align: center;
-    color: #242B37;
-    font-family: 'League Spartan', sans-serif;
+    color: var(--elbony-clay);
+    font-family: var(--font-league-spartan);
     font-size: 5rem;
     font-weight: 400;
     letter-spacing: -1px;
@@ -936,7 +936,7 @@ section .container .service {
     background-position: center;
     padding: 70px 80px;
     position: relative;
-    color: #fff;
+    color: var(--white);
 }
 
 .reservation-footer::before {
@@ -946,7 +946,7 @@ section .container .service {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: #00000080;
     z-index: 1;
 }
 
@@ -965,17 +965,17 @@ section .container .service {
 }
 
 .reservation-heading {
-    font-family: 'League Spartan', sans-serif;
+    font-family: var(--font-league-spartan);
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
 
 .btn-homepage {
-    font-family: 'League Spartan', sans-serif;
+    font-family: var(--font-league-spartan);
     background-color: transparent;
-    border: 1px solid #fff;
-    color: #fff;
+    border: 1px solid var(--white);
+    color: var(--white);
     padding: 15px 70px;
     font-size: 1rem;
     width: 100%;
@@ -994,17 +994,13 @@ section .container .service {
 }
 
 .btn-homepage:hover {
-    background-color: #ffffff;
+    background-color: var(--white);
     color: #333;
     text-decoration: none;
 }
 
-/* #sipemCarousel button {
-    background-color: #9E7F66;
-} */
-
 #sipemCarousel img {
-    background-color: #ffffff;
+    background-color: var(--white);
 }
 
 /****
@@ -1013,14 +1009,14 @@ section .container .service {
 * @author Heloise Lui 
 **/
 .upcoming-events {
-    background-color: #ffffff;
-    font-family: 'League Spartan', sans-serif;
+    background-color: var(--white);
+    font-family: var(--font-league-spartan);
     text-align: center;
 }
 
 .upcoming-events h1 {
     font-size: 4rem;
-    color: #242B37;
+    color: var(--elbony-clay);
     margin: 70px 0;
 }
 
@@ -1052,18 +1048,18 @@ section .container .service .col {
 .upcoming-events .event h2 {
     font-weight: bold;
     font-size: 2rem;
-    color: #242B37;
+    color: var(--elbony-clay);
 }
 
 .upcoming-events .event p {
     font-size: 1.3rem;
-    color: #242B37;
+    color: var(--elbony-clay);
     margin-bottom: 40px;
 
 }
 
 .upcoming-events .event .event-time {
-    color: #111111;
+    color: var(--cod-grey);
     font-size: 1rem;
     letter-spacing: 2px;
 }
@@ -1083,7 +1079,7 @@ section .container .service .col {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: #000000;
+    background-color: var(--black);
     background-color: rgba(0, 0, 0, 0.9);
 }
 
@@ -1106,15 +1102,15 @@ section .container .service .col {
 
 /* Newsletter Section */
 .newsletter {
-    color: #242B37;
+    color: var(--elbony-clay);
     padding: 60px 0;
-    font-family: 'League Spartan', sans-serif;
+    font-family: var(--font-league-spartan);
     text-align: center;
 }
 
 .newsletter h2 {
     font-size: 2.5rem;
-    font-family: 'League Spartan';
+    font-family: var(--font-league-spartan);
     margin-bottom: 20px;
     font-weight: 700;
 }
@@ -1135,9 +1131,9 @@ section .container .service .col {
 }
 
 .newsletter button {
-    background-color: #111111;
+    background-color: var(--cod-grey);
     font-size: 1rem;
-    color: #FFFFFF;
+    color: var(--white);
     text-align: center;
     width: 108px;
     height: 40px;
@@ -1146,9 +1142,9 @@ section .container .service .col {
 }
 
 .newsletter button:hover {
-    background-color: #FFFFFF;
-    border: 1px solid #111111;
-    color: #111111;
+    background-color: var(--white);
+    border: 1px solid var(--cod-grey);
+    color: var(--cod-grey);
 }
 
 .reservation-footer {
@@ -1157,7 +1153,7 @@ section .container .service .col {
     background-position: center;
     padding: 70px 80px;
     position: relative;
-    color: #fff;
+    color: var(--white);
 }
 
 .reservation-footer::before {
@@ -1179,17 +1175,17 @@ section .container .service .col {
 }
 
 .reservation-heading {
-    font-family: 'League Spartan', sans-serif;
+    font-family: var(--font-league-spartan);
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
 
 .btn-footer {
-    font-family: 'League Spartan', sans-serif;
+    font-family: var(--font-league-spartan);
     background-color: transparent;
-    border: 1px solid #fff;
-    color: #fff;
+    border: 1px solid var(--white);
+    color: var(--white);
     padding: 15px 35px;
     font-size: 1rem;
     text-transform: uppercase;
@@ -1199,7 +1195,7 @@ section .container .service .col {
 }
 
 .btn-footer:hover {
-    background-color: #fff;
+    background-color: var(--white);
     color: #333;
     text-decoration: none;
 }
@@ -1230,7 +1226,7 @@ section .container .service .col {
 
 .cocktail-overview p,
 .cocktail-section P {
-    font-family: 'Sanchez', serif;
+    font-family: var(--font-sanchez);
 }
 
 /* Style for cocktail image*/
@@ -1296,7 +1292,7 @@ section .container .service .col {
 #board .card {
     margin: 5px;
     border: none;
-    background-color: #111111;
+    background-color: var(--cod-grey);
     zoom: 1.1;
 
 }
@@ -1391,7 +1387,7 @@ section .container .service .col {
     .footer-wraper {
         min-height: 260px;
         min-width: 100%;
-        background-color: #111111;
+        background-color: var(--cod-grey);
 
     }
 
@@ -1564,21 +1560,21 @@ section .container .service .col {
     .pin-separator .gold-circle {
         width: 5px;
         height: 5px;
-        border: solid 2px #9E7F66;
+        border: solid 2px var(--beaver);
         border-radius: 50px;
     }
 
     .pin-separator .gold-line {
         width: 60px;
         height: 1px;
-        background-color: #9E7F66;
+        background-color: var(--beaver);
         border-radius: 5px;
         margin-left: 7px;
     }
 
     #john .john-wraper {
-        background-color: #111111;
-        color: #ffffff;
+        background-color: var(--cod-grey);
+        color: var(--white);
         padding-bottom: 60px;
     }
 
@@ -1616,7 +1612,7 @@ section .container .service .col {
     }
 
     #alex .alex-wraper {
-        color: #111111;
+        color: var(--cod-grey);
         padding-bottom: 60px;
     }
 
@@ -1730,7 +1726,7 @@ section .container .service .col {
     #reservations-main-wraper .inputBaseLine {
         width: 100%;
         min-height: 2px;
-        background-color: #9E7F66;
+        background-color: var(--beaver);
     }
 
     #contact-number-wraper {
@@ -1757,11 +1753,11 @@ section .container .service .col {
         height: 20px;
         width: 20px;
         margin: 0 10px 0 10px;
-        border: solid 1px #9E7F66;
+        border: solid 1px var(--beaver);
     }
 
     #reservations input[type="checkbox"]:checked {
-        background-color: #9E7F66;
+        background-color: var(--beaver);
     }
 
     #reservations-main-wraper button[type="submit"] {
@@ -1771,7 +1767,7 @@ section .container .service .col {
         font-weight: 500;
         letter-spacing: 1.5px;
         width: 93%;
-        background-color: #111111;
+        background-color: var(--cod-grey);
         text-transform: uppercase;
         transition: 0.5s;
     }
@@ -1800,7 +1796,7 @@ section .container .service .col {
     /* Took this code "::-webkit-datetime-edit" from the below link to override default date input placeholder color */
     /* https://stackoverflow.com/questions/31706433/how-can-i-change-the-text-color-of-chromes-input-date-placeholder */
     #reservations input[type="date"]::-webkit-datetime-edit {
-        color: #111111;
+        color: var(--cod-grey);
         opacity: 0.7;
         font-size: 1.063rem;
         ;
@@ -1907,7 +1903,7 @@ section .container .service .col {
         -webkit-box-shadow: 0 0 0 50px #ffffff inset;
         /*your box-shadow*/
         -webkit-text-fill-backgorund-color: #FFFFF0;
-        -webkit-text-fill-color: #111111;
+        -webkit-text-fill-color: var(--cod-grey);
         -webkit-text-fill-font-size: 1.125rem;
     }
 
@@ -2005,7 +2001,7 @@ section .container .service .col {
     #reservations-review {
         width: 100%;
         min-height: 450px;
-        background-color: #ffffff;
+        background-color: var(--white);
     }
 
     #reservations-review #review-wraper {
@@ -2057,14 +2053,14 @@ section .container .service .col {
 **/
 
     .upcoming-events {
-        background-color: #ffffff;
-        font-family: 'League Spartan', sans-serif;
+        background-color: var(--white);
+        font-family: var(--font-league-spartan);
         text-align: center;
     }
 
     .upcoming-events h1 {
         font-size: 4rem;
-        color: #242B37;
+        color: var(--elbony-clay);
         margin: 70px 0;
 
     }
@@ -2092,18 +2088,18 @@ section .container .service .col {
     .upcoming-events .event h2 {
         font-weight: bold;
         font-size: 2rem;
-        color: #242B37;
+        color: var(--elbony-clay);
     }
 
     .upcoming-events .event p {
         font-size: 1.3rem;
-        color: #242B37;
+        color: var(--elbony-clay);
         margin-bottom: 40px;
 
     }
 
     .upcoming-events .event .event-time {
-        color: #111111;
+        color: var(--cod-grey);
         font-size: 1rem;
         letter-spacing: 2px;
     }
@@ -2112,15 +2108,15 @@ section .container .service .col {
 
     /* Newsletter Section */
     .newsletter {
-        color: #242B37;
+        color: var(--elbony-clay);
         padding: 60px 0;
-        font-family: 'League Spartan', sans-serif;
+        font-family: var(--font-league-spartan);
         text-align: center;
     }
 
     .newsletter h2 {
         font-size: 2.5rem;
-        font-family: 'League Spartan';
+        font-family: var(--font-league-spartan);
         margin-bottom: 20px;
         font-weight: 700;
     }
@@ -2141,9 +2137,9 @@ section .container .service .col {
     }
 
     .newsletter button {
-        background-color: #111111;
+        background-color: var(--cod-grey);
         font-size: 1rem;
-        color: #FFFFFF;
+        color: var(--white);
         text-align: center;
         width: 108px;
         height: 40px;
@@ -2152,9 +2148,9 @@ section .container .service .col {
     }
 
     .newsletter button:hover {
-        background-color: #FFFFFF;
-        border: 1px solid #111111;
-        color: #111111;
+        background-color: var(--white);
+        border: 1px solid var(--cod-grey);
+        color: var(--cod-grey);
     }
 
 
@@ -2164,7 +2160,7 @@ section .container .service .col {
         background-position: center;
         padding: 70px 80px;
         position: relative;
-        color: #fff;
+        color: var(--white);
         text-align: center;
     }
 
@@ -2188,7 +2184,7 @@ section .container .service .col {
     }
 
     .reservation-heading {
-        font-family: 'League Spartan', sans-serif;
+        font-family: var(--font-league-spartan);
         font-size: 2rem;
         font-weight: bold;
         text-align: left;
@@ -2196,10 +2192,10 @@ section .container .service .col {
     }
 
     .btn-footer {
-        font-family: 'League Spartan', sans-serif;
+        font-family: var(--font-league-spartan);
         background-color: transparent;
-        border: 1px solid #fff;
-        color: #fff;
+        border: 1px solid var(--white);
+        color: var(--white);
         padding: 15px 35px;
         font-size: 1rem;
         text-transform: uppercase;
@@ -2209,7 +2205,7 @@ section .container .service .col {
     }
 
     .btn-footer:hover {
-        background-color: #fff;
+        background-color: var(--white);
         color: #333;
         text-decoration: none;
     }
@@ -2252,7 +2248,7 @@ section .container .service .col {
     }
 
     header nav #navbarSupportedContent {
-        background-color: #111111;
+        background-color: var(--cod-grey);
     }
 
     nav .nav-link {
@@ -2279,8 +2275,8 @@ section .container .service .col {
         top: 0;
         min-height: 100vh;
         width: 71%;
-        background-color: #111111;
-        color: #ffffff;
+        background-color: var(--cod-grey);
+        color: var(--white);
         z-index: 3;
         margin: 0 auto;
     }
@@ -2512,21 +2508,21 @@ section .container .service .col {
     .pin-separator .gold-circle {
         width: 5px;
         height: 5px;
-        border: solid 2px #9E7F66;
+        border: solid 2px var(--beaver);
         border-radius: 50px;
     }
 
     .pin-separator .gold-line {
         width: 60px;
         height: 1px;
-        background-color: #9E7F66;
+        background-color: var(--beaver);
         border-radius: 5px;
         margin-left: 7px;
     }
 
     #john .john-wraper {
-        background-color: #111111;
-        color: #ffffff;
+        background-color: var(--cod-grey);
+        color: var(--white);
         padding-bottom: 60px;
         width: 100%;
 
@@ -2597,7 +2593,7 @@ section .container .service .col {
         width: 100%;
         width: 600px;
         margin: 0 auto;
-        color: #111111;
+        color: var(--cod-grey);
         padding-top: 50px;
         padding-bottom: 200px;
     }
@@ -2646,8 +2642,8 @@ section .container .service .col {
         margin-top: 20px;
         padding-top: 8px;
         letter-spacing: 1.5px;
-        color: #ffffff;
-        border: solid 1px #ffffff;
+        color: var(--white);
+        border: solid 1px var(--white);
         border-radius: 0;
         width: 40%;
         background-color: transparent;
@@ -2726,7 +2722,7 @@ section .container .service .col {
     #reservations-main-wraper .inputBaseLine {
         width: 100%;
         min-height: 2px;
-        background-color: #9E7F66;
+        background-color: var(--beaver);
     }
 
     #reservations-main-wraper input::placeholder {
@@ -2754,11 +2750,11 @@ section .container .service .col {
         height: 20px;
         width: 20px;
         margin: 0 10px 0 10px;
-        border: solid 1px #9E7F66;
+        border: solid 1px var(--beaver);
     }
 
     #reservations input[type="checkbox"]:checked {
-        background-color: #9E7F66;
+        background-color: var(--beaver);
     }
 
     #reservations-main-wraper button[type="submit"] {
@@ -2768,7 +2764,7 @@ section .container .service .col {
         font-weight: 500;
         letter-spacing: 1.5px;
         width: 93%;
-        background-color: #111111;
+        background-color: var(--cod-grey);
         text-transform: uppercase;
         transition: 0.5s;
     }
@@ -2793,7 +2789,7 @@ section .container .service .col {
     /* Took this code "::-webkit-datetime-edit" from the below link to override default date input placeholder color */
     /* https://stackoverflow.com/questions/31706433/how-can-i-change-the-text-color-of-chromes-input-date-placeholder */
     #reservations input[type="date"]::-webkit-datetime-edit {
-        color: #111111;
+        color: var(--cod-grey);
         opacity: 0.7;
         font-size: 1.063rem;
         ;
@@ -2884,7 +2880,7 @@ section .container .service .col {
     #contact input:-webkit-autofill {
         -webkit-box-shadow: 0 0 0 50px #333333 inset;
         /* Change the color to your own background color */
-        -webkit-text-fill-background-color: #ffffff;
+        -webkit-text-fill-background-color: var(--white);
         -webkit-text-fill-color: #FFFFF0;
         -webkit-text-fill-font-size: 0.813rem;
     }
@@ -2893,7 +2889,7 @@ section .container .service .col {
     #contact input:-webkit-autofill:focus {
         -webkit-box-shadow: 0 0 0 50px #ffffff inset;
         /*your box-shadow*/
-        -webkit-text-fill-color: #111111;
+        -webkit-text-fill-color: var(--cod-grey);
         -webkit-text-fill-font-size: 1.125rem;
     }
 
@@ -3020,7 +3016,7 @@ section .container .service .col {
 **/
     .homepage-heading .heading-container .header-content {
         margin: 0 auto;
-        color: #ffffff;
+        color: var(--white);
         width: 600px;
         padding-left: 3%;
         padding-right: 3%;
@@ -3072,7 +3068,7 @@ section .container .service .col {
         width: 85%;
         margin: 0 auto;
         font-size: 1.4rem;
-        font-family: 'League Spartan';
+        font-family: var(--font-league-spartan);
         font-size: 1.3rem;
         margin: 50px auto;
     }
@@ -3152,7 +3148,7 @@ section .container .service .col {
     }
 
     header nav #navbarSupportedContent {
-        background-color: #111111;
+        background-color: var(--cod-grey);
     }
 
     header #logo {
@@ -3198,7 +3194,7 @@ section .container .service .col {
         right: 300px;
         height: 100vh;
         width: 67%;
-        background-color: #111111;
+        background-color: var(--cod-grey);
         color: #FFFFF0;
         z-index: 3;
         margin: 0 auto;
@@ -3340,7 +3336,7 @@ section .container .service .col {
 
     #footer .footer-copyright {
         width: 100%;
-        background-color: #111111;
+        background-color: var(--cod-grey);
         text-align: center;
         padding: 40px 0;
         margin: 0;
@@ -3356,12 +3352,12 @@ section .container .service .col {
 
     .authors-wraper {
         width: 100%;
-        background-color: #9E7F66;
+        background-color: var(--beaver);
     }
 
     .authors-container {
         max-width: 1300px;
-        background-color: #9E7F66;
+        background-color: var(--beaver);
         margin: 0 auto;
         padding: 10px 0
     }
@@ -3476,14 +3472,14 @@ section .container .service .col {
     .pin-separator .gold-circle {
         width: 5px;
         height: 5px;
-        border: solid 2px #9E7F66;
+        border: solid 2px var(--beaver);
         border-radius: 50px;
     }
 
     .pin-separator .gold-line {
         width: 60px;
         height: 1px;
-        background-color: #9E7F66;
+        background-color: var(--beaver);
         border-radius: 5px;
         margin-left: 7px;
     }
@@ -3496,8 +3492,8 @@ section .container .service .col {
     }
 
     #john .john-wraper {
-        background-color: #111111;
-        color: #ffffff;
+        background-color: var(--cod-grey);
+        color: var(--white);
         padding-bottom: 60px;
     }
 
@@ -3555,7 +3551,7 @@ section .container .service .col {
 
     #alex .alex-wraper .alex-container {
         margin: 0 auto;
-        color: #111111;
+        color: var(--cod-grey);
         padding-bottom: 150px;
     }
 
@@ -3608,8 +3604,8 @@ section .container .service .col {
         font-weight: 500;
         margin-top: 20px;
         letter-spacing: 1.5px;
-        color: #ffffff;
-        border: solid 1px #ffffff;
+        color: var(--white);
+        border: solid 1px var(--white);
         border-radius: 0;
         width: 60%;
         background-color: transparent;
@@ -3746,7 +3742,7 @@ section .container .service .col {
     #reservations-main-wraper .inputBaseLine {
         width: 100%;
         min-height: 2px;
-        background-color: #9E7F66;
+        background-color: var(--beaver);
     }
 
     #reservations-main-wraper input::placeholder {
@@ -3789,13 +3785,13 @@ section .container .service .col {
         height: 1.125rem;
         width: 1.125rem;
         margin: 0 10px 0 10px;
-        border: solid 1px #9E7F66;
+        border: solid 1px var(--beaver);
         position: relative;
         top: 3px;
     }
 
     #reservations input[type="checkbox"]:checked {
-        background-color: #9E7F66;
+        background-color: var(--beaver);
     }
 
     #reservations-main-wraper button[type="submit"] {
@@ -3826,7 +3822,7 @@ section .container .service .col {
     /* Took this code "::-webkit-datetime-edit" from the below link to override default date input placeholder color */
     /* https://stackoverflow.com/questions/31706433/how-can-i-change-the-text-color-of-chromes-input-date-placeholder */
     #reservations input[type="date"]::-webkit-datetime-edit {
-        color: #111111;
+        color: var(--cod-grey);
         opacity: 0.7;
         font-size: 1.063rem;
         ;
@@ -3905,7 +3901,7 @@ section .container .service .col {
         font-weight: 500;
         letter-spacing: 1.5px;
         width: 93%;
-        background-color: #111111;
+        background-color: var(--cod-grey);
         text-transform: uppercase;
         transition: 0.5s;
     }
@@ -3930,7 +3926,7 @@ section .container .service .col {
     #contact input:-webkit-autofill {
         -webkit-box-shadow: 0 0 0 50px #333333 inset;
         /* Change the color to your own background color */
-        background-color: #ffffff;
+        background-color: var(--white);
         -webkit-text-fill-color: #FFFFF0;
         -webkit-text-fill-font-size: 0.813rem;
     }
@@ -3939,8 +3935,8 @@ section .container .service .col {
     #contact input:-webkit-autofill:focus {
         -webkit-box-shadow: 0 0 0 50px #ffffff inset;
         /*your box-shadow*/
-        -webkit-text-fill-color: #111111;
-        background-color: #ffffff;
+        -webkit-text-fill-color: var(--cod-grey);
+        background-color: var(--white);
         -webkit-text-fill-font-size: 1.125rem;
     }
 
@@ -4095,7 +4091,7 @@ section .container .service .col {
 
     .homepage-heading .heading-container {
         margin: 0 auto;
-        color: #ffffff;
+        color: var(--white);
         width: 95%;
         padding-left: 3%;
         padding-right: 3%;
