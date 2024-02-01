@@ -88,6 +88,39 @@
                             <div class="reservation-form-wraper">
                                 <div class="reservation-form-container">
                                     <form class="form" id="reservation-form" action="#" method="GET">
+                                        <!-------- contact details ----->
+                                        <div class="form-input-wraper" id="fullName-wraper">
+                                            <input class="" type="text" id="fullName" name="fullName"
+                                                placeholder="Name">
+                                            <div class="inputBaseLine"></div>
+                                        </div>
+                                        <!-------- email ----->
+                                        <div class="form-input-wraper" id="reservation-email-wraper">
+                                            <input class="" type="text" id="email" name="email" placeholder="Email">
+                                            <div class="inputBaseLine"></div>
+                                        </div>
+                                        <!-------- contact number ----->
+                                        <div class="row" id="contact-number-wraper">
+                                            <div class="col-4 col-md-4 col-lg-3 ps-lg-0">
+                                                <div id="prefix-wraper" class="form-input-wraper p-lg-0">
+                                                    <select class="prefix-select-wraper "
+                                                        aria-label="Select phone prefix">
+                                                        <option id="prefix" selected>+353</option>
+                                                        <option value="1">+373</option>
+                                                        <option value="2">+345</option>
+                                                        <option value="3">+384</option>
+                                                    </select>
+                                                    <div class="puta inputBaseLine"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-8 col-md-8 col-lg-9 pe-lg-0">
+                                                <div id="phone-wraper" class="form-input-wraper">
+                                                    <input class="" type="text" id="phone" name="phone"
+                                                        placeholder="Contact number">
+                                                    <div class="inputBaseLine" id="phoneBaseLine"></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <!-------- date and time ----->
                                         <div class="form-input-wraper">
                                             <div class="row gx-0">
@@ -137,40 +170,6 @@
                                                 placeholder="Part size">
                                             <div class="inputBaseLine"></div>
                                         </div>
-                                        <!-------- contact details ----->
-                                        <div class="form-input-wraper" id="fullName-wraper">
-                                            <input class="" type="text" id="fullName" name="fullName"
-                                                placeholder="Full Name">
-                                            <div class="inputBaseLine"></div>
-                                        </div>
-                                        <!-------- email ----->
-                                        <div class="form-input-wraper" id="reservation-email-wraper">
-                                            <input class="" type="text" id="email" name="email"
-                                                placeholder="name@example.com">
-                                            <div class="inputBaseLine"></div>
-                                        </div>
-                                        <!-------- contact number ----->
-                                        <div class="row" id="contact-number-wraper">
-                                            <div class="col-4 col-md-4 col-lg-3 ps-lg-0">
-                                                <div id="prefix-wraper" class="form-input-wraper p-lg-0">
-                                                    <select class="prefix-select-wraper "
-                                                        aria-label="Select phone prefix">
-                                                        <option id="prefix" selected>+353</option>
-                                                        <option value="1">+373</option>
-                                                        <option value="2">+345</option>
-                                                        <option value="3">+384</option>
-                                                    </select>
-                                                    <div class="puta inputBaseLine"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-8 col-md-8 col-lg-9 pe-lg-0">
-                                                <div id="phone-wraper" class="form-input-wraper">
-                                                    <input class="" type="text" id="phone" name="phone"
-                                                        placeholder="Contact number">
-                                                    <div class="inputBaseLine" id="phoneBaseLine"></div>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <div class="form-check">
                                             <div class="row">
                                                 <div class="col-2">
@@ -190,8 +189,6 @@
                                         </div>
                                         <div class="row g-0">
                                             <button class="form-control" type="submit">make reservation</button>
-
-
                                         </div>
                                     </form>
                                 </div>
@@ -229,7 +226,7 @@
                                             <!-------- contact details ----->
                                             <div class="form-input-wraper">
                                                 <input class="" type="text" id="contact-form-fullname"
-                                                    name="contact-form-fullname" placeholder="Full Name">
+                                                    name="contact-form-fullname" placeholder="Name">
                                                 <div class="inputBaseLine"></div>
                                                 <div id="contact-nameMessageError" class="errorMessage">
                                                     <small></small>
@@ -238,7 +235,7 @@
                                             <!-------- email ----->
                                             <div class="form-input-wraper">
                                                 <input class="" type="text" id="contact-form-email"
-                                                    name="contact-form-email" placeholder="name@example.com">
+                                                    name="contact-form-email" placeholder="Email">
                                                 <div class="inputBaseLine"></div>
                                                 <div id="contact-emailMessageError" class="errorMessage">
                                                     <small></small>
