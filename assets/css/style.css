@@ -1,29 +1,34 @@
-/* Root Variables for Color Scheme and Fonts */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Lora:wght@500;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&family=Sanchez:ital@0;1&display=swap');
+
+/**** Root Variables for Color Scheme and Fonts ****/
 :root {
-    /* Color Palette */
+    /**** Color Palette ****/
     --beaver: #9E7F66;
+    --yellowish-beige: #f4e6cb;
     --cod-grey: #111111;
     --mirage: #17192B;
     --elbony-clay: #242B37;
-    --shuttle-gray: #5C6779;
+    --shuttle-blue: #5C6779;
     --white: #ffffff;
     --black: #000000;
+    --red: #b40505;
+    --dark-charcoal: #333333;
+    --black-russian: #0000001a;
+    --navy-blue: #00000080;
+    --black-transparent: #000000e6;
+    --grey: #d9d9d95c;
 
-    /* Font Families */
+
+    /**** Font Families ****/
     --font-league-spartan: var(--font-league-spartan);
     --font-sanchez: var(--font-sanchez);
 }
-
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Lora:wght@500;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&family=Sanchez:ital@0;1&display=swap');
-
-
 
 h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5 {
     font-family: var(--font-league-spartan);
 }
 
@@ -34,12 +39,12 @@ p a {
 }
 
 
-/****
-* Navbar, Footer & Modal menu stylings and animations
-* @author Javier Bastande 
-**/
+/*
+- Navbar, Footer & Modal menu stylings and animations
+- @author Javier Bastande 
+*/
 
-/*************** CLASSLIST ANIMATIONS*/
+/**** CLASSLIST ANIMATIONS ****/
 .showMenu {
     display: block;
     animation-name: showMenu;
@@ -51,13 +56,13 @@ p a {
     from {
         right: -600px;
         display: none;
-        border-left: solid 1px black;
+        border-left: solid 1px var(--black);
     }
 
     to {
         right: 0;
         display: block;
-        border-left: solid 1px white;
+        border-left: solid 1px var(--white);
 
     }
 }
@@ -169,7 +174,7 @@ p a {
 }
 
 
-/*********************  SHARED HEADER PROPERTIES*/
+/**** SHARED HEADER PROPERTIES ****/
 header {
     height: 800px;
 }
@@ -185,7 +190,6 @@ header .navbar {
     position: relative;
     z-index: 4;
 }
-
 
 header nav .navbar-brand,
 #logo-footer {
@@ -207,7 +211,6 @@ header nav .nav-link:hover {
     color: var(--white);
 }
 
-
 header nav .nav-link::after {
     content: '';
     margin: auto;
@@ -221,7 +224,7 @@ header nav .nav-link::after {
 header nav .nav-link:hover::after {
     height: 2px;
     width: 100%;
-    background-color: ;
+    background-color: var(--beaver);
 }
 
 header nav .navbar-toggler,
@@ -237,7 +240,7 @@ header nav .navbar-toggler-icon {
     color: inherit;
 }
 
-/* header backgorund images */
+/**** Header Backgorund Images ****/
 #upcoming-header #upcoming-bg-image {
     position: absolute;
     width: 100%;
@@ -285,15 +288,13 @@ header #home-bg-img {
     opacity: 0.5;
 }
 
-
-
 header .rectangle {
     background-color: var(--cod-grey);
     position: absolute;
     height: inherit;
 }
 
-/************** SHARED FOOTER PROPERTIES*/
+/**** SHARED FOOTER PROPERTIES ****/
 .footer-wraper {
     min-height: 460px;
     width: 100%;
@@ -342,14 +343,14 @@ header .rectangle {
 .authors-container>p,
 .names-wraper>p {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 
-/****
-* About page stylings shared accross screen sizes
-* @author Javier Bastande 
-**/
+/*
+- About page stylings shared accross screen sizes
+- @author Javier Bastande 
+*/
 #about-header {
     height: 200px;
 }
@@ -359,17 +360,7 @@ section {
     padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: var(--font-league-spartan);
-}
-
-
-/********** story section**/
+/**** Story Section ****/
 #story-decorator .decorator,
 #alex-decorator .decorator {
     width: 90%;
@@ -422,7 +413,7 @@ h6 {
     font-size: 3rem;
 }
 
-/********* john section**/
+/**** John Section ****/
 #john .pin-holder {
     background-image: url("../images/pin.png");
     background-position: center;
@@ -470,7 +461,7 @@ h6 {
     background-size: cover;
 }
 
-/********* alex section**/
+/**** Alex Section ****/
 #alex #alex-decorator {
     position: absolute;
     right: 0;
@@ -490,7 +481,7 @@ h6 {
     background-size: cover;
 }
 
-/****** call to action **/
+/**** Call to action ****/
 
 .call-action-wraper .call-action-container {
     display: flex;
@@ -527,10 +518,9 @@ h6 {
     background-size: cover;
 }
 
-
 .call-action-wraper a {
     height: 75px;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 500;
     letter-spacing: 1.5px;
     color: var(--white);
@@ -550,31 +540,31 @@ h6 {
     cursor: url("../images/pointer.png"), auto;
 }
 
+/*
+- Reservation page stylings for desktop
+- @author Javier Bastande 
+*/
 
-/****
-* Reservation page stylings for desktop
-* @author Javier Bastande 
-**/
-/********* CLASSS LIST*/
+/**** Class List ****/
 .inputError {
     width: 100%;
     height: 2px;
-    background-color: #b40505;
+    background-color: var(--red);
 }
 
 .redText {
-    color: #b40505;
+    color: var(--red);
     opacity: 0.6;
 }
 
 .redPlaceholder::-webkit-input-placeholder {
-    color: #b40505;
+    color: var(--red);
     opacity: 0.6;
     font-size: 1.125rem;
 }
 
 .wrongEmail::-webkit-input-placeholder {
-    color: #b40505;
+    color: var(--red);
     opacity: 0.6;
     font-size: 1.063rem;
 }
@@ -585,7 +575,7 @@ h6 {
     background-color: var(--beaver);
 }
 
-/**** double quotes */
+/**** Double Quotes ****/
 #reservations-review .left-quote-wraper {
     text-align: start;
 }
@@ -604,13 +594,12 @@ h6 {
     transform: rotate(180deg);
 }
 
-
-/*********** RESERVATIONS PAGE SHARED PROPERTIES*/
+/**** RESERVATIONS PAGE SHARED PROPERTIES ****/
 #reservations-main-wraper h4 {
     font-size: 4rem;
 }
 
-/** font family*/
+/**** Font Family ****/
 #reservations-main-wraper input,
 #reservations input[type="date"],
 #reservations form .form-input-wraper p,
@@ -640,7 +629,7 @@ h6 {
     font-family: var(--font-league-spartan);
 }
 
-/**** colors ***/
+/**** Colors ****/
 .reservations-wraper .reservation-text-wraper,
 #reservations-main-wraper button[type="submit"],
 .contact-wraper .contact-text-wraper,
@@ -654,7 +643,6 @@ header nav .nav-link,
 #about-main-wraper {
     color: var(--white);
 }
-
 
 .authors-container>p,
 .names-wraper>p,
@@ -681,7 +669,7 @@ header nav .nav-link,
     background-color: var(--cod-grey);
 }
 
-/*** buttons and links */
+/**** Buttons and Links ****/
 #reservations-main-wraper button[type="submit"] {
     font-size: 1.25rem;
     font-weight: 500;
@@ -703,12 +691,12 @@ header nav .nav-link,
     box-shadow: none;
 }
 
-/*** containers shadow*/
+/**** Containers Shadow ****/
 /* https://cssgenerator.org/box-shadow-css-generator.html */
 .reservations-wraper .reservation-form-wraper {
-    box-shadow: 16px 18px 46px -13px rgba(0, 0, 0, 0.21);
-    -webkit-box-shadow: 16px 18px 46px -13px rgba(0, 0, 0, 0.21);
-    -moz-box-shadow: 16px 18px 46px -13px rgba(0, 0, 0, 0.21);
+    box-shadow: 16px 18px 46px -13px var(--black-transparent);
+    -webkit-box-shadow: 16px 18px 46px -13px var(--black-transparent);
+    -moz-box-shadow: 16px 18px 46px -13px var(--black-transparent);
 }
 
 #reservations input[type="date"]::-webkit-calendar-picker-indicator:hover,
@@ -726,7 +714,7 @@ header nav .navbar-brand:hover {
     cursor: url("../images/pointer.png"), auto;
 }
 
-/******* shared form inputs ***/
+/******* Shared Form Inputs ***/
 input[type="checkbox"]:focus,
 select,
 input[type="date"]:focus,
@@ -773,13 +761,12 @@ input[type="checkbox"]:checked {
     background-size: cover;
 }
 
-/****
-* Home page stylings
-*
-* @author Heloise Lui 
-**/
+/*
+- Home page stylings
+- @author Heloise Lui 
+*/
 
-/************** MAIN **************/
+/**** MAIN ****/
 .homepage-heading {
     width: 100%;
     position: absolute;
@@ -827,7 +814,7 @@ section .container .service {
 .section3 img {
     width: 100%;
     height: auto;
-    box-shadow: 0 10px 8px #0000001a;
+    box-shadow: 0 10px 8px var(--black-russian);
 }
 
 section .container .service {
@@ -835,20 +822,16 @@ section .container .service {
     height: 500px;
 }
 
-
 /* .section5 img {
     width: 100%;
 } */
 
-
-/* Estilizando o h3 */
 .section2 h3,
 .section3 h3 {
     font-weight: bold;
     font-size: 3rem;
 }
 
-/* Estilizando o p */
 .section2 p,
 .section3 p {
     font-size: 1.25rem;
@@ -908,7 +891,7 @@ section .container .service {
 
 .buttons button {
     background-color: transparent;
-    color: #333;
+    color: var(--dark-charcoal);
     font-size: 1.125rem;
     padding: 15px 32px;
     text-align: center;
@@ -946,7 +929,7 @@ section .container .service {
     right: 0;
     bottom: 0;
     left: 0;
-    background: #00000080;
+    background: var(--navy-blue);
     z-index: 1;
 }
 
@@ -995,7 +978,7 @@ section .container .service {
 
 .btn-homepage:hover {
     background-color: var(--white);
-    color: #333;
+    color: var(--dark-charcoal);
     text-decoration: none;
 }
 
@@ -1003,11 +986,10 @@ section .container .service {
     background-color: var(--white);
 }
 
-/****
-* Upcoming page stylings
-*
-* @author Heloise Lui 
-**/
+/*
+- Upcoming page stylings
+- @author Heloise Lui 
+*/
 .upcoming-events {
     background-color: var(--white);
     font-family: var(--font-league-spartan);
@@ -1042,7 +1024,7 @@ section .container .service .col {
     width: 350px;
     height: 300px;
     margin-bottom: 40px;
-    box-shadow: 0 10px 50px -12px #333;
+    box-shadow: 0 10px 50px -12px var(--dark-charcoal);
 }
 
 .upcoming-events .event h2 {
@@ -1079,8 +1061,7 @@ section .container .service .col {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: var(--black);
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: var(--black-transparent);
 }
 
 .lightbox-content {
@@ -1094,8 +1075,8 @@ section .container .service .col {
     position: absolute;
     top: 50px;
     right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
+    color: var(--white);
+    font-size: 2.5rem;
     font-weight: bold;
     cursor: pointer;
 }
@@ -1125,7 +1106,7 @@ section .container .service .col {
     margin-right: 3px;
     border: none;
     border-radius: 0;
-    background-color: rgba(217, 217, 217, 0.36);
+    background-color: var(--grey);
     width: 344px;
     height: 40px;
 }
@@ -1163,7 +1144,7 @@ section .container .service .col {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--navy-blue);
     z-index: 1;
 }
 
@@ -1196,30 +1177,27 @@ section .container .service .col {
 
 .btn-footer:hover {
     background-color: var(--white);
-    color: #333;
+    color: var(--dark-charcoal);
     text-decoration: none;
 }
 
+/* Signature page 
+- Stylings Sections 
+- @author Bence Pillips
+*/
 
 
-
-
-/* Signature page stylings Sections 
-**
-**@author Bence Pillips*/
-
-
-/* Style for Cocktail Overview */
+/**** Style for Cocktail Overview ****/
 .cocktail-overview {
     padding-top: 50px;
 }
 
 .cocktail-overview h1,
 .cocktail-section h1 {
-    font-family: 'Spartan League', sans-serif;
+    font-family: var(--font-league-spartan);
 }
 
-/* Style for cocktail section */
+/**** Style for cocktail section ****/
 .cocktail-section {
     padding: 50px 0;
 }
@@ -1229,7 +1207,7 @@ section .container .service .col {
     font-family: var(--font-sanchez);
 }
 
-/* Style for cocktail image*/
+/**** Style for cocktail image ****/
 .cocktail-section img {
     max-width: 100%;
     max-height: 750px;
@@ -1239,7 +1217,7 @@ section .container .service .col {
     object-fit: cover;
 }
 
-/* Style for cocktail images when clicked */
+/**** Style for cocktail images when clicked ****/
 .clickedCocktail {
     transition: transform 0.2s ease-in-out;
 }
@@ -1248,22 +1226,22 @@ section .container .service .col {
     transform: scale(1.05);
 }
 
-/* Style for cocktail info */
+/**** Style for cocktail info ****/
 .cocktail-info {
     padding: 20px;
 }
 
 .cocktail-info h2 {
-    font-size: 24px;
+    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
 .cocktail-info p {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.6;
 }
 
-/* CSS for Minigame */
+/**** CSS for Minigame ****/
 #minigame-section {
     padding: 50px;
 }
@@ -1278,8 +1256,8 @@ section .container .service .col {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    background-color: rgb(112, 47, 47);
-    border: 10px solid rgb(163, 161, 161);
+    background-color: var(--grey);
+    border: 5px solid var(--beaver);
     justify-content: space-between;
     padding: 5px;
 }
@@ -1294,7 +1272,6 @@ section .container .service .col {
     border: none;
     background-color: var(--cod-grey);
     zoom: 1.1;
-
 }
 
 .card:active {
@@ -1304,8 +1281,8 @@ section .container .service .col {
 
 
 /* Inside page stylings 
-**
-**@author Bence Pillips*/
+- @author Bence Pillips
+*/
 
 .gallery-page .container {
     width: calc(100% - 40px);
@@ -1340,13 +1317,13 @@ section .container .service .col {
 }
 
 
-/*************************** Large devices (laptops/desktops, 992px and up) */
+/**** Large devices (laptops/desktops, 992px and up) ****/
 @media only screen and (min-width: 992px) {
 
-    /****
-* Navbar, Footer & Modal menu stylings for desktop
-* @author Javier Bastande 
-**/
+    /*
+- Navbar, Footer & Modal menu stylings for desktop
+- @author Javier Bastande 
+*/
     header .navbar {
         max-width: 1300px;
     }
@@ -1383,7 +1360,7 @@ section .container .service .col {
         position: relative;
     }
 
-    /**************** FOOTER SECTION ****/
+    /**** Footer Section ****/
     .footer-wraper {
         min-height: 260px;
         min-width: 100%;
@@ -1455,16 +1432,16 @@ section .container .service .col {
 
     }
 
-    /****
-* About page stylings for Desktop
-* @author Javier Bastande 
-**/
+    /*
+- About page stylings for Desktop
+- @author Javier Bastande 
+*/
 
     #about-main-wraper {
         position: relative;
     }
 
-    /********* story section**/
+    /**** Story Section ****/
     #story #story-decorator {
         position: absolute;
         top: 0;
@@ -1539,7 +1516,7 @@ section .container .service .col {
         font-size: 3.2rem;
     }
 
-    /********* john section**/
+    /**** John Section ****/
     #john .pin-holder {
         background-image: url("../images/pin.png");
         background-position: center;
@@ -1582,7 +1559,7 @@ section .container .service .col {
         min-height: 520px;
     }
 
-    /********* alex section**/
+    /**** Alex Section ****/
     #alex #alex-decorator {
         position: absolute;
         right: 0;
@@ -1629,8 +1606,7 @@ section .container .service .col {
         height: inherit;
     }
 
-
-    /******call to action ****/
+    /**** Call to action ****/
     .call-action-wraper {
         height: 200px;
     }
@@ -1640,12 +1616,11 @@ section .container .service .col {
 
     }
 
-    /****
-* Reservations page stylings for desktop
-* @author Javier Bastande 
-**/
-
-    /*********** RESERVATIONS SECTION */
+    /*
+- Reservations page stylings for desktop
+- @author Javier Bastande 
+*/
+    /**** Reservation Section ****/
     .reservations-wraper {
         width: 100%;
         position: absolute;
@@ -1682,7 +1657,7 @@ section .container .service .col {
         width: 100%;
     }
 
-    /*** BOOKING FORM*/
+    /**** Booking Form ****/
     #reservations form .form-input-wraper p {
         font-size: 1.25rem;
         padding-top: 10px;
@@ -1745,7 +1720,7 @@ section .container .service .col {
 
     #reservations form .form-check {
         margin-top: 30px;
-        font-size: 16px;
+        font-size: 1rem;
         opacity: 0.9;
     }
 
@@ -1772,8 +1747,6 @@ section .container .service .col {
         transition: 0.5s;
     }
 
-
-
     /*  Remove default arrows on input type=number */
     /*  Code taken from next link */
     /* https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
@@ -1791,7 +1764,7 @@ section .container .service .col {
     }
 
 
-    /**** DAY PICKER */
+    /**** Day Picker ****/
 
     /* Took this code "::-webkit-datetime-edit" from the below link to override default date input placeholder color */
     /* https://stackoverflow.com/questions/31706433/how-can-i-change-the-text-color-of-chromes-input-date-placeholder */
@@ -1803,18 +1776,16 @@ section .container .service .col {
         cursor: url("../images/pointer.png"), auto;
     }
 
-
-
     /* Took this code "::-webkit-calendar-picker-indicator {filter: invert(0.5);}"
  from the below link to override default date indicator color */
     /* https://stackoverflow.com/questions/31706433/how-can-i-change-the-text-color-of-chromes-input-date-placeholder */
+
     #reservations input[type="date"]::-webkit-calendar-picker-indicator {
         filter: invert(0.5);
         font-size: 1.125rem;
     }
 
-
-    /**** TIME PICKER */
+    /**** Timer Picker ****/
 
     #reservations form .form-input-wraper .dropdown {
         text-align: center;
@@ -1842,7 +1813,7 @@ section .container .service .col {
     }
 
     #reservations form .form-input-wraper .time-slot-wraper p:hover {
-        background-color: rgb(244, 230, 203);
+        background-color: var(--yellowish-beige);
         border-radius: 5px;
     }
 
@@ -1873,8 +1844,8 @@ section .container .service .col {
 
     }
 
-    /***** remove arrow on dropdown element ****/
-    /**
+    /**** Removing arrow on dropdown element ****/
+    /*
 * Took the code lines from the below link
 /* https://stackoverflow.com/questions/16603979/how-to-remove-the-default-arrow-icon-from-a-dropdown-list-select-element 
 */
@@ -1884,30 +1855,29 @@ section .container .service .col {
     }
 
 
-    /***** Override autofill default style behavoir ****/
-    /**
+    /**** Override autofill default style behavoir ****/
+    /*
 * Took the code lines from the below link
 /* https://stackoverflow.com/questions/2338102/override-browser-form-filling-and-input-highlighting-with-html-css 
 */
     input:-webkit-autofill,
     #contact input:-webkit-autofill {
-        -webkit-box-shadow: 0 0 0 50px #333333 inset;
-        /* Change the color to your own background color */
-        -webkit-text-fill-color: #FFFFF0;
-        -webkit-text-fill-backgorund-color: #FFFFF0;
+        -webkit-box-shadow: 0 0 0 50px var(--dark-charcoal) inset;
+
+        -webkit-text-fill-color: var(--white);
+        -webkit-text-fill-backgorund-color: var(--white);
         -webkit-text-fill-font-size: 0.813rem;
     }
 
     #reservations input:-webkit-autofill:focus,
     #contact input:-webkit-autofill:focus {
-        -webkit-box-shadow: 0 0 0 50px #ffffff inset;
-        /*your box-shadow*/
-        -webkit-text-fill-backgorund-color: #FFFFF0;
+        -webkit-box-shadow: 0 0 0 50px var(--white) inset;
+        -webkit-text-fill-backgorund-color: var(--white);
         -webkit-text-fill-color: var(--cod-grey);
         -webkit-text-fill-font-size: 1.125rem;
     }
 
-    /******* RESERVATION SECTIONS SEPARATOR  */
+    /**** Reservation Sections Separator ****/
     #reservations-section-separator {
         width: 100%;
         padding-bottom: 150px;
@@ -1934,7 +1904,7 @@ section .container .service .col {
         right: 480px;
     }
 
-    /******* CONTACT SECTION*/
+    /**** Contact Section ****/
     .contact-wraper {
         position: relative;
         min-height: fit-content;
@@ -1965,10 +1935,9 @@ section .container .service .col {
 
     .contact-wraper .contact-form-wraper {
         padding: 40px 50px;
-        box-shadow: 16px 18px 46px -13px rgba(0, 0, 0, 0.21);
-        -webkit-box-shadow: 16px 18px 46px -13px rgba(0, 0, 0, 0.21);
-        -moz-box-shadow: 16px 18px 46px -13px rgba(0, 0, 0, 0.21);
-
+        box-shadow: 16px 18px 46px -13px var(--black-transparent);
+        -webkit-box-shadow: 16px 18px 46px -13px var(--black-transparent);
+        -moz-box-shadow: 16px 18px 46px -13px var(--black-transparent);
     }
 
     .contact-wraper .office-hours-wraper {
@@ -1979,7 +1948,7 @@ section .container .service .col {
         font-size: 1rem;
     }
 
-    /************** CONTACT FORM */
+    /**** Contact Form ****/
     #contact .contact-form-wraper textarea {
         margin: 50px 5px 0 5px;
         font-size: 1.25rem;
@@ -1997,7 +1966,7 @@ section .container .service .col {
         text-align: left;
     }
 
-    /************* REVIEW SECTION**/
+    /**** Review Section ****/
     #reservations-review {
         width: 100%;
         min-height: 450px;
@@ -2046,11 +2015,10 @@ section .container .service .col {
     }
 
 
-    /****
-* Upcoming page stylings for desktop screens
-*
-* @author Heloise Lui 
-**/
+    /*
+- Upcoming page stylings for desktop screens
+- @author Heloise Lui 
+*/
 
     .upcoming-events {
         background-color: var(--white);
@@ -2082,7 +2050,7 @@ section .container .service .col {
         width: 350px;
         height: 300px;
         margin-bottom: 40px;
-        box-shadow: 0 10px 50px -12px #333;
+        box-shadow: 0 10px 50px -12px var(--dark-charcoal);
     }
 
     .upcoming-events .event h2 {
@@ -2095,7 +2063,6 @@ section .container .service .col {
         font-size: 1.3rem;
         color: var(--elbony-clay);
         margin-bottom: 40px;
-
     }
 
     .upcoming-events .event .event-time {
@@ -2104,9 +2071,7 @@ section .container .service .col {
         letter-spacing: 2px;
     }
 
-
-
-    /* Newsletter Section */
+    /**** Newsletter Section ****/
     .newsletter {
         color: var(--elbony-clay);
         padding: 60px 0;
@@ -2131,7 +2096,7 @@ section .container .service .col {
         margin-right: 3px;
         border: none;
         border-radius: 0;
-        background-color: rgba(217, 217, 217, 0.36);
+        background-color: var(--grey);
         width: 344px;
         height: 40px;
     }
@@ -2153,7 +2118,6 @@ section .container .service .col {
         color: var(--cod-grey);
     }
 
-
     .reservation-footer {
         background-image: url('../images/call-action-img.webp');
         background-size: cover;
@@ -2171,7 +2135,7 @@ section .container .service .col {
         right: 0;
         bottom: 0;
         left: 0;
-        background: rgba(0, 0, 0, 0.5);
+        background: var(--navy-blue);
         z-index: 1;
     }
 
@@ -2206,25 +2170,20 @@ section .container .service .col {
 
     .btn-footer:hover {
         background-color: var(--white);
-        color: #333;
+        color: var(--dark-charcoal);
         text-decoration: none;
     }
-
-
 }
 
-
-/********************************************* TABLET SCREEN SIZE *****/
-
-
+/**** Tablet Sreen Size ****/
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 990px) and (min-width:590px) {
 
-    /****
-* Navbar, Footer & Modal menu stylings for Tablet screen
-* @author Javier Bastande 
-**/
-    /************** NAVBAR */
+    /*
+- Navbar, Footer & Modal menu stylings for Tablet screen
+- @author Javier Bastande 
+*/
+    /**** NavBar ****/
     header .navbar {
         background-color: transparent;
         margin: 0 auto;
@@ -2269,7 +2228,7 @@ section .container .service .col {
         position: relative;
     }
 
-    /********** MODAL MENU */
+    /**** MODAL MENU ****/
     #navbar-modal {
         position: fixed;
         top: 0;
@@ -2331,8 +2290,7 @@ section .container .service .col {
         width: 27px;
     }
 
-
-    /************** FOOTER SECTION ***********/
+    /**** Footer Section ****/
     .footer-wraper {
         min-height: 460px;
         padding: 60px 0px 0px;
@@ -2413,17 +2371,17 @@ section .container .service .col {
         padding: 100px 0 60px;
     }
 
-    /****
-* About page stylings for tablet screen
-* @author Javier Bastande 
-**/
+    /*
+- About page stylings for tablet screen
+- @author Javier Bastande 
+*/
 
     #john .name-heading,
     #alex .name-heading {
         font-size: 2.3rem;
     }
 
-    /********* story section**/
+    /**** Story Section ****/
     #story-decorator .decorator,
     #alex-decorator .decorator {
         width: 100%;
@@ -2453,7 +2411,7 @@ section .container .service .col {
     }
 
     .story-wraper h1 {
-        font-size: 55px;
+        font-size: 3.438rem;
         margin-bottom: 0;
     }
 
@@ -2481,8 +2439,7 @@ section .container .service .col {
         letter-spacing: 0.5px;
     }
 
-
-    /**** john*/
+    /**** John ****/
     #john #about-heading {
         text-align: center;
         font-size: 3.2rem;
@@ -2548,18 +2505,16 @@ section .container .service .col {
         margin: 0 auto;
     }
 
-    /********* alex section**/
+    /**** Alex Section ****/
     #alex #alex-decorator {
         position: absolute;
         width: 100%;
         margin: 0 auto;
-
     }
 
     #alex #alex-decorator .decorator {
         margin: 0 auto;
         width: 100%;
-
     }
 
     #alex-decorator .decorator img:last-child {
@@ -2571,7 +2526,6 @@ section .container .service .col {
         right: 0;
         top: 650px;
         width: 70%;
-
     }
 
     #alex-decorator .decorator img:first-child {
@@ -2611,7 +2565,7 @@ section .container .service .col {
         margin: 0 auto;
     }
 
-    /******call to action ****/
+    /**** Call to action ****/
     .call-action-wraper {
         height: 170px;
     }
@@ -2637,7 +2591,7 @@ section .container .service .col {
 
     .call-action-wraper a {
         height: 2.5rem;
-        font-size: 20px;
+        font-size: 1.25rem;
         font-weight: 500;
         margin-top: 20px;
         padding-top: 8px;
@@ -2651,13 +2605,11 @@ section .container .service .col {
         transition: 0.5s;
     }
 
-    /****
-* Reservations page stylings for tablet screen
-* @author Javier Bastande 
-**/
-
-
-    /******** RESERVATION SECTION */
+    /*
+- Reservations page stylings for tablet screen
+- @author Javier Bastande 
+*/
+    /**** Reservation Section ****/
     .reservations-wraper {
         width: 100%;
         position: absolute;
@@ -2686,12 +2638,12 @@ section .container .service .col {
         margin: 0 auto;
         min-height: fit-content;
         padding: 40px 50px;
-        box-shadow: 16px 18px 46px -13px rgba(0, 0, 0, 0.21);
-        -webkit-box-shadow: 16px 18px 46px -13px rgba(0, 0, 0, 0.21);
-        -moz-box-shadow: 16px 18px 46px -13px rgba(0, 0, 0, 0.21);
+        box-shadow: 16px 18px 46px -13px var(--black-transparent);
+        -webkit-box-shadow: 16px 18px 46px -13px var(--black-transparent);
+        -moz-box-shadow: 16px 18px 46px -13px var(--black-transparent);
     }
 
-    /******* BOOKING FORM*/
+    /**** Booking Form ****/
     #reservations form .form-input-wraper p {
         font-size: 1.1rem;
         padding-top: 10px;
@@ -2784,7 +2736,7 @@ section .container .service .col {
         -moz-appearance: textfield;
     }
 
-    /**** DAY PICKER */
+    /* Day Picker */
 
     /* Took this code "::-webkit-datetime-edit" from the below link to override default date input placeholder color */
     /* https://stackoverflow.com/questions/31706433/how-can-i-change-the-text-color-of-chromes-input-date-placeholder */
@@ -2804,7 +2756,7 @@ section .container .service .col {
         ;
     }
 
-    /**** TIME PICKER */
+    /**** Timer Picker ****/
 
     #reservations #reservation-form .form-input-wraper .dropdown {
         text-align: center;
@@ -2833,7 +2785,7 @@ section .container .service .col {
     }
 
     #reservations #reservation-form .form-input-wraper .time-slot-wraper p:hover {
-        background-color: rgb(244, 230, 203);
+        background-color: var(--yellowish-beige);
         cursor: pointer;
         border-radius: 5px;
     }
@@ -2860,8 +2812,8 @@ section .container .service .col {
         margin: 4px auto 0;
     }
 
-    /***** remove arrow on dropdown element ****/
-    /**
+    /**** Remove arrow on dropdown element ****/
+    /*
 * Took the code lines from the below link
 /* https://stackoverflow.com/questions/16603979/how-to-remove-the-default-arrow-icon-from-a-dropdown-list-select-element 
 */
@@ -2870,31 +2822,27 @@ section .container .service .col {
         -moz-appearance: none;
     }
 
-
-    /***** Override autofill default style behavoir ****/
-    /**
+    /**** Override autofill default style behavoir ****/
+    /*
 * Took the code lines from the below link
 /* https://stackoverflow.com/questions/2338102/override-browser-form-filling-and-input-highlighting-with-html-css 
 */
     #reservations input:-webkit-autofill,
     #contact input:-webkit-autofill {
-        -webkit-box-shadow: 0 0 0 50px #333333 inset;
-        /* Change the color to your own background color */
+        -webkit-box-shadow: 0 0 0 50px var(--dark-charcoal) inset;
         -webkit-text-fill-background-color: var(--white);
-        -webkit-text-fill-color: #FFFFF0;
+        -webkit-text-fill-color: var(--white);
         -webkit-text-fill-font-size: 0.813rem;
     }
 
     #reservations input:-webkit-autofill:focus,
     #contact input:-webkit-autofill:focus {
-        -webkit-box-shadow: 0 0 0 50px #ffffff inset;
-        /*your box-shadow*/
+        -webkit-box-shadow: 0 0 0 50px var(--white) inset;
         -webkit-text-fill-color: var(--cod-grey);
         -webkit-text-fill-font-size: 1.125rem;
     }
 
-
-    /******* RESERVATION SECTIONS SEPARATOR  */
+    /**** Reservation Section Separator  ****/
     #reservations-section-separator {
         width: 100%;
         padding-bottom: 200px;
@@ -2921,7 +2869,7 @@ section .container .service .col {
         padding-bottom: 400px;
     }
 
-    /******* CONTACT SECTION*/
+    /**** Contact Section ****/
     .contact-wraper {
         min-height: fit-content;
         width: 100%;
@@ -2950,7 +2898,7 @@ section .container .service .col {
         margin-top: 25px;
     }
 
-    /* CONTACT FORM */
+    /**** Contact Form ****/
     #contact .contact-form-wraper textarea {
         margin: 50px 5px 0 5px;
         width: inherit;
@@ -2964,12 +2912,11 @@ section .container .service .col {
         text-align: left;
     }
 
-
     #contact .contact-form-wraper textarea:active {
         text-align: left;
     }
 
-    /************* REVIEW SECTION**/
+    /**** Review Section ****/
     #reservations-review {
         min-height: 400px;
     }
@@ -3009,11 +2956,10 @@ section .container .service .col {
         line-height: 40px;
     }
 
-    /****
-* Home page stylings for tablet screen
-*
-* @author Heloise Lui 
-**/
+    /*
+- Home page stylings for tablet screen
+- @author Heloise Lui 
+*/
     .homepage-heading .heading-container .header-content {
         margin: 0 auto;
         color: var(--white);
@@ -3082,10 +3028,10 @@ section .container .service .col {
         columns: 2;
     }
 
-    /* * Upcoming page stylings for tablet screen
-*
-* @author Heloise Lui 
-**/
+    /* 
+- Upcoming page stylings for tablet screen
+- @author Heloise Lui 
+*/
     .upcoming-events h1,
     .newsletter h2,
     .reservation-footer h2 {
@@ -3117,10 +3063,7 @@ section .container .service .col {
     .newsletter {
         padding: 40px 20px;
         text-align: center;
-
     }
-
-
 
     .btn-footer {
         width: auto;
@@ -3131,11 +3074,11 @@ section .container .service .col {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 575px) and (min-width:330px) {
 
-    /****
-* Navbar, Footer & Modal menu stylings for mobile screen
-* @author Javier Bastande 
-**/
-    /************** NAVBAR */
+    /*
+- Navbar, Footer & Modal menu stylings for mobile screen
+- @author Javier Bastande 
+*/
+    /**** NavBar ****/
 
     header .navbar {
         padding-right: 10px;
@@ -3187,7 +3130,7 @@ section .container .service .col {
 
     }
 
-    /***** modal menu */
+    /**** Modal Menu ****/
     #navbar-modal {
         position: fixed;
         top: 0;
@@ -3195,7 +3138,7 @@ section .container .service .col {
         height: 100vh;
         width: 67%;
         background-color: var(--cod-grey);
-        color: #FFFFF0;
+        color: var(--white);
         z-index: 3;
         margin: 0 auto;
     }
@@ -3250,7 +3193,7 @@ section .container .service .col {
         width: 26px;
     }
 
-    /************** FOOTER SECTION ***********/
+    /**** Footer Section ****/
     .footer-wraper {
         min-height: 460px;
         width: 100%;
@@ -3349,7 +3292,6 @@ section .container .service .col {
         padding: 0;
     }
 
-
     .authors-wraper {
         width: 100%;
         background-color: var(--beaver);
@@ -3365,14 +3307,14 @@ section .container .service .col {
     .authors-container>p,
     .names-wraper>p {
         font-weight: bold;
-        font-size: 16px;
+        font-size: 1rem;
     }
 
 
-    /****
-* About page stylings for tablet screen
-* @author Javier Bastande 
-**/
+    /*
+- About page stylings for tablet screen
+- @author Javier Bastande 
+*/
     #about-header {
         height: 120px;
     }
@@ -3382,7 +3324,7 @@ section .container .service .col {
         font-size: 1.9rem;
     }
 
-    /********* story section**/
+    /**** Story Section ****/
     #story-decorator .decorator {
         width: 100%;
         display: flex;
@@ -3415,7 +3357,6 @@ section .container .service .col {
         margin-bottom: 0;
     }
 
-
     #story .story-wraper .story-container {
         padding: 0;
         width: 95%;
@@ -3432,16 +3373,13 @@ section .container .service .col {
         margin-top: 30px;
         padding-right: 30px;
         padding-left: 30px;
-
     }
 
     #story .about-desc-wraper p {
         margin-top: 50px;
-
     }
 
-
-    /********* john section**/
+    /**** John Section ****/
     #john .john-wraper {
         width: 100%;
     }
@@ -3450,7 +3388,6 @@ section .container .service .col {
         text-align: center;
         font-size: 2.5rem;
     }
-
 
     #john .pin-holder {
         background-image: url("../images/pin.png");
@@ -3488,7 +3425,6 @@ section .container .service .col {
         width: 95%;
         padding: 100px 0;
         margin: 0 auto;
-
     }
 
     #john .john-wraper {
@@ -3504,13 +3440,12 @@ section .container .service .col {
         line-height: 32px;
     }
 
-
     #john .john-wraper #john-img-wraper {
         width: 95%;
         margin: 0 auto;
     }
 
-    /********* alex section**/
+    /**** Alex Section ****/
     #alex #alex-decorator {
         position: relative;
         width: 100%;
@@ -3532,7 +3467,6 @@ section .container .service .col {
         top: 950px;
         width: 80%;
     }
-
 
     #alex-decorator .decorator img:first-child {
         max-height: 60px;
@@ -3568,7 +3502,7 @@ section .container .service .col {
         margin: 0 auto;
     }
 
-    /******call to action ****/
+    /**** Call to action ****/
     .call-action-wraper {
         width: 100%;
     }
@@ -3614,17 +3548,17 @@ section .container .service .col {
     }
 
 
-    /****
-* Reservations page stylings for mobile screen
-* @author Javier Bastande 
-**/
+    /*
+- Reservations page stylings for mobile screen
+- @author Javier Bastande 
+*/
     #reservations-main-wraper h4 {
         min-width: fit-content;
         font-size: 2.1rem;
         margin-bottom: 20px;
     }
 
-    /***************** RESERVATIONS SECTION */
+    /**** Reservation Section ****/
 
     .reservations-wraper {
         width: 100%;
@@ -3651,12 +3585,11 @@ section .container .service .col {
         padding: 40px 20px;
     }
 
-    /*** BOOKING FORM*/
+    /**** Booking Form ****/
     #reservations-main-wraper #reservation-form {
         padding-right: 0;
         margin-left: 8px;
     }
-
 
     #reservations-main-wraper #reservation-form #datePicker-input,
     #reservations-main-wraper #reservation-form #timePicker-input {
@@ -3669,7 +3602,6 @@ section .container .service .col {
     #reservations #reservation-form #startDate {
         text-align: center;
     }
-
 
     #reservations #reservation-form #party-size-wraper,
     #reservations #reservation-form #fullName-wraper,
@@ -3706,7 +3638,6 @@ section .container .service .col {
         margin: 0 auto 6px;
     }
 
-
     #reservations form #contact-number-wraper .prefix-select-wraper .inputBaseLine {
         margin-top: 10px;
     }
@@ -3736,7 +3667,6 @@ section .container .service .col {
         max-height: 45px;
         width: 100%;
         font-size: 1rem;
-
     }
 
     #reservations-main-wraper .inputBaseLine {
@@ -3816,8 +3746,7 @@ section .container .service .col {
         -moz-appearance: textfield;
     }
 
-
-    /**** DAY PICKER */
+    /**** Day Picker ****/
 
     /* Took this code "::-webkit-datetime-edit" from the below link to override default date input placeholder color */
     /* https://stackoverflow.com/questions/31706433/how-can-i-change-the-text-color-of-chromes-input-date-placeholder */
@@ -3838,7 +3767,7 @@ section .container .service .col {
 
     }
 
-    /**** TIME PICKER */
+    /**** Time Picker ****/
 
     #reservations form .form-input-wraper .dropdown {
         text-align: start;
@@ -3865,7 +3794,7 @@ section .container .service .col {
     }
 
     #reservations form .form-input-wraper .time-slot-wraper p:hover {
-        background-color: rgb(244, 230, 203);
+        background-color: var(--yellowish-beige);
         cursor: pointer;
         border-radius: 5px;
     }
@@ -3906,8 +3835,8 @@ section .container .service .col {
         transition: 0.5s;
     }
 
-    /***** remove arrow on dropdown element ****/
-    /**
+    /**** Remove arrow on dropdown element ****/
+    /*
 * Took the code lines from the below link
 /* https://stackoverflow.com/questions/16603979/how-to-remove-the-default-arrow-icon-from-a-dropdown-list-select-element 
 */
@@ -3916,32 +3845,28 @@ section .container .service .col {
         -moz-appearance: none;
     }
 
-
-    /***** Override autofill default style behavoir ****/
-    /**
+    /**** Override autofill default style behavoir ****/
+    /*
 * Took the code lines from the below link
 /* https://stackoverflow.com/questions/2338102/override-browser-form-filling-and-input-highlighting-with-html-css 
 */
     #reservations input:-webkit-autofill,
     #contact input:-webkit-autofill {
-        -webkit-box-shadow: 0 0 0 50px #333333 inset;
-        /* Change the color to your own background color */
+        -webkit-box-shadow: 0 0 0 50px var(--dark-charcoal) inset;
         background-color: var(--white);
-        -webkit-text-fill-color: #FFFFF0;
+        -webkit-text-fill-color: var(--white);
         -webkit-text-fill-font-size: 0.813rem;
     }
 
     #reservations input:-webkit-autofill:focus,
     #contact input:-webkit-autofill:focus {
-        -webkit-box-shadow: 0 0 0 50px #ffffff inset;
-        /*your box-shadow*/
+        -webkit-box-shadow: 0 0 0 50px var(--dark-charcoal) inset;
         -webkit-text-fill-color: var(--cod-grey);
         background-color: var(--white);
         -webkit-text-fill-font-size: 1.125rem;
     }
 
-
-    /******* RESERVATION SECTIONS SEPARATOR  */
+    /**** Reservation Section Separator ****/
     #reservations-section-separator {
         width: 100%;
         padding-bottom: 150px;
@@ -3968,7 +3893,7 @@ section .container .service .col {
         padding-bottom: 420px;
     }
 
-    /******* CONTACT SECTION*/
+    /**** Contact Section ****/
     .contact-wraper {
         width: 100%;
         margin: 0 auto;
@@ -4003,7 +3928,7 @@ section .container .service .col {
         padding-right: 0px;
     }
 
-    /* CONTACT FORM */
+    /**** Contact Form ****/
     #contact .contact-form-wraper .row {
         padding: 0px;
         margin: 0 auto;
@@ -4022,7 +3947,6 @@ section .container .service .col {
         font-size: 1rem;
         text-align: left;
         letter-spacing: 0.5px;
-
     }
 
     #contact .contact-form-wraper textarea:focus {
@@ -4034,8 +3958,7 @@ section .container .service .col {
         text-align: left;
     }
 
-
-    /************* REVIEW SECTION**/
+    /**** Review Section ****/
     #reservations-review .review-wraper {
         width: 100%;
     }
@@ -4056,7 +3979,6 @@ section .container .service .col {
         margin: 100px auto 50px;
         width: 420px;
         max-width: 80%;
-
     }
 
     #reservations-review .rh-decorator-holder {
@@ -4083,11 +4005,10 @@ section .container .service .col {
         bottom: 10px;
     }
 
-    /****
-* Home page stylings for Mobile screen
-*
-* @author Heloise Lui 
-**/
+    /*
+- Home page stylings for Mobile screen
+- @author Heloise Lui 
+*/
 
     .homepage-heading .heading-container {
         margin: 0 auto;
@@ -4113,7 +4034,6 @@ section .container .service .col {
         text-align: left;
         word-break: keep-all;
     }
-
 
     .section5 {
         height: 900px;
@@ -4169,12 +4089,10 @@ section .container .service .col {
         font-size: 0.950rem;
     }
 
-
-    /****
-* Upcoming page stylings for mobile screen
-*
-* @author Heloise Lui 
-**/
+    /*
+- Upcoming page stylings for mobile screen
+- @author Heloise Lui 
+*/
 
     .upcoming-events h1,
     .newsletter h2,
@@ -4210,32 +4128,32 @@ section .container .service .col {
 
     .event img {
         margin: auto;
-        /* Center images */
+
     }
 
     .btn-footer {
         width: 100%;
-        /* Full width button */
+
     }
 
-    /* Adjust the heading sizes */
+
     .section2 h3,
     .section3 h3,
     .reservation-heading {
         font-size: 1.5rem;
-        /* Even smaller font size for headings */
+
     }
 
-    /* Adjust the paragraph sizes */
+
     .section2 p,
     .section3 p {
         font-size: .9rem;
-        /* Even smaller font size for paragraphs */
+
     }
 
     .reservation-footer {
         padding: 30px 10px;
-        /* Further reduce padding */
+
     }
 
     .gallery-page .container {
