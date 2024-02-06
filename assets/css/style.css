@@ -899,7 +899,7 @@ section .container .service {
     color: var(--elbony-clay);
     font-family: var(--font-league-spartan);
     font-size: 5rem;
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: -1px;
     margin-bottom: 40px;
 }
