@@ -24,20 +24,14 @@
     --font-sanchez: var(--font-sanchez);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
+* {
     font-family: var(--font-league-spartan);
 }
 
-#CocktailBackground p,
-p a {
-    font-family: var(--font-league-spartan);
+p {
+    font-size: 1.25rem;
 
 }
-
 
 /*
 - Navbar, Footer & Modal menu stylings and animations
@@ -367,7 +361,7 @@ section {
 #alex .alex-desc-wraper,
 .call-action-heading {
     font-family: var(--font-league-spartan);
-    font-size: 1rem;
+    font-size: 4rem;
     line-height: 30px;
 }
 
@@ -394,12 +388,18 @@ section {
 #story .about-desc-wraper,
 #john .john-desc-wraper {
     padding: 70px;
-    font-size: 1.2rem;
+
 }
 
 #john #about-heading {
     text-align: center;
-    font-size: 3rem;
+    font-size: 4rem;
+    color: red;
+
+}
+
+#john sipem-story {
+    font-size: 4rem;
 }
 
 /**** John Section ****/
@@ -604,7 +604,6 @@ section {
 #contact .contact-form-wraper textarea::placeholder,
 #about-main-wraper {
     font-family: var(--font-league-spartan);
-    letter-spacing: 0.5px;
 }
 
 #reservation-main-wraper p,
@@ -631,8 +630,6 @@ header nav .nav-link,
 .footer-wraper .names-wraper p,
 #about-main-wraper {
     color: var(--white);
-    font-weight: 600;
-    letter-spacing: 2px;
 }
 
 .authors-container>p,
@@ -773,7 +770,6 @@ input[type="checkbox"]:checked {
     padding-left: 5%;
     padding-right: 5%;
 }
-
 
 .homepage-heading .heading-container .header-content {
     /* margin: 0 auto; */
@@ -1183,9 +1179,9 @@ section .container .service .col {
     padding-top: 50px;
 }
 
-.cocktail-overview h1,
-.cocktail-section h1 {
+.cocktail-overview h1 {
     font-family: var(--font-league-spartan);
+    font-size: 4rem;
 }
 
 /**** Style for cocktail section ****/
@@ -1194,7 +1190,7 @@ section .container .service .col {
 }
 
 .cocktail-overview p,
-.cocktail-section P {
+.cocktail-section p {
     font-family: var(--font-sanchez);
 }
 
@@ -1270,7 +1266,6 @@ section .container .service .col {
     transition: transform .2s;
 }
 
-
 /* Inside page stylings 
 - @author Bence Pillips
 */
@@ -1306,7 +1301,6 @@ section .container .service .col {
 .container .gallery img:hover {
     transform: scale(1.02);
 }
-
 
 /**** Large devices (laptops/desktops, 992px and up) ****/
 @media only screen and (min-width: 992px) {
@@ -1356,7 +1350,6 @@ section .container .service .col {
         min-height: 260px;
         min-width: 100%;
         background-color: var(--cod-grey);
-
     }
 
     .footer-wraper .container-fluid {
@@ -1420,7 +1413,6 @@ section .container .service .col {
 
     .authors-container .names-wraper {
         max-width: 1300px;
-
     }
 
     /*
@@ -1463,7 +1455,8 @@ section .container .service .col {
     }
 
     .story-wraper h1 {
-        font-size: 3rem;
+        font-family: var(--font-league-spartan);
+        font-size: 4rem;
         margin-bottom: 0;
     }
 
@@ -1499,12 +1492,7 @@ section .container .service .col {
     #john .john-desc-wraper,
     #alex .alex-desc-wraper {
         padding: 70px;
-        font-size: 1.1rem;
-    }
-
-    #john #about-heading {
-        text-align: center;
-        font-size: 3.2rem;
+        font-size: 1.25rem;
     }
 
     /**** John Section ****/
@@ -2370,7 +2358,7 @@ section .container .service .col {
 
     #john .name-heading,
     #alex .name-heading {
-        font-size: 2.3rem;
+        font-size: 3rem;
     }
 
     /**** Story Section ****/
@@ -2428,15 +2416,9 @@ section .container .service .col {
         padding-right: 90px;
         max-width: 700px;
         line-height: 35px;
-        letter-spacing: 0.5px;
     }
 
     /**** John ****/
-    #john #about-heading {
-        text-align: center;
-        font-size: 3.2rem;
-    }
-
     #john .pin-holder {
         background-image: url("../images/pin.png");
         background-position: center;
@@ -2474,22 +2456,18 @@ section .container .service .col {
         color: var(--white);
         padding-bottom: 60px;
         width: 100%;
-
     }
 
     #john .john-wraper .john-container {
         padding: 100px 20px;
         max-width: 600px;
         margin: 0 auto;
-
     }
 
     #john .john-desc-wraper {
         padding-right: 90px;
         max-width: 700px;
         line-height: 35px;
-        letter-spacing: 0.5px;
-
     }
 
     #john .john-wraper #john-img-wraper {
@@ -3376,11 +3354,6 @@ section .container .service .col {
         width: 100%;
     }
 
-    #john #about-heading {
-        text-align: center;
-        font-size: 2.5rem;
-    }
-
     #john .pin-holder {
         background-image: url("../images/pin.png");
         background-position: center;
@@ -3746,7 +3719,6 @@ section .container .service .col {
         color: var(--cod-grey);
         opacity: 0.7;
         font-size: 1.063rem;
-        ;
     }
 
     /* Took this code "::-webkit-calendar-picker-indicator {filter: invert(0.5);}"
@@ -3755,8 +3727,6 @@ section .container .service .col {
     #reservation input[type="date"]::-webkit-calendar-picker-indicator {
         filter: invert(0.5);
         font-size: 1.25rem;
-        ;
-
     }
 
     /**** Time Picker ****/
