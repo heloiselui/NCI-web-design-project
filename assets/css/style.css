@@ -394,11 +394,10 @@ section {
 #john #about-heading {
     text-align: center;
     font-size: 4rem;
-    color: red;
-
+    font-weight: normal;
 }
 
-#john sipem-story {
+#john .sipem-story {
     font-size: 4rem;
 }
 
