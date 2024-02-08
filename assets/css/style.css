@@ -796,6 +796,10 @@ section .container .service {
     height: 1200px;
 }
 
+#svg-section2 {
+    padding-left: 100px;
+}
+
 .section2 img,
 .section3 img {
     width: 100%;
@@ -890,7 +894,6 @@ section .container .service {
 }
 
 .row h3 {
-    text-align: center;
     color: var(--elbony-clay);
     font-family: var(--font-league-spartan);
     font-size: 5rem;
