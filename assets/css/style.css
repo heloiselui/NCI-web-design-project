@@ -897,7 +897,6 @@ section .container .service {
     color: var(--elbony-clay);
     font-family: var(--font-league-spartan);
     font-size: 5rem;
-    font-weight: 700;
     letter-spacing: -1px;
     margin-bottom: 40px;
 }
@@ -2952,11 +2951,6 @@ section .container .service .col {
         word-break: keep-all;
     }
 
-    .row h3 {
-        font-size: 3rem;
-        font-weight: 400;
-    }
-
     .section5 {
         height: 1200px;
     }
@@ -2989,6 +2983,11 @@ section .container .service .col {
         font-family: var(--font-league-spartan);
         font-size: 1.3rem;
         margin: 50px auto;
+    }
+
+    .story-section5 {
+        text-align: center;
+        font-weight: normal;
     }
 
     .btn-homepage {
@@ -4030,11 +4029,6 @@ section .container .service .col {
         padding: 0;
         margin: 0 auto;
     }
-
-    .row h3 {
-        font-size: 2rem;
-    }
-
 
     .section5 p {
         width: 90%;
