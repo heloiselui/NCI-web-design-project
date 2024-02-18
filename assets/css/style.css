@@ -20,8 +20,8 @@
 
 
     /**** Font Families ****/
-    --font-league-spartan: var(--font-league-spartan);
-    --font-sanchez: var(--font-sanchez);
+    --font-league-spartan: 'League-Spartan', sans-serif;
+    --font-sanchez: 'Sanchez', sans-serif;
 }
 
 * {
@@ -57,7 +57,6 @@ p {
         right: 0;
         display: block;
         border-left: solid 1px var(--white);
-
     }
 }
 
@@ -76,7 +75,6 @@ p {
 
     to {
         right: -600px;
-
         display: none;
     }
 }
@@ -1183,6 +1181,7 @@ section .container .service .col {
 .cocktail-overview h1 {
     font-family: var(--font-league-spartan);
     font-size: 4rem;
+    letter-spacing: 1px;
 }
 
 /**** Style for cocktail section ****/
@@ -1192,7 +1191,8 @@ section .container .service .col {
 
 .cocktail-overview p,
 .cocktail-section p {
-    font-family: var(--font-sanchez);
+    font-family: var(--font-league-spartan);
+    font-size: 1.25rem;
 }
 
 /**** Style for cocktail image ****/
@@ -1219,15 +1219,31 @@ section .container .service .col {
     padding: 20px;
 }
 
-.cocktail-info h2 {
+.cocktail-info-wrapper h2 {
+    font-family: var(--font-league-spartan);
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.cocktail-info-wrapper {
+    text-align: left;
+    margin-left: 50px;
+}
+
+.cocktail-info h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
 .cocktail-info p {
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.8;
+
 }
+
+
+
 
 /**** CSS for Minigame ****/
 #minigame-section {
