@@ -18,7 +18,6 @@
     --black-transparent: #000000e6;
     --grey: #d9d9d95c;
 
-
     /**** Font Families ****/
     --font-league-spartan: 'League-Spartan', sans-serif;
     --font-sanchez: 'Sanchez', sans-serif;
@@ -30,7 +29,6 @@
 
 p {
     font-size: 1.25rem;
-
 }
 
 /*
@@ -283,7 +281,6 @@ header .rectangle {
 }
 
 .footer-wraper .row {
-
     margin: 0 auto;
 }
 
