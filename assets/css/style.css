@@ -1211,6 +1211,35 @@ section .container .service .col {
     transform: scale(1.05);
 }
 
+.left-side-container-cosmopolitan {
+    position: relative;
+    bottom: -542px;
+    left: -111px;
+    opacity: 0.5;
+}
+
+.left-side-container-margarita {
+    position: relative;
+    bottom: -555px;
+    left: -103px;
+    opacity: 0.5;
+}
+
+.left-side-container-martini {
+    position: relative;
+    bottom: -555px;
+    left: -110px;
+    opacity: 0.5;
+}
+
+.right-side-container-mint {
+    position: relative;
+    bottom: 500px;
+    right: -560px;
+    opacity: 0.5;
+}
+
+
 /**** Style for cocktail info ****/
 .cocktail-info {
     padding: 20px;
