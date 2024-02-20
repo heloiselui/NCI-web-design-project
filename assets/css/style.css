@@ -578,8 +578,8 @@ section {
 }
 
 /**** reservation PAGE SHARED PROPERTIES ****/
-#reservation-main-wraper h4 {
-    font-size: 4rem;
+#reservation-main-wraper h1 {
+    font-size: 4.5rem;
 }
 
 /**** Font Family ****/
@@ -1077,32 +1077,38 @@ section .container .service .col {
     font-family: var(--font-league-spartan);
     margin-bottom: 20px;
     font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 48px;
 }
 
 .newsletter p {
     font-size: 1.25rem;
     margin-bottom: 40px;
+    line-height: 30px;
 }
 
 .newsletter input[type="email"] {
     padding: 12px;
+    font-size: 1.25rem;
     margin-right: 3px;
     border: none;
     border-radius: 0;
     background-color: var(--grey);
     width: 344px;
-    height: 40px;
+    height: 35px;
 }
 
 .newsletter button {
     background-color: var(--cod-grey);
-    font-size: 1rem;
-    color: var(--white);
-    text-align: center;
-    width: 108px;
-    height: 40px;
     border: none;
+    color: var(--white);
+    font-size: 1.063rem;
+    font-weight: 600;
     letter-spacing: 2.5px;
+    line-height: 28px;
+    text-align: center;
+    height: 35px;
+    width: 108px;
 }
 
 .newsletter button:hover {
@@ -1220,7 +1226,7 @@ section .container .service .col {
 
 .left-side-container-margarita {
     position: relative;
-    bottom: -555px;
+    bottom: -540px;
     left: -103px;
     opacity: 0.5;
 }
@@ -1492,7 +1498,7 @@ section .container .service .col {
         max-width: 250px;
         position: relative;
         z-index: 1;
-        top: 180px;
+        top: 160px;
         right: 300px;
         height: 110px;
     }
@@ -1606,8 +1612,9 @@ section .container .service .col {
         max-width: 250px;
         position: relative;
         z-index: 1;
-        top: 130px;
+        top: 60px;
         height: 110px;
+        right: 30px;
     }
 
     #alex .alex-wraper {
@@ -1902,7 +1909,6 @@ section .container .service .col {
     /**** Reservation Sections Separator ****/
     #reservation-section-separator {
         width: 100%;
-        padding-bottom: 150px;
     }
 
     #reservation-section-separator .separator-container {
@@ -1922,7 +1928,7 @@ section .container .service .col {
         width: 8000px;
         width: 100%;
         position: relative;
-        top: 340px;
+        top: 127px;
         right: 480px;
     }
 
@@ -1968,6 +1974,7 @@ section .container .service .col {
 
     #contact .contact-wraper .office-hours-wraper p {
         font-size: 1rem;
+        letter-spacing: 3px;
     }
 
     /**** Contact Form ****/
@@ -2631,7 +2638,7 @@ section .container .service .col {
         z-index: 1;
     }
 
-    #reservation-main-wraper h4 {
+    #reservation-main-wraper h1 {
         font-size: 2.188rem;
     }
 
@@ -3560,7 +3567,7 @@ section .container .service .col {
 - reservation page stylings for mobile screen
 - @author Javier Bastande 
 */
-    #reservation-main-wraper h4 {
+    #reservation-main-wraper h1 {
         min-width: fit-content;
         font-size: 2.1rem;
         margin-bottom: 20px;
