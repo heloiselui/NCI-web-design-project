@@ -11,7 +11,7 @@ Our website is designed to provide visitors with information about our venue, up
 ## Features
 
 - **Home Page**: Overview of our offerings with quick links to reservations and contact.
-- **About Us**: History and background of SIP Mix and Lounge.
+- **About Us**: History and background of SIPEM Mix and Lounge.
 - **Inside**: Gallery showcasing our venue and exclusive cocktails.
 - **Signature**: Details about our signature cocktails.
 - **Upcoming Events**: Information about upcoming events and live performances.
