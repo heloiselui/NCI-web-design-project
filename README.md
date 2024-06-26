@@ -1,11 +1,11 @@
-# SIP - Mix and Lounge
+# SIPEM - Mix and Lounge
 
-Welcome to the SIP Mix and Lounge project repository. This project is developed as part of a group assignment for our Web Design and Client-Side Scripting module at NCI.
+Welcome to the SIPEM Mix and Lounge project repository. This project is developed as part of a group assignment for our Web Design and Client-Side Scripting module at NCI.
 Our aim is to create a vibrant venue website in Dublin, where expertly crafted cocktails harmonise with high-end live music performances.
 
 ## Project Overview
 
-SIP Mix and Lounge offers a unique experience, combining an elegant atmosphere with artisanal cocktails and live music. 
+SIPEM Mix and Lounge offers a unique experience, combining an elegant atmosphere with artisanal cocktails and live music. 
 Our website is designed to provide visitors with information about our venue, upcoming events, and the option to make reservations.
 
 ## Features
