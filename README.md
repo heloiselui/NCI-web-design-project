@@ -1,5 +1,8 @@
 # SIPEM - Mix and Lounge
 
+![image](https://github.com/user-attachments/assets/b0908d09-5162-4717-addb-d12bc08f875c)
+
+
 Welcome to the SIPEM Mix and Lounge project repository. This project is developed as part of a group assignment for our Web Design and Client-Side Scripting module at NCI.
 Our aim is to create a vibrant venue website in Dublin, where expertly crafted cocktails harmonise with high-end live music performances.
 
