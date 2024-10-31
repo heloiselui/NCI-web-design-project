@@ -53,7 +53,7 @@ Validated using the HTML and CSS validator with excellent results.
 Optimised using Google Page Speed Insights with excellent scores.
 Images optimised for the web.
 Video Presentation
-A video presentation demonstrating the website, its responsiveness, framework usage, form validation, and JavaScript implementation is available at [your-video-link].
+A video presentation was provided to demonstrate the website, its responsiveness, framework usage, form validation, and JavaScript implementation.
 
 ## Licence
 This project is licensed under the MIT Licence - see the LICENSE file for details.
